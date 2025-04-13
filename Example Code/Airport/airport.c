@@ -29,7 +29,7 @@ init(airport_state * s, tw_lp * lp)
   s->planes_on_the_ground = planes_per_airport;
   s->waiting_time = 0.0;
   s->furthest_flight_landing = 0.0;
-
+  lp -> gid
   for(i = 0; i < planes_per_airport; i++)
     {
       e = tw_event_new(lp->gid, tw_rand_exponential(lp->rng, MEAN_DEPARTURE), lp);
