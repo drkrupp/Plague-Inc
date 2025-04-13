@@ -8,9 +8,9 @@
 #define GRID_WIDTH 10
 #define GRID_HEIGHT 10
 
-//Events - movements & status updates
+//Move causes status check, after status check is done move again
 enum events { MOVE, STATUS_CHECK };
-enum abs_directions { NORTH = 0, NORTH_EAST, EAST, SOUTH_EAST, SOUTH, SOUTH_WEST, WEST, NORTH_WEST };
+enum abs_directions { NORTH = 0, NORTH_EAST, EAST, SOUTH_EAST, SOUTH, SOUTH_WEST, WEST, NORTH_WEST, NO_MOVE};
 
 
 typedef struct {
@@ -27,7 +27,7 @@ typedef struct {
 	int x_spot;
 	int y_spot;
 	int people_held;
-    
+
 	//Maybe an array which holds the people in the spot
 } grid_spot;
 

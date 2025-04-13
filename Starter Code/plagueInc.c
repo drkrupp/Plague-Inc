@@ -2,7 +2,7 @@
 
 
 void
-init(person * s, tw_lp * lp)
+person_init(person * s, tw_lp * lp)
 {
   int i;
   tw_event *e;
@@ -16,23 +16,109 @@ init(person * s, tw_lp * lp)
   s->susceptible = true;
   s->alive = true;
   s->previous_move = NULL;
-  //Think this is where we need to start message creations
+  s->next_move = assign_move()
+
+  e = tw_event_new(lp->gid, 0, lp); //0 is the offset - no clue what that is
+  m = tw_event_data(e); //tried looking at the documentation, wasn't sure, just followed from the examples
+  m->type = MOVE;
+  tw_event_send(e);
+}
+
+
+
+abs_directions assign_move(tw_lp * lp, int x_spot, int y_spot) {
+    abs_directions possible_moves[8]; 
+    int count = 0;
+
+    if (y_spot < GRID_HEIGHT - 1) {
+        possible_moves[count++] = NORTH;
+        if (x_spot < GRID_WIDTH - 1)
+            possible_moves[count++] = NORTH_EAST;
+        if (x_spot > 0)
+            possible_moves[count++] = NORTH_WEST;
+    }
+    if (y_spot > 0) {
+        possible_moves[count++] = SOUTH;
+        if (x_spot < GRID_WIDTH - 1)
+            possible_moves[count++] = SOUTH_EAST;
+        if (x_spot > 0)
+            possible_moves[count++] = SOUTH_WEST;
+    }
+    if (x_spot < GRID_WIDTH - 1)
+        possible_moves[count++] = EAST;
+    if (x_spot > 0)
+        possible_moves[count++] = WEST;
+
+    if (count == 0)
+        return NO_MOVE;
+
+    return possible_moves[tw_rand_integer(lp->rng, 0, count - 1)];
+}
+
+
+
+
+
+tw_lptype my_lps[] = {
+    {
+        .init = person_init,
+        .pre_run = NULL,
+        .event = person_event,
+        .revent = person_event_reverse,
+        .final = person_final,
+        .map = NULL,
+        .state_sz = sizeof(Person),
+    },
+    {
+        .init = grid_init,
+        .pre_run = NULL,
+        .event = grid_event,
+        .revent = grid_event_reverse,
+        .final = grid_final,
+        .map = NULL,
+        .state_sz = sizeof(Grid),
+    },
+    { 0 }, // End marker
+};
+
+
+main(int argc, char **argv, char **env)
+{
+
+
+	tw_define_lps(nlp, sizeof(Msg_Data), 0);
+	g_tw_lp_types = my_lps;
 
 }
 
+
 void
-event_handler(airport_state * s, tw_bf * bf, airport_message * msg, tw_lp * lp)
+event_handler(person * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp)
 {
   int rand_result;
-  tw_lpid dst_lp;
-  tw_stime ts;
+  abs_directions;
   tw_event *e;
   airport_message *m;
+
+
+  switch(msg->type)
+  {
+	case MOVE:
+		{
+			
+			break;
+		}
+	case STATUS_CHECK:
+		{
+
+		}
+  }
+
 
   switch(msg->type)
     {
 
-    case ARRIVAL:
+    case MOVE:
       {
 	// Schedule a landing in the future
 	msg->saved_furthest_flight_landing = s->furthest_flight_landing;
