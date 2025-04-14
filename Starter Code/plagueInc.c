@@ -157,6 +157,18 @@ person_event(person * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp) {
 	//LET THEM MOVE AND SEND MESSAGES TO THEIR LOCATION LPs
 
 	if (s->alive) {
+		//Store previous values for reverse event
+		s->prev_x_spot = s->x_spot;
+		s->prev_y_spot = s->y_spot;
+		s->prev_moves_left = s->moves_left;
+		s->prev_infected_time = s->infected_time;
+		s->prev_infected = s->infected;
+		s->prev_susceptible = s->susceptible;
+		s->prev_alive = s->alive;
+		s->prev_immune = s->immune;
+		s->prev_infection_start = s->infection_start;
+    	s->prev_immune_start = s->immune_start;
+
 		tw_lpid prev_location_id = get_location_id(x_spot, y_spot);
 		enum abs_directions next_move = assign_move(lp, x_spot, y_spot);
 		switch (next_move)
@@ -223,6 +235,24 @@ person_event(person * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp) {
 	}
 }
 
+//TODO: MAYBE FIX THIS - WILL ASK PROF IF THIS IS FEASIBLE
+person_event_reverse(person * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp) {
+	s->x_spot = s->prev_x_spot;
+	s->y_spot = s->prev_y_spot;
+	s->moves_left = s->prev_moves_left;
+	s->infected_time = s->prev_infected_time;
+	s->infected = s->prev_infected;
+	s->susceptible = s->prev_susceptible;
+	s->alive = s->prev_alive;
+	s->immune = s->prev_immune;
+	s->infection_start = s->prev_infection_start;
+	s->immune_start = s->prev_immune_start;
+}
+
+
+
+
+
 void
 location_event(location * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp)  {
 	//ARRIVAL, DEPARTURE, NEW_INFECTION, NEW_RECOVERY
@@ -252,7 +282,7 @@ location_event(location * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp)  {
 				s->people_held[i] == s->people_held[s->total_people-1];
 			}
 		}
-		if(is_infected){
+		if(was_infected){
 			s->infected_count--;
 		}
 		s->total_people--;
@@ -266,7 +296,7 @@ location_event(location * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp)  {
 		return;
 	}
 
-	
+
 	tw_event *e;
 	Msg_Data *m;
 	e = tw_event_new(person_id, tw_rand_exponential(lp->rng, AVERAGE_MOVE_TIME), lp);
@@ -276,7 +306,54 @@ location_event(location * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp)  {
 	tw_event_send(e);
 }
 
+void
+location_event_reverse(location * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp) {
+	enum events event = msg->event_type;
+	switch (event)
+	{
+	case ARRIVAL:
+		//effects of a departure, not worth worrying about resizing array
+		bool is_infected = msg->person_infected;
+		tw_lpid person_id = msg->person_id;
+		bool was_infected = msg->person_infected;
+		for (int i = 0; i < s->total_people; i++){
+			if(s->people_held[i] == person_id){
+				s->people_held[i] == s->people_held[s->total_people-1];
+			}
+		}
+		if(was_infected){
+			s->infected_count--;
+		}
+		s->total_people--;
+		break;
+	case DEPARTURE:
+		//Effects of an arrival, don't have to worry about resizing array
+		bool was_infected = msg->person_infected;
+		tw_lpid person_id = msg->person_id;
+		s->people_held[s->total_people] = person_id;
+		s->total_people++;
+		if(was_infected){
+			s->infected_count++;
+		}
+		break;
+	case NEW_INFECTION:
+		s->infected_count--;
+		break;
+	case NEW_RECOVERY:
+		s->infected_count++;
+		break;
+	}
+}
 
+void person_final(person * s, tw_lp * lp){
+	//print stats if we want
+}
+
+
+void location_final(location * s, tw_lp * lp){
+	//print stats if we want
+	free(s->people_lpids);
+} 
 
 tw_lptype my_lps[] = {
     {

@@ -23,18 +23,29 @@ enum abs_directions { NORTH = 0, NORTH_EAST, EAST, SOUTH_EAST, SOUTH, SOUTH_WEST
 
 
 typedef struct {
-	int moves_left;
-	int x_spot;
-	int y_spot;
-	int infected_time;
-    bool infected;
-    bool susceptible;
-	bool alive;
-    bool immune;
-	enum abs_directions previous_move;
+	x_spot;
+	y_spot;
+    moves_left;
+	infected_time;
+    infected;
+    susceptible;
+	alive;
+    immune;
+    infection_start;
+    immune_start;
 
-    tw_stime infection_start;
-    tw_stime immune_start;
+    int prev_x_spot;
+    int prev_y_spot;
+    int prev_moves_left;
+    int prev_infected_time;
+    bool prev_infected;
+    bool prev_susceptible;
+    bool prev_alive;
+    bool prev_immune;
+    tw_stime prev_infection_start;
+    tw_stime prev_immune_start;
+
+
 } person;
 
 typedef struct {
