@@ -13,6 +13,9 @@
 #define LETHALITY .00001
 #define TRAVEL_LIKELIHOOD .8
 #define AVERAGE_MOVE_TIME 10.0
+#define INITIAL_MAX_PEOPLE_PER_SQUARE 500
+#define NUM_LOCATIONS = GRID_WIDTH * GRID_HEIGHT
+#define NUM_PEOPLE = 50
 
 //Move causes status check, after status check is done move again
 enum events { ARRIVAL, DEPARTURE, NEW_INFECTION, NEW_RECOVERY, STATUS_CHECK};
@@ -40,6 +43,7 @@ typedef struct {
     int infected_count;
     int total_people;
 	tw_lpid* people_held;
+    int max_people_held;
 } location;
 
 typedef struct {
