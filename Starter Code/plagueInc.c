@@ -198,6 +198,8 @@ person_event(person * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp, person * save_s
 			x_spot--;
 
 		case NO_MOVE:
+			tw_event *e;
+			Msg_Data *m;
 			if(new_infection){
 				e = tw_event_new(prev_location_id, 1, lp);
 				m = tw_event_data(e); 
@@ -210,6 +212,12 @@ person_event(person * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp, person * save_s
 				m->type = NEW_INFECTION //JUST DECREASE THE AMOUNT OF SICK PEOPLE AT THE SPOT;
 				tw_event_send(e); 
 			}
+			tw_event *e_stay;
+			Msg_Data *m_stay;
+			e_stay = tw_event_new(prev_location_id, 1, lp);
+			m_stay = tw_event_data(e_stay); 
+			m_stay->type = STAY //JUST INCREMENT THE AMOUNT OF SICK PEOPLE AT THE SPOT;
+			tw_event_send(e); 
 			return;
 		}
 		tw_event *e_leave;
@@ -277,6 +285,7 @@ location_event(location * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp)  {
 		s->people_held[s->total_people] = person_id;
 		s->total_people++;
 		break;
+
 	case DEPARTURE:
 		bool was_infected = msg->person_infected;
 		for (int i = 0; i < s->total_people; i++){
@@ -288,7 +297,7 @@ location_event(location * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp)  {
 			s->infected_count--;
 		}
 		s->total_people--;
-		break;
+		return;
 
 	case NEW_INFECTION:
 		s->infected_count++;
@@ -296,9 +305,12 @@ location_event(location * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp)  {
 	case NEW_RECOVERY:
 		s->infected_count--;
 		return;
+	default:
+		//no work to be done if the person is just staying there, only needed in order to generate their next move
+		break;
 	}
-
-
+	//Only reach this point if the message was an ARRIVAL or STAY. The lp that receives depaerture doesn't need to worry about the person
+	//If a person doesn't move (New infection or new recovery) then the person sends a stay message after to receive next instructions
 	tw_event *e;
 	Msg_Data *m;
 	e = tw_event_new(person_id, tw_rand_exponential(lp->rng, AVERAGE_MOVE_TIME), lp);

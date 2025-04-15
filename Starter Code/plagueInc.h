@@ -18,7 +18,7 @@
 #define NUM_PEOPLE = 50
 
 //Move causes status check, after status check is done move again
-enum events { ARRIVAL, DEPARTURE, NEW_INFECTION, NEW_RECOVERY, STATUS_CHECK};
+enum events { ARRIVAL, DEPARTURE, NEW_INFECTION, NEW_RECOVERY, STAY, STATUS_CHECK};
 enum abs_directions { NORTH = 0, NORTH_EAST, EAST, SOUTH_EAST, SOUTH, SOUTH_WEST, WEST, NORTH_WEST, NO_MOVE};
 
 
@@ -49,6 +49,7 @@ typedef struct {
     bool person_infected;
     tw_lpid person_id;
     int infected_count;
+    person* person_state;
 } Msg_Data;
 
 #endif
