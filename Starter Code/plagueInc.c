@@ -346,12 +346,22 @@ void location_final(location * s, tw_lp * lp){
 	free(s->people_lpids);
 } 
 
+
+void person_commit(person * s, tw_bf * bf, msg_type * in_msg, tw_lp * lp){
+
+}
+
+void location_commit(location * s, tw_bf * bf, msg_type * in_msg, tw_lp * lp){
+
+}
+
 tw_lptype my_lps[] = {
     {
         .init = person_init,
         .pre_run = NULL,
         .event = person_event,
         .revent = person_event_reverse,
+		.commit = person_commit,
         .final = person_final,
         .map = NULL,
         .state_sz = sizeof(person),
@@ -361,6 +371,7 @@ tw_lptype my_lps[] = {
         .pre_run = NULL,
         .event = location_event,
         .revent = location_event_reverse,
+		.commit = location_commit,
         .final = location_final,
         .map = NULL,
         .state_sz = sizeof(location),
