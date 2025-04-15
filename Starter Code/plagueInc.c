@@ -105,21 +105,7 @@ enum abs_directions assign_move(tw_lp * lp, int x_spot, int y_spot) {
 
 
 void
-person_event(person * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp, person * save_state) {
-
-	//Store previous values for reverse event
-	save_state->x_spot = s->x_spot;
-	save_state->y_spot = s->y_spot;
-	save_state->moves_left = s->moves_left;
-	save_state->infected_time = s->infected_time;
-	save_state->infected = s->infected;
-	save_state->infected = s->infected;
-	save_state->alive = s->alive;
-	save_state->immune = s->immune;
-	save_state->infection_start = s->infection_start;
-	save_state->immune_start = s->immune_start;
-
-
+person_event(person * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp) {
 	//WHEN NOT SICK & ALIVE
 	bool new_infection;
 	bool new_recovery;
@@ -236,32 +222,22 @@ person_event(person * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp, person * save_s
 		m_leave->person_id = lp->gid;
 		tw_event_send(e_leave); 
 
+
+
 		e_arrive = tw_event_new(new_location_id, 1, lp);
 		m_arrive = tw_event_data(e_arrive); 
 		m_arrive->type = ARRIVAL; //ADJUST THE AMOUNT OF SICK PEOPLE AND TOTAL PEOPLE AT THE SPOT & ADD THE PERSON TO THE ARRAY OF PEOPLE IN THE SPOT
 		m_arrive->person_infected = s->infected;
 		m_arrive->person_id = lp->gid;
+		m_arrive->person_state = *s;
 		tw_event_send(e_arrive); 
 	}
 }
 
 //TODO: MAYBE FIX THIS - WILL ASK PROF IF THIS IS FEASIBLE
-person_event_reverse(person * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp, person * save_state) {
-	s->x_spot = save_state->x_spot;
-	s->y_spot = save_state->y_spot;
-	s->moves_left = save_state->moves_left;
-	s->infected_time = save_state->infected_time;
-	s->infected = save_state->infected;
-	s->susceptible = save_state->susceptible;
-	s->alive = save_state->alive;
-	s->immune = save_state->immune;
-	s->infection_start = save_state->infection_start;
-	s->immune_start = save_state->immune_start;
+person_event_reverse(person * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp) {
+	*s = msg->person_state;
 }
-
-
-
-
 
 void
 location_event(location * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp)  {
@@ -317,6 +293,7 @@ location_event(location * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp)  {
 	m = tw_event_data(e);
 	m->type = STATUS_CHECK;
 	m->infected_count = s->infected_count;
+	m->person_state = msg->person_state;
 	tw_event_send(e);
 }
 

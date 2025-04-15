@@ -49,7 +49,7 @@ typedef struct {
     bool person_infected;
     tw_lpid person_id;
     int infected_count;
-    person* person_state;
+    person person_state;
 } Msg_Data;
 
 #endif
