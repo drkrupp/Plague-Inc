@@ -105,7 +105,21 @@ enum abs_directions assign_move(tw_lp * lp, int x_spot, int y_spot) {
 
 
 void
-person_event(person * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp) {
+person_event(person * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp, person * save_state) {
+
+	//Store previous values for reverse event
+	save_state->x_spot = s->x_spot;
+	save_state->y_spot = s->y_spot;
+	save_state->moves_left = s->moves_left;
+	save_state->infected_time = s->infected_time;
+	save_state->infected = s->infected;
+	save_state->infected = s->infected;
+	save_state->alive = s->alive;
+	save_state->immune = s->immune;
+	save_state->infection_start = s->infection_start;
+	save_state->immune_start = s->immune_start;
+
+
 	//WHEN NOT SICK & ALIVE
 	bool new_infection;
 	bool new_recovery;
@@ -157,18 +171,6 @@ person_event(person * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp) {
 	//LET THEM MOVE AND SEND MESSAGES TO THEIR LOCATION LPs
 
 	if (s->alive) {
-		//Store previous values for reverse event
-		s->prev_x_spot = s->x_spot;
-		s->prev_y_spot = s->y_spot;
-		s->prev_moves_left = s->moves_left;
-		s->prev_infected_time = s->infected_time;
-		s->prev_infected = s->infected;
-		s->prev_susceptible = s->susceptible;
-		s->prev_alive = s->alive;
-		s->prev_immune = s->immune;
-		s->prev_infection_start = s->infection_start;
-    	s->prev_immune_start = s->immune_start;
-
 		tw_lpid prev_location_id = get_location_id(x_spot, y_spot);
 		enum abs_directions next_move = assign_move(lp, x_spot, y_spot);
 		switch (next_move)
@@ -236,17 +238,17 @@ person_event(person * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp) {
 }
 
 //TODO: MAYBE FIX THIS - WILL ASK PROF IF THIS IS FEASIBLE
-person_event_reverse(person * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp) {
-	s->x_spot = s->prev_x_spot;
-	s->y_spot = s->prev_y_spot;
-	s->moves_left = s->prev_moves_left;
-	s->infected_time = s->prev_infected_time;
-	s->infected = s->prev_infected;
-	s->susceptible = s->prev_susceptible;
-	s->alive = s->prev_alive;
-	s->immune = s->prev_immune;
-	s->infection_start = s->prev_infection_start;
-	s->immune_start = s->prev_immune_start;
+person_event_reverse(person * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp, person * save_state) {
+	s->x_spot = save_state->x_spot;
+	s->y_spot = save_state->y_spot;
+	s->moves_left = save_state->moves_left;
+	s->infected_time = save_state->infected_time;
+	s->infected = save_state->infected;
+	s->susceptible = save_state->susceptible;
+	s->alive = save_state->alive;
+	s->immune = save_state->immune;
+	s->infection_start = save_state->infection_start;
+	s->immune_start = save_state->immune_start;
 }
 
 
