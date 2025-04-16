@@ -355,26 +355,30 @@ void location_commit(location * s, tw_bf * bf, msg_type * in_msg, tw_lp * lp){
 
 }
 
+
+
+
 tw_lptype my_lps[] = {
     {
-        .init = person_init,
-        .pre_run = NULL,
-        .event = person_event,
-        .revent = person_event_reverse,
-		.commit = person_commit,
-        .final = person_final,
-        .map = NULL,
-        .state_sz = sizeof(person),
+		(init_f) person_init,
+		(pre_run_f) NULL,
+		(event_f) person_event,
+		(revent_f) person_event_reverse,
+		(commit_f) person_commit,
+		(final_f) person_final,
+		(map_f) lp_type_mapper,
+		sizeof(person)
     },
     {
-        .init = location_init,
-        .pre_run = NULL,
-        .event = location_event,
-        .revent = location_event_reverse,
-		.commit = location_commit,
-        .final = location_final,
-        .map = NULL,
-        .state_sz = sizeof(location),
+
+		(init_f) location_init,
+		(pre_run_f) NULL,
+		(event_f) location_event,
+		(revent_f) location_event_reverse,
+		(commit_f) location_commit,
+		(final_f) location_final,
+		(map_f) lp_type_mapper,
+		sizeof(location)
     },
     { 0 }, // End marker
 };
@@ -382,7 +386,40 @@ tw_lptype my_lps[] = {
 
 main(int argc, char **argv, char **env)
 {
-	tw_define_lps(nlp, sizeof(Msg_Data), 0);
-	g_tw_lp_types = my_lps;
-	g_tw_lp_typemap = lp_type_mapper;
+
+	int i;
+
+	tw_opt_add(app_opt);
+	tw_init(&argc, &argv);
+	tw_define_lps(nlp_per_pe, sizeof(Msg_Data));
+
+	for(i = 0; i < NUM_LOCATIONS + NUM_PEOPLE; i++){
+		if (i < NUM_LOCATIONS){
+			tw_lp_settype(i, &my_lps[0]);
+		} else{
+			tw_lp_settype(i, &my_lps[1]);
+		}
+	}
+		
+	tw_run();
+
+	/*
+	
+	MAYBE WE COME UP WITH OUR OWN STATS TO ADD HERE
+	
+	if(tw_ismaster())
+	{
+		printf("\nAirport Model Statistics:\n");
+		printf("\t%-50s %11.4lf\n", "Average Waiting Time", wait_time_avg);
+		printf("\t%-50s %11lld\n", "Number of airports",
+			nlp_per_pe * g_tw_npe * tw_nnodes());
+		printf("\t%-50s %11lld\n", "Number of planes",
+			planes_per_airport * nlp_per_pe * g_tw_npe * tw_nnodes());
+	}
+
+	*/
+
+	tw_end();
+
+	return 0;
 }

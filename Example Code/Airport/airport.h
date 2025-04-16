@@ -3,9 +3,6 @@
 
 #include <ross.h>
 
-#define MEAN_DEPARTURE 30.0
-#define MEAN_LAND 10.0
-
 typedef enum airport_event_t airport_event_t;
 typedef struct airport_state airport_state;
 typedef struct airport_message airport_message;
