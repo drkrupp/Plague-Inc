@@ -2,6 +2,8 @@
 #define INC_plagueInc_h
 
 #include <ross.h>
+#include <mpi.h>
+#include <stdio.h>
 
 #define MOVES 30
 #define INFECTION_TIME 50.0

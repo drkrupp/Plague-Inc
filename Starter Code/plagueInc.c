@@ -337,7 +337,7 @@ location_event_reverse(location * s, tw_bf * bf, Msg_Data * msg, tw_lp * lp) {
 }
 
 void person_final(person * s, tw_lp * lp){
-	//print stats if we want
+	//print stats if we want, maybe count up the number of dead people and the number of alive infected people
 }
 
 
@@ -347,12 +347,33 @@ void location_final(location * s, tw_lp * lp){
 } 
 
 
-void person_commit(person * s, tw_bf * bf, msg_type * in_msg, tw_lp * lp){
+void person_commit(person * s, tw_bf * bf, Msg_Data * in_msg, tw_lp * lp){
+	person prev_info = in_msg->person_state;
+	int prev_x = prev_info.x_spot;
+	int prev_y = prev_info.y_spot;
+	bool prev_infected = prev_info.infected;
+	bool prev_alive = prev_info.alive;
+	bool became_infected = !prev_infected && s->infected;
+	bool died = prev_alive && !s->alive;
+	bool recovered = prev_infected && !s->infected;
+	char buf[128];
+    int len = snprintf(buf, sizeof(buf), "Time: %lf, Person %lu, Infected: %s, Became Infected: %s, Recovered: %s, Died: %s\n Moved from (%d, %d) to (%d, %d)\n",
+                       tw_now(lp), lp->gid, s->infected ? "true" : "false", became_infected ? "true" : "false" recovered ? "true" : "false" died ? "true" : "false", 
+					   prev_x, prev_y, s->x_spot, s->y_spot);
 
+	//Might need to adjust offset depending on how output looks/if this gives enough space for each message
+    MPI_Offset offset = (MPI_Offset)(lp->gid * 1000 + (long)(tw_now(lp) * 10));
+    MPI_File_write_at(mpi_file, offset, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
 }
 
-void location_commit(location * s, tw_bf * bf, msg_type * in_msg, tw_lp * lp){
+void location_commit(location * s, tw_bf * bf, Msg_Data * in_msg, tw_lp * lp){
+	char buf[128];
+    int len = snprintf(buf, sizeof(buf), "Time: %lf, Location %lu, Coordinates: (%d, %d), Infected People: %d, Total People: %d\n",
+                       tw_now(lp), lp->gid, s->x_spot, s->y_spot, s->infected, s->total_people);
 
+	//Might need to adjust offset depending on how output looks/if this gives enough space for each message
+    MPI_Offset offset = (MPI_Offset)(lp->gid * 1000 + (long)(tw_now(lp) * 10));
+    MPI_File_write_at(mpi_file, offset, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
 }
 
 
@@ -393,11 +414,16 @@ main(int argc, char **argv, char **env)
 	tw_init(&argc, &argv);
 	tw_define_lps(nlp_per_pe, sizeof(Msg_Data));
 
+
+	MPI_File mpi_file;
+	MPI_Comm comm = MPI_COMM_WORLD;
+	MPI_File_open(comm, "output.dat", MPI_MODE_CREATE | MPI_MODE_WRONLY, MPI_INFO_NULL, &mpi_file);
+
 	for(i = 0; i < NUM_LOCATIONS + NUM_PEOPLE; i++){
 		if (i < NUM_LOCATIONS){
-			tw_lp_settype(i, &my_lps[0]);
-		} else{
 			tw_lp_settype(i, &my_lps[1]);
+		} else{
+			tw_lp_settype(i, &my_lps[0]);
 		}
 	}
 		
@@ -405,7 +431,7 @@ main(int argc, char **argv, char **env)
 
 	/*
 	
-	MAYBE WE COME UP WITH OUR OWN STATS TO ADD HERE
+	MAYBE WE COME UP WITH OUR OWN STATS TO ADD HERE, would want to probs output to the file and not just print tho
 	
 	if(tw_ismaster())
 	{
