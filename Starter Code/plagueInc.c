@@ -42,12 +42,6 @@ person_init(person * s, tw_lp * lp)
 	s->infected = false;
   }
 
-  e = tw_event_new(lp->gid, tw_rand_exponential(lp->rng, AVERAGE_MOVE_TIME), lp); //Schedules event at some future point in time
-  m = tw_event_data(e); //retrieves the data pointer for the message associated with scheduled event, can modify message from here
-  m->type = STATUS_CHECK;
-  m->infected_count = 0;
-  tw_event_send(e); //schedules event in ROSS
-
   //TELL INITIAL LOCATION THAT PERSON HAS "ARRIVED" -> SPAWN PEOPLE
   tw_lpid location_id = get_location_id(s->x_spot, s->y_spot);
   tw_event *e_arrival;
@@ -57,6 +51,7 @@ person_init(person * s, tw_lp * lp)
   m_arrive->type = ARRIVAL;
   m_arrive->person_infected = s->infected;
   m_arrive->person_id = lp->gid;
+  n_arrive->person_state = *s;
   tw_event_send(e_arrive); 
 }
 
