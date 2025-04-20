@@ -4,8 +4,9 @@
 #include <ross.h>
 #include <mpi.h>
 #include <stdio.h>
+#include <stdbool.h>
 
-#define MOVES 30
+#define MOVES 3
 #define INFECTION_TIME 50.0
 #define IMMUNE_TIME 100
 #define GRID_WIDTH 10
@@ -16,8 +17,8 @@
 #define TRAVEL_LIKELIHOOD .8
 #define AVERAGE_MOVE_TIME 10.0
 #define INITIAL_MAX_PEOPLE_PER_SQUARE 500
-#define NUM_LOCATIONS = GRID_WIDTH * GRID_HEIGHT
-#define NUM_PEOPLE = 50
+#define NUM_LOCATIONS (GRID_WIDTH * GRID_HEIGHT)
+#define NUM_PEOPLE 50
 
 // Move causes status check, after status check is done move again
 enum events
