@@ -7,11 +7,11 @@
 #include <stdbool.h>
 
 // Tesing Nums
-#define MOVES 10
+#define MOVES 2
 #define INFECTION_TIME 10.0
 #define IMMUNE_TIME 20
-#define GRID_WIDTH 5
-#define GRID_HEIGHT 5
+#define GRID_WIDTH 2
+#define GRID_HEIGHT 2
 #define STARTING_INFECTED_PERCENTAGE .2
 #define TRANSMISSION_COEFFICIENT .8
 #define LETHALITY 0.01
@@ -19,7 +19,7 @@
 #define AVERAGE_MOVE_TIME 1.0
 #define INITIAL_MAX_PEOPLE_PER_SQUARE 50
 #define NUM_LOCATIONS (GRID_WIDTH * GRID_HEIGHT)
-#define NUM_PEOPLE 10
+#define NUM_PEOPLE 4
 
 // Realistic Nums
 /**

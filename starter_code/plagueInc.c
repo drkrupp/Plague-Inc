@@ -5,35 +5,43 @@ int total_infected = 0;
 int total_dead = 0;
 int total_recovered = 0;
 MPI_File mpi_file;
+// Mapping functions for custom mapping
 
-// Map global LP ID to a logical process type: 0 for locations, 1 for people
-// tw_lpid lp_type_mapper(tw_lpid gid)
-// {
-// 	if (gid < NUM_LOCATIONS)
-// 		return 0; // Location
-// 	else
-// 		return 1; // Person
-// }
-
-// Map global LP ID to a logical process type: 0 for locations, 1 for people
-tw_peid lp_type_mapper(tw_lpid gid)
+tw_peid custom_mapping_lp_to_pe(tw_lpid gid)
 {
-	if (g_tw_nlp == 0)
-	{
-		printf("ERROR: g_tw_nlp is zero. Cannot compute LP-to-PE mapping.\n");
-		fflush(stdout);
-		return 0;
-	}
+	return gid % tw_nnodes();
+}
 
-	tw_peid pe = gid / g_tw_nlp;
-	if (pe >= tw_nnodes())
-	{
-		printf("WARNING: LP %lu mapped to invalid PE %lu (tw_nnodes() = %lu)\n", (unsigned long)gid, (unsigned long)pe, (unsigned long)tw_nnodes());
-		fflush(stdout);
-		pe = gid % tw_nnodes();
-	}
+tw_lp *custom_mapping_lpgid_to_local(tw_lpid gid)
+{
+	tw_lpid local_index = gid / tw_nnodes();
+	return g_tw_lp[local_index];
+}
 
-	return pe;
+void custom_mapping_setup(void)
+{
+	tw_kp_onpe(0, g_tw_pe);
+
+	int total_lps = NUM_LOCATIONS + NUM_PEOPLE;
+	int min_num_lps_per_pe = total_lps / tw_nnodes();
+	int remainder = total_lps % tw_nnodes();
+	int lps_on_this_pe = min_num_lps_per_pe + (g_tw_mynode < remainder ? 1 : 0);
+
+	for (int i = 0; i < lps_on_this_pe; i++)
+	{
+		tw_lp_onkp(g_tw_lp[i], g_tw_kp[0]);
+		tw_lpid gid = g_tw_mynode + (i * tw_nnodes());
+		tw_lp_onpe(i, g_tw_pe, gid);
+	}
+}
+
+// Map LP to type: 0 = person, 1 = location
+tw_lpid lp_type_mapper(tw_lpid gid)
+{
+	if (gid < NUM_LOCATIONS)
+		return 1; // Location
+	else
+		return 0; // Person
 }
 
 int get_x_spot(tw_lpid gid)
@@ -155,7 +163,7 @@ void person_event(person *s, tw_bf *bf, Msg_Data *msg, tw_lp *lp)
 {
 
 	// Stop sending events if out of moves
-	if (s->moves_left >= MOVES)
+	if (s->moves_left <= 0)
 		return;
 	s->moves_left--;
 
@@ -483,7 +491,7 @@ tw_lptype my_lps[] = {
 	 (revent_f)person_event_reverse,
 	 (commit_f)person_commit,
 	 (final_f)person_final,
-	 (map_f)lp_type_mapper,
+	 (map_f)custom_mapping_lp_to_pe,
 	 sizeof(person)},
 	{
 
@@ -493,12 +501,33 @@ tw_lptype my_lps[] = {
 		(revent_f)location_event_reverse,
 		(commit_f)location_commit,
 		(final_f)location_final,
-		(map_f)lp_type_mapper,
+		(map_f)custom_mapping_lp_to_pe,
 		sizeof(location)},
 	{0}, // End marker
 };
 
-// Main simulation entry point
+// tw_lptype my_lps[] = {
+// 	{(init_f)person_init,
+// 	 (pre_run_f)NULL,
+// 	 (event_f)person_event,
+// 	 (revent_f)person_event_reverse,
+// 	 (commit_f)person_commit,
+// 	 (final_f)person_final,
+// 	 (map_f)lp_type_mapper,
+// 	 sizeof(person)},
+// 	{
+
+// 		(init_f)location_init,
+// 		(pre_run_f)NULL,
+// 		(event_f)location_event,
+// 		(revent_f)location_event_reverse,
+// 		(commit_f)location_commit,
+// 		(final_f)location_final,
+// 		(map_f)lp_type_mapper,
+// 		sizeof(location)},
+// 	{0}, // End marker
+// };
+
 int main(int argc, char **argv, char **env)
 {
 	tw_opt_add(NULL);
@@ -512,16 +541,21 @@ int main(int argc, char **argv, char **env)
 			   GRID_WIDTH, GRID_HEIGHT, NUM_LOCATIONS, NUM_PEOPLE, n_lps);
 	}
 
+	g_tw_mapping = CUSTOM;
+	g_tw_custom_initial_mapping = &custom_mapping_setup;
+	g_tw_custom_lp_global_to_local_map = &custom_mapping_lpgid_to_local;
+	// g_tw_custom_lp_global_to_pe_map = &custom_mapping_lp_to_pe;
+	g_tw_lp_types = lp_types;
+
 	tw_define_lps(n_lps, sizeof(Msg_Data));
 
 	if (tw_ismaster())
 	{
 		printf("After tw_define_lps: g_tw_nlp = %d, g_tw_mynode = %lu\n",
-			   g_tw_nlp, g_tw_mynode);
+			   g_tw_nlp, (unsigned long)g_tw_mynode);
 		fflush(stdout);
 	}
 
-	// Hi
 	for (int i = 0; i < g_tw_nlp; i++)
 	{
 		tw_lp *l = g_tw_lp[i];
@@ -529,15 +563,15 @@ int main(int argc, char **argv, char **env)
 
 		if (gid < NUM_LOCATIONS)
 		{
-			tw_lp_settype(gid, &my_lps[1]);
-			printf("LP %lu (local idx %d) assigned type Location on PE %lu (g_tw_mynode = %lu)\n",
-				   gid, i, lp_type_mapper(gid), g_tw_mynode);
+			tw_lp_settype(gid, &my_lps[1]); // Location
+			printf("LP %lu (local idx %d) assigned type Location on PE %lu\n",
+				   (unsigned long)gid, i, (unsigned long)g_tw_mynode);
 		}
 		else
 		{
-			tw_lp_settype(gid, &my_lps[0]);
-			printf("LP %lu (local idx %d) assigned type Person on PE %lu (g_tw_mynode = %lu)\n",
-				   gid, i, lp_type_mapper(gid), g_tw_mynode);
+			tw_lp_settype(gid, &my_lps[0]); // Person
+			printf("LP %lu (local idx %d) assigned type Person on PE %lu\n",
+				   (unsigned long)gid, i, (unsigned long)g_tw_mynode);
 		}
 		fflush(stdout);
 	}
