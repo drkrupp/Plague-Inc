@@ -1,0 +1,42 @@
+Running on dcs093 at Mon Apr 21 05:01:09 EDT 2025
+ROSS path: 
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+./plagueInc --synch=3 --end=1000 
+
+Mon Apr 21 05:01:10 2025
+
+ROSS Version: -128-NOTFOUND
+
+tw_net_start: Found world size to be 32 
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
