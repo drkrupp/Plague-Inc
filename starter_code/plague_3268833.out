@@ -1,0 +1,4767 @@
+Running on dcs023 at Mon Apr 21 05:18:24 EDT 2025
+ROSS path: 
+./plagueInc --synch=3 --end=1000 
+
+Mon Apr 21 05:18:26 2025
+
+ROSS Version: -128-NOTFOUND
+
+tw_net_start: Found world size to be 32 
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Before tw_run()
+Before tw_run()
+Before tw_run()
+Grid: 5 x 5, Locations: 25, People: 20, Total LPs: 45
+Before tw_run()
+Before tw_run()
+Before tw_run()
+Before tw_run()
+Before tw_run()
+Before tw_run()
+Before tw_run()
+Before tw_run()
+Before tw_run()
+Before tw_run()
+Before tw_run()
+Before tw_run()
+Before tw_run()
+
+ROSS Core Configuration: 
+	Total PEs                                                   32
+	Total KPs                                          [Nodes (32) x KPs (16)] 512
+	Total LPs                                                 1440
+	Simulation End Time                                    1000.00
+	LP-to-PE Mapping                                        linear
+
+
+ROSS Event Memory Allocation:
+	Model events                                              2049
+	Network events                                              16
+	Total events                                              2064
+
+Before tw_run()
+Before Loc initINIT LOCATION LP 495 at (0,99)
+Before Loc initINIT LOCATION LP 496 at (1,99)
+Before Loc initINIT LOCATION LP 497 at (2,99)
+Before Loc initINIT LOCATION LP 498 at (3,99)
+Before Loc initINIT LOCATION LP 499 at (4,99)
+Before Loc initINIT LOCATION LP 500 at (0,100)
+Before Loc initINIT LOCATION LP 501 at (1,100)
+Before Loc initINIT LOCATION LP 502 at (2,100)
+Before Loc initINIT LOCATION LP 503 at (3,100)
+Before Loc initINIT LOCATION LP 504 at (4,100)
+Before Loc initINIT LOCATION LP 505 at (0,101)
+Before Loc initINIT LOCATION LP 506 at (1,101)
+Before Loc initINIT LOCATION LP 507 at (2,101)
+Before Loc initINIT LOCATION LP 508 at (3,101)
+Before Loc initINIT LOCATION LP 509 at (4,101)
+Before Loc initINIT LOCATION LP 510 at (0,102)
+Before Loc initINIT LOCATION LP 511 at (1,102)
+Before Loc initINIT LOCATION LP 512 at (2,102)
+Before Loc initINIT LOCATION LP 513 at (3,102)
+Before Loc initINIT LOCATION LP 514 at (4,102)
+Before Loc initINIT LOCATION LP 515 at (0,103)
+Before Loc initINIT LOCATION LP 516 at (1,103)
+Before Loc initINIT LOCATION LP 517 at (2,103)
+Before Loc initINIT LOCATION LP 518 at (3,103)
+Before Loc initINIT LOCATION LP 519 at (4,103)
+Before Per initINIT PERSON LP 520 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 521 at (0,1). Infected: 1
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 522 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 523 at (3,1). Infected: 0
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 524 at (2,3). Infected: 1
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 525 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 526 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 527 at (3,3). Infected: 0
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 528 at (1,4). Infected: 1
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 529 at (0,1). Infected: 0
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 530 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 531 at (0,3). Infected: 0
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+Before Per initINIT PERSON LP 532 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 533 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 534 at (2,3). Infected: 1
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 535 at (4,0). Infected: 1
+Mapping LP 4 to PE 0
+Mapping LP 4 to PE 0
+Before Per initINIT PERSON LP 536 at (0,2). Infected: 1
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 537 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 538 at (1,0). Infected: 1
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 539 at (4,4). Infected: 0
+Mapping LP 24 to PE 0
+Mapping LP 24 to PE 0
+Before Loc initINIT LOCATION LP 675 at (0,135)
+Before Loc initINIT LOCATION LP 676 at (1,135)
+Before Loc initINIT LOCATION LP 677 at (2,135)
+Before Loc initINIT LOCATION LP 678 at (3,135)
+Before Loc initINIT LOCATION LP 679 at (4,135)
+Before Loc initINIT LOCATION LP 680 at (0,136)
+Before Loc initINIT LOCATION LP 681 at (1,136)
+Before Loc initINIT LOCATION LP 682 at (2,136)
+Before Loc initINIT LOCATION LP 683 at (3,136)
+Before Loc initINIT LOCATION LP 684 at (4,136)
+Before Loc initINIT LOCATION LP 685 at (0,137)
+Before Loc initINIT LOCATION LP 686 at (1,137)
+Before Loc initINIT LOCATION LP 687 at (2,137)
+Before Loc initINIT LOCATION LP 688 at (3,137)
+Before Loc initINIT LOCATION LP 689 at (4,137)
+Before Loc initINIT LOCATION LP 690 at (0,138)
+Before Loc initINIT LOCATION LP 691 at (1,138)
+Before Loc initINIT LOCATION LP 692 at (2,138)
+Before Loc initINIT LOCATION LP 693 at (3,138)
+Before Loc initINIT LOCATION LP 694 at (4,138)
+Before Loc initINIT LOCATION LP 695 at (0,139)
+Before Loc initINIT LOCATION LP 696 at (1,139)
+Before Loc initINIT LOCATION LP 697 at (2,139)
+Before Loc initINIT LOCATION LP 698 at (3,139)
+Before Loc initINIT LOCATION LP 699 at (4,139)
+Before Per initINIT PERSON LP 700 at (4,4). Infected: 0
+Mapping LP 24 to PE 0
+Mapping LP 24 to PE 0
+Before Per initINIT PERSON LP 701 at (0,3). Infected: 0
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+Before Per initINIT PERSON LP 702 at (3,4). Infected: 0
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 703 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 704 at (2,4). Infected: 0
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 705 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 706 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 707 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 708 at (4,4). Infected: 0
+Mapping LP 24 to PE 0
+Mapping LP 24 to PE 0
+Before Per initINIT PERSON LP 709 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 710 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 711 at (4,4). Infected: 0
+Mapping LP 24 to PE 0
+Mapping LP 24 to PE 0
+Before Per initINIT PERSON LP 712 at (0,4). Infected: 0
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 713 at (4,0). Infected: 1
+Mapping LP 4 to PE 0
+Mapping LP 4 to PE 0
+Before Per initINIT PERSON LP 714 at (0,1). Infected: 0
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 715 at (0,3). Infected: 0
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+Before Per initINIT PERSON LP 716 at (4,3). Infected: 0
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+Before Per initINIT PERSON LP 717 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 718 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 719 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Loc initINIT LOCATION LP 630 at (0,126)
+Before Loc initINIT LOCATION LP 631 at (1,126)
+Before Loc initINIT LOCATION LP 632 at (2,126)
+Before Loc initINIT LOCATION LP 633 at (3,126)
+Before Loc initINIT LOCATION LP 634 at (4,126)
+Before Loc initINIT LOCATION LP 635 at (0,127)
+Before Loc initINIT LOCATION LP 636 at (1,127)
+Before Loc initINIT LOCATION LP 637 at (2,127)
+Before Loc initINIT LOCATION LP 638 at (3,127)
+Before Loc initINIT LOCATION LP 639 at (4,127)
+Before Loc initINIT LOCATION LP 640 at (0,128)
+Before Loc initINIT LOCATION LP 641 at (1,128)
+Before Loc initINIT LOCATION LP 642 at (2,128)
+Before Loc initINIT LOCATION LP 643 at (3,128)
+Before Loc initINIT LOCATION LP 644 at (4,128)
+Before Loc initINIT LOCATION LP 645 at (0,129)
+Before Loc initINIT LOCATION LP 646 at (1,129)
+Before Loc initINIT LOCATION LP 647 at (2,129)
+Before Loc initINIT LOCATION LP 648 at (3,129)
+Before Loc initINIT LOCATION LP 649 at (4,129)
+Before Loc initINIT LOCATION LP 650 at (0,130)
+Before Loc initINIT LOCATION LP 651 at (1,130)
+Before Loc initINIT LOCATION LP 652 at (2,130)
+Before Loc initINIT LOCATION LP 653 at (3,130)
+Before Loc initINIT LOCATION LP 654 at (4,130)
+Before Per initINIT PERSON LP 655 at (3,4). Infected: 1
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 656 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 657 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 658 at (0,4). Infected: 0
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 659 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 660 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 661 at (4,3). Infected: 0
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+Before Per initINIT PERSON LP 662 at (3,3). Infected: 0
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 663 at (0,3). Infected: 0
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+Before Per initINIT PERSON LP 664 at (3,1). Infected: 0
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 665 at (4,3). Infected: 0
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+Before Per initINIT PERSON LP 666 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Loc initINIT LOCATION LP 315 at (0,63)
+Before Loc initINIT LOCATION LP 316 at (1,63)
+Before Loc initINIT LOCATION LP 317 at (2,63)
+Before Loc initINIT LOCATION LP 318 at (3,63)
+Before Loc initINIT LOCATION LP 319 at (4,63)
+Before Loc initINIT LOCATION LP 320 at (0,64)
+Before Loc initINIT LOCATION LP 321 at (1,64)
+Before Loc initINIT LOCATION LP 322 at (2,64)
+Before Loc initINIT LOCATION LP 323 at (3,64)
+Before Loc initINIT LOCATION LP 324 at (4,64)
+Before Loc initINIT LOCATION LP 325 at (0,65)
+Before Loc initINIT LOCATION LP 326 at (1,65)
+Before Loc initINIT LOCATION LP 327 at (2,65)
+Before Loc initINIT LOCATION LP 328 at (3,65)
+Before Loc initINIT LOCATION LP 329 at (4,65)
+Before Loc initINIT LOCATION LP 330 at (0,66)
+Before Loc initINIT LOCATION LP 331 at (1,66)
+Before Loc initINIT LOCATION LP 332 at (2,66)
+Before Loc initINIT LOCATION LP 333 at (3,66)
+Before Loc initINIT LOCATION LP 334 at (4,66)
+Before Loc initINIT LOCATION LP 335 at (0,67)
+Before Loc initINIT LOCATION LP 336 at (1,67)
+Before Loc initINIT LOCATION LP 337 at (2,67)
+Before Loc initINIT LOCATION LP 338 at (3,67)
+Before Loc initINIT LOCATION LP 339 at (4,67)
+Before Per initINIT PERSON LP 340 at (2,1). Infected: 0
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Before Per initINIT PERSON LP 341 at (0,1). Infected: 1
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 342 at (0,4). Infected: 0
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 343 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 344 at (0,4). Infected: 0
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 345 at (3,2). Infected: 1
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 346 at (0,4). Infected: 1
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 347 at (3,3). Infected: 0
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 348 at (3,4). Infected: 0
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 349 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 350 at (4,3). Infected: 0
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+Before Per initINIT PERSON LP 351 at (4,4). Infected: 0
+Mapping LP 24 to PE 0
+Mapping LP 24 to PE 0
+Before Per initINIT PERSON LP 352 at (2,2). Infected: 1
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 353 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 354 at (2,4). Infected: 1
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 355 at (1,3). Infected: 1
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 356 at (2,1). Infected: 0
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Before Per initINIT PERSON LP 357 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 358 at (2,0). Infected: 1
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 359 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before tw_run()
+Before Loc initINIT LOCATION LP 270 at (0,54)
+Before Loc initINIT LOCATION LP 271 at (1,54)
+Before Loc initINIT LOCATION LP 272 at (2,54)
+Before Loc initINIT LOCATION LP 273 at (3,54)
+Before Loc initINIT LOCATION LP 274 at (4,54)
+Before Loc initINIT LOCATION LP 275 at (0,55)
+Before Loc initINIT LOCATION LP 276 at (1,55)
+Before Loc initINIT LOCATION LP 277 at (2,55)
+Before Loc initINIT LOCATION LP 278 at (3,55)
+Before Loc initINIT LOCATION LP 279 at (4,55)
+Before Loc initINIT LOCATION LP 280 at (0,56)
+Before Loc initINIT LOCATION LP 281 at (1,56)
+Before Loc initINIT LOCATION LP 282 at (2,56)
+Before Loc initINIT LOCATION LP 283 at (3,56)
+Before Loc initINIT LOCATION LP 284 at (4,56)
+Before Loc initINIT LOCATION LP 285 at (0,57)
+Before Loc initINIT LOCATION LP 286 at (1,57)
+Before Loc initINIT LOCATION LP 287 at (2,57)
+Before Loc initINIT LOCATION LP 288 at (3,57)
+Before Loc initINIT LOCATION LP 289 at (4,57)
+Before Loc initINIT LOCATION LP 290 at (0,58)
+Before Loc initINIT LOCATION LP 291 at (1,58)
+Before Loc initINIT LOCATION LP 292 at (2,58)
+Before Loc initINIT LOCATION LP 293 at (3,58)
+Before Loc initINIT LOCATION LP 294 at (4,58)
+Before Per initINIT PERSON LP 295 at (4,4). Infected: 0
+Mapping LP 24 to PE 0
+Mapping LP 24 to PE 0
+Before Per initINIT PERSON LP 296 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 297 at (2,4). Infected: 1
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 298 at (2,3). Infected: 0
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 299 at (1,1). Infected: 0
+Mapping LP 6 to PE 0
+Mapping LP 6 to PE 0
+Before Per initINIT PERSON LP 300 at (4,0). Infected: 0
+Mapping LP 4 to PE 0
+Mapping LP 4 to PE 0
+Before Per initINIT PERSON LP 301 at (3,4). Infected: 0
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 302 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 303 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 304 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 305 at (3,2). Infected: 1
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 306 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 307 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 308 at (2,4). Infected: 0
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 309 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 310 at (4,4). Infected: 0
+Mapping LP 24 to PE 0
+Mapping LP 24 to PE 0
+Before Per initINIT PERSON LP 311 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 312 at (1,2). Infected: 0
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 313 at (3,1). Infected: 1
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 314 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 667 at (3,1). Infected: 0
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 668 at (2,1). Infected: 0
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Before Per initINIT PERSON LP 669 at (4,0). Infected: 0
+Mapping LP 4 to PE 0
+Mapping LP 4 to PE 0
+Before Per initINIT PERSON LP 670 at (4,3). Infected: 0
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+Before Per initINIT PERSON LP 671 at (1,2). Infected: 0
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 672 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 673 at (3,4). Infected: 0
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 674 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Loc initINIT LOCATION LP 450 at (0,90)
+Before Loc initINIT LOCATION LP 451 at (1,90)
+Before Loc initINIT LOCATION LP 452 at (2,90)
+Before Loc initINIT LOCATION LP 453 at (3,90)
+Before Loc initINIT LOCATION LP 454 at (4,90)
+Before Loc initINIT LOCATION LP 455 at (0,91)
+Before Loc initINIT LOCATION LP 456 at (1,91)
+Before Loc initINIT LOCATION LP 457 at (2,91)
+Before Loc initINIT LOCATION LP 458 at (3,91)
+Before Loc initINIT LOCATION LP 459 at (4,91)
+Before Loc initINIT LOCATION LP 460 at (0,92)
+Before Loc initINIT LOCATION LP 461 at (1,92)
+Before Loc initINIT LOCATION LP 462 at (2,92)
+Before Loc initINIT LOCATION LP 463 at (3,92)
+Before Loc initINIT LOCATION LP 464 at (4,92)
+Before Loc initINIT LOCATION LP 465 at (0,93)
+Before Loc initINIT LOCATION LP 466 at (1,93)
+Before Loc initINIT LOCATION LP 467 at (2,93)
+Before Loc initINIT LOCATION LP 468 at (3,93)
+Before Loc initINIT LOCATION LP 469 at (4,93)
+Before Loc initINIT LOCATION LP 470 at (0,94)
+Before Loc initINIT LOCATION LP 471 at (1,94)
+Before Loc initINIT LOCATION LP 472 at (2,94)
+Before Loc initINIT LOCATION LP 473 at (3,94)
+Before Loc initINIT LOCATION LP 474 at (4,94)
+Before Per initINIT PERSON LP 475 at (4,0). Infected: 0
+Mapping LP 4 to PE 0
+Mapping LP 4 to PE 0
+Before Per initINIT PERSON LP 476 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 477 at (3,3). Infected: 0
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 478 at (1,4). Infected: 1
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 479 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 480 at (3,4). Infected: 0
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 481 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 482 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 483 at (3,1). Infected: 0
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 484 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 485 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 486 at (1,1). Infected: 0
+Mapping LP 6 to PE 0
+Mapping LP 6 to PE 0
+Before Per initINIT PERSON LP 487 at (3,1). Infected: 0
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 488 at (1,4). Infected: 1
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 489 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 490 at (2,3). Infected: 0
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 491 at (4,4). Infected: 0
+Mapping LP 24 to PE 0
+Mapping LP 24 to PE 0
+Before Per initINIT PERSON LP 492 at (3,1). Infected: 1
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 493 at (0,1). Infected: 0
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 494 at (2,1). Infected: 0
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Before Loc initINIT LOCATION LP 0 at (0,0)
+Before Loc initINIT LOCATION LP 1 at (1,0)
+Before Loc initINIT LOCATION LP 2 at (2,0)
+Before Loc initINIT LOCATION LP 3 at (3,0)
+Before Loc initINIT LOCATION LP 4 at (4,0)
+Before Loc initINIT LOCATION LP 5 at (0,1)
+Before Loc initINIT LOCATION LP 6 at (1,1)
+Before Loc initINIT LOCATION LP 7 at (2,1)
+Before Loc initINIT LOCATION LP 8 at (3,1)
+Before Loc initINIT LOCATION LP 9 at (4,1)
+Before Loc initINIT LOCATION LP 10 at (0,2)
+Before Loc initINIT LOCATION LP 11 at (1,2)
+Before Loc initINIT LOCATION LP 12 at (2,2)
+Before Loc initINIT LOCATION LP 13 at (3,2)
+Before Loc initINIT LOCATION LP 14 at (4,2)
+Before Loc initINIT LOCATION LP 15 at (0,3)
+Before Loc initINIT LOCATION LP 16 at (1,3)
+Before Loc initINIT LOCATION LP 17 at (2,3)
+Before Loc initINIT LOCATION LP 18 at (3,3)
+Before Loc initINIT LOCATION LP 19 at (4,3)
+Before Loc initINIT LOCATION LP 20 at (0,4)
+Before Loc initINIT LOCATION LP 21 at (1,4)
+Before Loc initINIT LOCATION LP 22 at (2,4)
+Before Loc initINIT LOCATION LP 23 at (3,4)
+Before Loc initINIT LOCATION LP 24 at (4,4)
+Before Per initINIT PERSON LP 25 at (2,3). Infected: 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 26 at (4,3). Infected: 0
+Mapping LP 19 to PE 0
+Before Per initINIT PERSON LP 27 at (4,4). Infected: 0
+Mapping LP 24 to PE 0
+Before Per initINIT PERSON LP 28 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 29 at (4,0). Infected: 0
+Mapping LP 4 to PE 0
+Before Per initINIT PERSON LP 30 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 31 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 32 at (4,0). Infected: 0
+Mapping LP 4 to PE 0
+Before Per initINIT PERSON LP 33 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 34 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 35 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 36 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 37 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 38 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 39 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 40 at (0,2). Infected: 1
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 41 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 42 at (1,4). Infected: 1
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 43 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 44 at (4,4). Infected: 1
+Mapping LP 24 to PE 0
+Before tw_run()
+Before Loc initINIT LOCATION LP 45 at (0,9)
+Before Loc initINIT LOCATION LP 46 at (1,9)
+Before Loc initINIT LOCATION LP 47 at (2,9)
+Before Loc initINIT LOCATION LP 48 at (3,9)
+Before Loc initINIT LOCATION LP 49 at (4,9)
+Before Loc initINIT LOCATION LP 225 at (0,45)
+Before Loc initINIT LOCATION LP 226 at (1,45)
+Before Loc initINIT LOCATION LP 227 at (2,45)
+Before Loc initINIT LOCATION LP 228 at (3,45)
+Before tw_run()
+Before Loc initINIT LOCATION LP 50 at (0,10)
+Before Loc initINIT LOCATION LP 51 at (1,10)
+Before Loc initINIT LOCATION LP 52 at (2,10)
+Before Loc initINIT LOCATION LP 53 at (3,10)
+Before Loc initINIT LOCATION LP 54 at (4,10)
+Before Loc initINIT LOCATION LP 360 at (0,72)
+Before Loc initINIT LOCATION LP 361 at (1,72)
+Before Loc initINIT LOCATION LP 362 at (2,72)
+Before Loc initINIT LOCATION LP 363 at (3,72)
+Before Loc initINIT LOCATION LP 364 at (4,72)
+Before Loc initINIT LOCATION LP 365 at (0,73)
+Before Loc initINIT LOCATION LP 366 at (1,73)
+Before Loc initINIT LOCATION LP 367 at (2,73)
+Before Loc initINIT LOCATION LP 368 at (3,73)
+Before Loc initINIT LOCATION LP 369 at (4,73)
+Before Loc initINIT LOCATION LP 370 at (0,74)
+Before Loc initINIT LOCATION LP 371 at (1,74)
+Before Loc initINIT LOCATION LP 229 at (4,45)
+Before Loc initINIT LOCATION LP 230 at (0,46)
+Before Loc initINIT LOCATION LP 231 at (1,46)
+Before Loc initINIT LOCATION LP 232 at (2,46)
+Before Loc initINIT LOCATION LP 233 at (3,46)
+Before Loc initINIT LOCATION LP 540 at (0,108)
+Before Loc initINIT LOCATION LP 541 at (1,108)
+Before Loc initINIT LOCATION LP 542 at (2,108)
+Before Loc initINIT LOCATION LP 543 at (3,108)
+Before Loc initINIT LOCATION LP 544 at (4,108)
+Before Loc initINIT LOCATION LP 545 at (0,109)
+Before Loc initINIT LOCATION LP 546 at (1,109)
+Before Loc initINIT LOCATION LP 547 at (2,109)
+Before Loc initINIT LOCATION LP 548 at (3,109)
+Before Loc initINIT LOCATION LP 549 at (4,109)
+Before Loc initINIT LOCATION LP 550 at (0,110)
+Before Loc initINIT LOCATION LP 551 at (1,110)
+Before Loc initINIT LOCATION LP 552 at (2,110)
+Before Loc initINIT LOCATION LP 90 at (0,18)
+Before Loc initINIT LOCATION LP 91 at (1,18)
+Before Loc initINIT LOCATION LP 92 at (2,18)
+Before Loc initINIT LOCATION LP 93 at (3,18)
+Before Loc initINIT LOCATION LP 94 at (4,18)
+Before Loc initINIT LOCATION LP 95 at (0,19)
+Before Loc initINIT LOCATION LP 96 at (1,19)
+Before Loc initINIT LOCATION LP 97 at (2,19)
+Before Loc initINIT LOCATION LP 98 at (3,19)
+Before Loc initINIT LOCATION LP 99 at (4,19)
+Before Loc initINIT LOCATION LP 100 at (0,20)
+Before Loc initINIT LOCATION LP 101 at (1,20)
+Before Loc initINIT LOCATION LP 102 at (2,20)
+Before Loc initINIT LOCATION LP 103 at (3,20)
+Before Loc initINIT LOCATION LP 104 at (4,20)
+Before Loc initINIT LOCATION LP 105 at (0,21)
+Before Loc initINIT LOCATION LP 106 at (1,21)
+Before Loc initINIT LOCATION LP 107 at (2,21)
+Before Loc initINIT LOCATION LP 135 at (0,27)
+Before Loc initINIT LOCATION LP 136 at (1,27)
+Before Loc initINIT LOCATION LP 137 at (2,27)
+Before Loc initINIT LOCATION LP 138 at (3,27)
+Before Loc initINIT LOCATION LP 180 at (0,36)
+Before Loc initINIT LOCATION LP 181 at (1,36)
+Before Loc initINIT LOCATION LP 182 at (2,36)
+Before Loc initINIT LOCATION LP 183 at (3,36)
+Before Loc initINIT LOCATION LP 184 at (4,36)
+Before Loc initINIT LOCATION LP 185 at (0,37)
+Before Loc initINIT LOCATION LP 186 at (1,37)
+Before Loc initINIT LOCATION LP 187 at (2,37)
+Before Loc initINIT LOCATION LP 188 at (3,37)
+Before Loc initINIT LOCATION LP 189 at (4,37)
+Before Loc initINIT LOCATION LP 190 at (0,38)
+Before Loc initINIT LOCATION LP 191 at (1,38)
+Before Loc initINIT LOCATION LP 192 at (2,38)
+Before Loc initINIT LOCATION LP 193 at (3,38)
+Before Loc initINIT LOCATION LP 194 at (4,38)
+Before Loc initINIT LOCATION LP 195 at (0,39)
+Before Loc initINIT LOCATION LP 196 at (1,39)
+Before Loc initINIT LOCATION LP 197 at (2,39)
+Before tw_run()
+Before Loc initINIT LOCATION LP 55 at (0,11)
+Before Loc initINIT LOCATION LP 56 at (1,11)
+Before Loc initINIT LOCATION LP 57 at (2,11)
+Before Loc initINIT LOCATION LP 58 at (3,11)
+Before Loc initINIT LOCATION LP 59 at (4,11)
+Before Loc initINIT LOCATION LP 198 at (3,39)
+Before Loc initINIT LOCATION LP 199 at (4,39)
+Before Loc initINIT LOCATION LP 200 at (0,40)
+Before Loc initINIT LOCATION LP 201 at (1,40)
+Before Loc initINIT LOCATION LP 202 at (2,40)
+Before Loc initINIT LOCATION LP 203 at (3,40)
+Before Loc initINIT LOCATION LP 204 at (4,40)
+Before Per initINIT PERSON LP 205 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Loc initINIT LOCATION LP 234 at (4,46)
+Before Loc initINIT LOCATION LP 235 at (0,47)
+Before Loc initINIT LOCATION LP 236 at (1,47)
+Before Loc initINIT LOCATION LP 237 at (2,47)
+Before Loc initINIT LOCATION LP 238 at (3,47)
+Before Loc initINIT LOCATION LP 239 at (4,47)
+Before Loc initINIT LOCATION LP 553 at (3,110)
+Before Loc initINIT LOCATION LP 554 at (4,110)
+Before Loc initINIT LOCATION LP 555 at (0,111)
+Before Loc initINIT LOCATION LP 556 at (1,111)
+Before Loc initINIT LOCATION LP 557 at (2,111)
+Before Loc initINIT LOCATION LP 558 at (3,111)
+Before Loc initINIT LOCATION LP 559 at (4,111)
+Before Loc initINIT LOCATION LP 560 at (0,112)
+Before Loc initINIT LOCATION LP 561 at (1,112)
+Before Loc initINIT LOCATION LP 562 at (2,112)
+Before Loc initINIT LOCATION LP 563 at (3,112)
+Before Loc initINIT LOCATION LP 564 at (4,112)
+Before Per initINIT PERSON LP 565 at (2,4). Infected: 0
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Loc initINIT LOCATION LP 108 at (3,21)
+Before Loc initINIT LOCATION LP 109 at (4,21)
+Before Loc initINIT LOCATION LP 110 at (0,22)
+Before Loc initINIT LOCATION LP 111 at (1,22)
+Before Loc initINIT LOCATION LP 112 at (2,22)
+Before Loc initINIT LOCATION LP 113 at (3,22)
+Before Loc initINIT LOCATION LP 114 at (4,22)
+Before Per initINIT PERSON LP 115 at (4,3). Infected: 0
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+Before Loc initINIT LOCATION LP 139 at (4,27)
+Before Loc initINIT LOCATION LP 140 at (0,28)
+Before Loc initINIT LOCATION LP 141 at (1,28)
+Before Loc initINIT LOCATION LP 142 at (2,28)
+Before Loc initINIT LOCATION LP 143 at (3,28)
+Before Loc initINIT LOCATION LP 144 at (4,28)
+Before Loc initINIT LOCATION LP 145 at (0,29)
+Before Loc initINIT LOCATION LP 146 at (1,29)
+Before Loc initINIT LOCATION LP 372 at (2,74)
+Before Loc initINIT LOCATION LP 373 at (3,74)
+Before Loc initINIT LOCATION LP 374 at (4,74)
+Before Loc initINIT LOCATION LP 375 at (0,75)
+Before Loc initINIT LOCATION LP 376 at (1,75)
+Before Loc initINIT LOCATION LP 377 at (2,75)
+Before Loc initINIT LOCATION LP 378 at (3,75)
+Before Loc initINIT LOCATION LP 379 at (4,75)
+Before Loc initINIT LOCATION LP 380 at (0,76)
+Before Loc initINIT LOCATION LP 381 at (1,76)
+Before Loc initINIT LOCATION LP 382 at (2,76)
+Before Loc initINIT LOCATION LP 383 at (3,76)
+Before Loc initINIT LOCATION LP 384 at (4,76)
+Before Per initINIT PERSON LP 385 at (2,0). Infected: 1
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before tw_run()
+Before Per initINIT PERSON LP 206 at (3,4). Infected: 0
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 207 at (2,3). Infected: 0
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 208 at (2,3). Infected: 0
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 209 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Loc initINIT LOCATION LP 240 at (0,48)
+Before Loc initINIT LOCATION LP 241 at (1,48)
+Before Loc initINIT LOCATION LP 242 at (2,48)
+Before Loc initINIT LOCATION LP 243 at (3,48)
+Before Loc initINIT LOCATION LP 244 at (4,48)
+Before Loc initINIT LOCATION LP 245 at (0,49)
+Before Loc initINIT LOCATION LP 246 at (1,49)
+Before Per initINIT PERSON LP 566 at (1,2). Infected: 0
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 567 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 568 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 569 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 570 at (3,3). Infected: 0
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 116 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 117 at (4,0). Infected: 0
+Mapping LP 4 to PE 0
+Mapping LP 4 to PE 0
+Before Per initINIT PERSON LP 118 at (3,3). Infected: 0
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 119 at (2,3). Infected: 0
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 120 at (2,2). Infected: 1
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 121 at (2,0). Infected: 0
+Before Loc initINIT LOCATION LP 147 at (2,29)
+Before Loc initINIT LOCATION LP 148 at (3,29)
+Before Loc initINIT LOCATION LP 149 at (4,29)
+Before Loc initINIT LOCATION LP 150 at (0,30)
+Before Loc initINIT LOCATION LP 151 at (1,30)
+Before Loc initINIT LOCATION LP 152 at (2,30)
+Before Loc initINIT LOCATION LP 60 at (0,12)
+Before Loc initINIT LOCATION LP 61 at (1,12)
+Before Loc initINIT LOCATION LP 62 at (2,12)
+Before Loc initINIT LOCATION LP 63 at (3,12)
+Before Loc initINIT LOCATION LP 64 at (4,12)
+Before Loc initINIT LOCATION LP 65 at (0,13)
+Before Loc initINIT LOCATION LP 66 at (1,13)
+Before Loc initINIT LOCATION LP 67 at (2,13)
+Before Loc initINIT LOCATION LP 68 at (3,13)
+Before Per initINIT PERSON LP 386 at (1,1). Infected: 1
+Mapping LP 6 to PE 0
+Mapping LP 6 to PE 0
+Before Per initINIT PERSON LP 387 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 388 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 389 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 390 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 391 at (2,2). Infected: 1
+Mapping LP 12 to PE 0
+Before tw_run()
+Before Loc initINIT LOCATION LP 585 at (0,117)
+Before Loc initINIT LOCATION LP 586 at (1,117)
+Before Loc initINIT LOCATION LP 587 at (2,117)
+Before Loc initINIT LOCATION LP 588 at (3,117)
+Before Loc initINIT LOCATION LP 589 at (4,117)
+Before Loc initINIT LOCATION LP 590 at (0,118)
+Before Loc initINIT LOCATION LP 591 at (1,118)
+Before Loc initINIT LOCATION LP 592 at (2,118)
+Before Loc initINIT LOCATION LP 593 at (3,118)
+Before Loc initINIT LOCATION LP 594 at (4,118)
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 392 at (2,2). Infected: 1
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 393 at (4,1). Infected: 1
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 394 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Loc initINIT LOCATION LP 69 at (4,13)
+Before Per initINIT PERSON LP 70 at (4,4). Infected: 1
+Mapping LP 24 to PE 0
+Mapping LP 24 to PE 0
+Before Per initINIT PERSON LP 210 at (3,3). Infected: 0
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 211 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 212 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 213 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 214 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 215 at (0,1). Infected: 0
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Loc initINIT LOCATION LP 247 at (2,49)
+Before Loc initINIT LOCATION LP 248 at (3,49)
+Before Loc initINIT LOCATION LP 249 at (4,49)
+Before Per initINIT PERSON LP 250 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 571 at (0,4). Infected: 0
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 572 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 573 at (0,4). Infected: 0
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 574 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 575 at (0,3). Infected: 0
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+Before Per initINIT PERSON LP 576 at (2,2). Infected: 1
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 122 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 123 at (1,1). Infected: 0
+Mapping LP 6 to PE 0
+Mapping LP 6 to PE 0
+Before Per initINIT PERSON LP 124 at (2,3). Infected: 0
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 125 at (2,3). Infected: 1
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 126 at (3,4). Infected: 0
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 127 at (0,3). Infected: 0
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+Before Per initINIT PERSON LP 128 at (2,3). Infected: 1
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Loc initINIT LOCATION LP 153 at (3,30)
+Before Loc initINIT LOCATION LP 154 at (4,30)
+Before Loc initINIT LOCATION LP 155 at (0,31)
+Before Loc initINIT LOCATION LP 156 at (1,31)
+Before Loc initINIT LOCATION LP 157 at (2,31)
+Before Loc initINIT LOCATION LP 158 at (3,31)
+Before Loc initINIT LOCATION LP 159 at (4,31)
+Before Per initINIT PERSON LP 160 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Loc initINIT LOCATION LP 405 at (0,81)
+Before Loc initINIT LOCATION LP 406 at (1,81)
+Before Loc initINIT LOCATION LP 407 at (2,81)
+Before Loc initINIT LOCATION LP 408 at (3,81)
+Before Loc initINIT LOCATION LP 409 at (4,81)
+Before Loc initINIT LOCATION LP 410 at (0,82)
+Before Loc initINIT LOCATION LP 411 at (1,82)
+Before Loc initINIT LOCATION LP 412 at (2,82)
+Before Loc initINIT LOCATION LP 413 at (3,82)
+Before Loc initINIT LOCATION LP 414 at (4,82)
+Before Loc initINIT LOCATION LP 415 at (0,83)
+Before Loc initINIT LOCATION LP 416 at (1,83)
+Before Loc initINIT LOCATION LP 417 at (2,83)
+Before Loc initINIT LOCATION LP 418 at (3,83)
+Before Loc initINIT LOCATION LP 419 at (4,83)
+Before Loc initINIT LOCATION LP 420 at (0,84)
+Before Loc initINIT LOCATION LP 421 at (1,84)
+Before tw_run()
+Before Per initINIT PERSON LP 395 at (3,1). Infected: 0
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 396 at (0,4). Infected: 1
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 397 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 398 at (0,4). Infected: 1
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 399 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 400 at (0,1). Infected: 0
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 71 at (3,4). Infected: 0
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 72 at (2,4). Infected: 0
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 73 at (0,2). Infected: 1
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 74 at (4,1). Infected: 1
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 216 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 217 at (3,1). Infected: 1
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 218 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 219 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 220 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 221 at (4,3). Infected: 0
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+Before Per initINIT PERSON LP 251 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 252 at (0,4). Infected: 0
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 253 at (3,3). Infected: 0
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 254 at (4,4). Infected: 0
+Mapping LP 24 to PE 0
+Mapping LP 24 to PE 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 577 at (4,1). Infected: 1
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 578 at (0,1). Infected: 0
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 579 at (1,1). Infected: 0
+Mapping LP 6 to PE 0
+Mapping LP 6 to PE 0
+Before Per initINIT PERSON LP 580 at (0,4). Infected: 1
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 581 at (3,3). Infected: 0
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 582 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 583 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 129 at (0,1). Infected: 0
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 130 at (3,0). Infected: 1
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 131 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 132 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 133 at (4,4). Infected: 0
+Mapping LP 24 to PE 0
+Mapping LP 24 to PE 0
+Before Per initINIT PERSON LP 134 at (1,1). Infected: 0
+Mapping LP 6 to PE 0
+Mapping LP 6 to PE 0
+Before Per initINIT PERSON LP 161 at (4,3). Infected: 1
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+Before Per initINIT PERSON LP 162 at (2,3). Infected: 0
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 163 at (0,1). Infected: 0
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 164 at (0,1). Infected: 0
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 165 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Loc initINIT LOCATION LP 595 at (0,119)
+Before Loc initINIT LOCATION LP 596 at (1,119)
+Before Loc initINIT LOCATION LP 597 at (2,119)
+Before Loc initINIT LOCATION LP 598 at (3,119)
+Before Loc initINIT LOCATION LP 599 at (4,119)
+Before Loc initINIT LOCATION LP 600 at (0,120)
+Before Loc initINIT LOCATION LP 601 at (1,120)
+Before Loc initINIT LOCATION LP 602 at (2,120)
+Before Loc initINIT LOCATION LP 603 at (3,120)
+Before Loc initINIT LOCATION LP 604 at (4,120)
+Before Loc initINIT LOCATION LP 605 at (0,121)
+Before Loc initINIT LOCATION LP 606 at (1,121)
+Before Loc initINIT LOCATION LP 607 at (2,121)
+Before Loc initINIT LOCATION LP 608 at (3,121)
+Before Loc initINIT LOCATION LP 609 at (4,121)
+Before Per initINIT PERSON LP 610 at (2,3). Infected: 1
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 611 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 612 at (1,3). Infected: 1
+Before Loc initINIT LOCATION LP 422 at (2,84)
+Before Loc initINIT LOCATION LP 423 at (3,84)
+Before Loc initINIT LOCATION LP 424 at (4,84)
+Before Loc initINIT LOCATION LP 425 at (0,85)
+Before Loc initINIT LOCATION LP 426 at (1,85)
+Before Loc initINIT LOCATION LP 427 at (2,85)
+Before Loc initINIT LOCATION LP 428 at (3,85)
+Before Loc initINIT LOCATION LP 429 at (4,85)
+Before Per initINIT PERSON LP 430 at (4,0). Infected: 0
+Mapping LP 4 to PE 0
+Mapping LP 4 to PE 0
+Before tw_run()
+Before Per initINIT PERSON LP 401 at (2,3). Infected: 0
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 402 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 403 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 404 at (3,2). Infected: 1
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 75 at (2,4). Infected: 0
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 76 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 77 at (2,4). Infected: 0
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 78 at (3,4). Infected: 0
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 79 at (4,0). Infected: 0
+Mapping LP 4 to PE 0
+Mapping LP 4 to PE 0
+Before Per initINIT PERSON LP 80 at (2,1). Infected: 1
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Before Per initINIT PERSON LP 222 at (0,4). Infected: 0
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 223 at (3,2). Infected: 1
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 224 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 255 at (4,3). Infected: 1
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+Before Per initINIT PERSON LP 256 at (4,4). Infected: 0
+Mapping LP 24 to PE 0
+Mapping LP 24 to PE 0
+Before Per initINIT PERSON LP 257 at (3,3). Infected: 1
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 258 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 259 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 260 at (1,1). Infected: 1
+Mapping LP 6 to PE 0
+Mapping LP 6 to PE 0
+Before Per initINIT PERSON LP 261 at (4,0). Infected: 0
+Before Per initINIT PERSON LP 584 at (3,1). Infected: 0
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 166 at (3,1). Infected: 1
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 167 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 168 at (3,3). Infected: 0
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 169 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 170 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 171 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 172 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 431 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 432 at (1,3). Infected: 1
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 433 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 434 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 435 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 436 at (4,2). Infected: 1
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 613 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 614 at (3,3). Infected: 0
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 615 at (4,2). Infected: 1
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 616 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 617 at (2,1). Infected: 0
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Before Per initINIT PERSON LP 618 at (3,4). Infected: 1
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 619 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Before tw_run()
+Mapping LP 4 to PE 0
+Mapping LP 4 to PE 0
+Before Per initINIT PERSON LP 262 at (2,1). Infected: 1
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Before Per initINIT PERSON LP 263 at (0,1). Infected: 0
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 264 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 265 at (0,3). Infected: 0
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+Before Per initINIT PERSON LP 266 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 620 at (4,0). Infected: 0
+Mapping LP 4 to PE 0
+Mapping LP 4 to PE 0
+Before Per initINIT PERSON LP 621 at (3,0). Infected: 1
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 622 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 623 at (0,3). Infected: 0
+Before Per initINIT PERSON LP 437 at (0,2). Infected: 1
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 438 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 439 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 440 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 441 at (1,1). Infected: 0
+Mapping LP 6 to PE 0
+Mapping LP 6 to PE 0
+Before Per initINIT PERSON LP 442 at (0,3). Infected: 0
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+Before Per initINIT PERSON LP 443 at (2,3). Infected: 1
+Before Per initINIT PERSON LP 173 at (1,2). Infected: 1
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 174 at (2,3). Infected: 0
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 175 at (2,3). Infected: 1
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 176 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 177 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 178 at (4,2). Infected: 1
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 179 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 81 at (2,1). Infected: 0
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Before Per initINIT PERSON LP 82 at (0,0). Infected: 1
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 83 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 84 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 85 at (0,2). Infected: 1
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 86 at (0,4). Infected: 0
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 87 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 88 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Before tw_run()
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 267 at (0,2). Infected: 1
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 268 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 269 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 89 at (0,4). Infected: 0
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+Before Per initINIT PERSON LP 624 at (2,4). Infected: 1
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 625 at (2,3). Infected: 0
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 626 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 627 at (0,3). Infected: 1
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+Before Per initINIT PERSON LP 628 at (2,1). Infected: 1
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 444 at (4,4). Infected: 0
+Mapping LP 24 to PE 0
+Mapping LP 24 to PE 0
+Before Per initINIT PERSON LP 445 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 446 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 447 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Mapping LP 21 to PE 0
+Before tw_run()
+Before Per initINIT PERSON LP 629 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 448 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 449 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before tw_run()
+Before tw_run()
+Before tw_run()
+Before tw_run()
+Before Loc initINIT LOCATION LP 945 at (0,189)
+Before Loc initINIT LOCATION LP 946 at (1,189)
+Before Loc initINIT LOCATION LP 947 at (2,189)
+Before Loc initINIT LOCATION LP 948 at (3,189)
+Before Loc initINIT LOCATION LP 949 at (4,189)
+Before Loc initINIT LOCATION LP 950 at (0,190)
+Before Loc initINIT LOCATION LP 951 at (1,190)
+Before Loc initINIT LOCATION LP 952 at (2,190)
+Before Loc initINIT LOCATION LP 953 at (3,190)
+Before Loc initINIT LOCATION LP 954 at (4,190)
+Before Loc initINIT LOCATION LP 955 at (0,191)
+Before Loc initINIT LOCATION LP 956 at (1,191)
+Before Loc initINIT LOCATION LP 957 at (2,191)
+Before Loc initINIT LOCATION LP 958 at (3,191)
+Before Loc initINIT LOCATION LP 959 at (4,191)
+Before Loc initINIT LOCATION LP 960 at (0,192)
+Before Loc initINIT LOCATION LP 961 at (1,192)
+Before Loc initINIT LOCATION LP 962 at (2,192)
+Before Loc initINIT LOCATION LP 963 at (3,192)
+Before Loc initINIT LOCATION LP 964 at (4,192)
+Before Loc initINIT LOCATION LP 965 at (0,193)
+Before Loc initINIT LOCATION LP 966 at (1,193)
+Before Loc initINIT LOCATION LP 967 at (2,193)
+Before Loc initINIT LOCATION LP 968 at (3,193)
+Before Loc initINIT LOCATION LP 969 at (4,193)
+Before Per initINIT PERSON LP 970 at (1,2). Infected: 0
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Loc initINIT LOCATION LP 990 at (0,198)
+Before Loc initINIT LOCATION LP 991 at (1,198)
+Before Loc initINIT LOCATION LP 992 at (2,198)
+Before Loc initINIT LOCATION LP 993 at (3,198)
+Before Loc initINIT LOCATION LP 994 at (4,198)
+Before Loc initINIT LOCATION LP 995 at (0,199)
+Before Loc initINIT LOCATION LP 996 at (1,199)
+Before Loc initINIT LOCATION LP 997 at (2,199)
+Before Loc initINIT LOCATION LP 998 at (3,199)
+Before Loc initINIT LOCATION LP 999 at (4,199)
+Before Loc initINIT LOCATION LP 1000 at (0,200)
+Before Loc initINIT LOCATION LP 1001 at (1,200)
+Before Loc initINIT LOCATION LP 1002 at (2,200)
+Before Loc initINIT LOCATION LP 1003 at (3,200)
+Before Loc initINIT LOCATION LP 1004 at (4,200)
+Before Loc initINIT LOCATION LP 1005 at (0,201)
+Before Loc initINIT LOCATION LP 1006 at (1,201)
+Before Loc initINIT LOCATION LP 1007 at (2,201)
+Before Loc initINIT LOCATION LP 1008 at (3,201)
+Before Loc initINIT LOCATION LP 1009 at (4,201)
+Before Loc initINIT LOCATION LP 1010 at (0,202)
+Before Loc initINIT LOCATION LP 1011 at (1,202)
+Before Loc initINIT LOCATION LP 1012 at (2,202)
+Before Loc initINIT LOCATION LP 1013 at (3,202)
+Before Loc initINIT LOCATION LP 1014 at (4,202)
+Before Per initINIT PERSON LP 1015 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Loc initINIT LOCATION LP 1035 at (0,207)
+Before Loc initINIT LOCATION LP 1036 at (1,207)
+Before Loc initINIT LOCATION LP 1037 at (2,207)
+Before Loc initINIT LOCATION LP 1038 at (3,207)
+Before Loc initINIT LOCATION LP 1039 at (4,207)
+Before Loc initINIT LOCATION LP 1040 at (0,208)
+Before Loc initINIT LOCATION LP 1041 at (1,208)
+Before Loc initINIT LOCATION LP 1042 at (2,208)
+Before Loc initINIT LOCATION LP 1043 at (3,208)
+Before Loc initINIT LOCATION LP 1044 at (4,208)
+Before Loc initINIT LOCATION LP 1045 at (0,209)
+Before Loc initINIT LOCATION LP 1046 at (1,209)
+Before Loc initINIT LOCATION LP 1047 at (2,209)
+Before Loc initINIT LOCATION LP 1048 at (3,209)
+Before Loc initINIT LOCATION LP 1049 at (4,209)
+Before Loc initINIT LOCATION LP 1050 at (0,210)
+Before Loc initINIT LOCATION LP 1051 at (1,210)
+Before Loc initINIT LOCATION LP 1052 at (2,210)
+Before Loc initINIT LOCATION LP 1053 at (3,210)
+Before Loc initINIT LOCATION LP 1054 at (4,210)
+Before Loc initINIT LOCATION LP 1055 at (0,211)
+Before Loc initINIT LOCATION LP 1056 at (1,211)
+Before Loc initINIT LOCATION LP 1057 at (2,211)
+Before Loc initINIT LOCATION LP 1058 at (3,211)
+Before Loc initINIT LOCATION LP 1059 at (4,211)
+Before Per initINIT PERSON LP 1060 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Loc initINIT LOCATION LP 1125 at (0,225)
+Before Loc initINIT LOCATION LP 1126 at (1,225)
+Before Loc initINIT LOCATION LP 1127 at (2,225)
+Before Loc initINIT LOCATION LP 1128 at (3,225)
+Before Loc initINIT LOCATION LP 1129 at (4,225)
+Before Loc initINIT LOCATION LP 1130 at (0,226)
+Before Loc initINIT LOCATION LP 1131 at (1,226)
+Before Loc initINIT LOCATION LP 1132 at (2,226)
+Before Loc initINIT LOCATION LP 1133 at (3,226)
+Before Loc initINIT LOCATION LP 1134 at (4,226)
+Before Loc initINIT LOCATION LP 1135 at (0,227)
+Before Loc initINIT LOCATION LP 1136 at (1,227)
+Before Loc initINIT LOCATION LP 1137 at (2,227)
+Before Loc initINIT LOCATION LP 1138 at (3,227)
+Before Loc initINIT LOCATION LP 1139 at (4,227)
+Before Loc initINIT LOCATION LP 1140 at (0,228)
+Before Loc initINIT LOCATION LP 1141 at (1,228)
+Before Loc initINIT LOCATION LP 1142 at (2,228)
+Before Loc initINIT LOCATION LP 1143 at (3,228)
+Before Loc initINIT LOCATION LP 1144 at (4,228)
+Before Loc initINIT LOCATION LP 1145 at (0,229)
+Before Loc initINIT LOCATION LP 1146 at (1,229)
+Before Loc initINIT LOCATION LP 1147 at (2,229)
+Before Loc initINIT LOCATION LP 1148 at (3,229)
+Before Loc initINIT LOCATION LP 1149 at (4,229)
+Before Per initINIT PERSON LP 1150 at (3,3). Infected: 1
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Loc initINIT LOCATION LP 1170 at (0,234)
+Before Loc initINIT LOCATION LP 1171 at (1,234)
+Before Loc initINIT LOCATION LP 1172 at (2,234)
+Before Loc initINIT LOCATION LP 1173 at (3,234)
+Before Loc initINIT LOCATION LP 1174 at (4,234)
+Before Loc initINIT LOCATION LP 1175 at (0,235)
+Before Loc initINIT LOCATION LP 1176 at (1,235)
+Before Loc initINIT LOCATION LP 1177 at (2,235)
+Before Loc initINIT LOCATION LP 1178 at (3,235)
+Before Loc initINIT LOCATION LP 1179 at (4,235)
+Before Loc initINIT LOCATION LP 1180 at (0,236)
+Before Loc initINIT LOCATION LP 1181 at (1,236)
+Before Loc initINIT LOCATION LP 1182 at (2,236)
+Before Loc initINIT LOCATION LP 1183 at (3,236)
+Before Loc initINIT LOCATION LP 1184 at (4,236)
+Before Loc initINIT LOCATION LP 1185 at (0,237)
+Before Loc initINIT LOCATION LP 1186 at (1,237)
+Before Loc initINIT LOCATION LP 1187 at (2,237)
+Before Loc initINIT LOCATION LP 1188 at (3,237)
+Before Loc initINIT LOCATION LP 1189 at (4,237)
+Before Loc initINIT LOCATION LP 1190 at (0,238)
+Before Loc initINIT LOCATION LP 1191 at (1,238)
+Before Loc initINIT LOCATION LP 1192 at (2,238)
+Before Loc initINIT LOCATION LP 1193 at (3,238)
+Before Loc initINIT LOCATION LP 1194 at (4,238)
+Before Per initINIT PERSON LP 1195 at (2,3). Infected: 0
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Loc initINIT LOCATION LP 1215 at (0,243)
+Before Loc initINIT LOCATION LP 1216 at (1,243)
+Before Loc initINIT LOCATION LP 1217 at (2,243)
+Before Loc initINIT LOCATION LP 1218 at (3,243)
+Before Loc initINIT LOCATION LP 1219 at (4,243)
+Before Loc initINIT LOCATION LP 1220 at (0,244)
+Before Loc initINIT LOCATION LP 1221 at (1,244)
+Before Loc initINIT LOCATION LP 1222 at (2,244)
+Before Loc initINIT LOCATION LP 1223 at (3,244)
+Before Loc initINIT LOCATION LP 1224 at (4,244)
+Before Loc initINIT LOCATION LP 1225 at (0,245)
+Before Loc initINIT LOCATION LP 1226 at (1,245)
+Before Loc initINIT LOCATION LP 1227 at (2,245)
+Before Loc initINIT LOCATION LP 1228 at (3,245)
+Before Loc initINIT LOCATION LP 1229 at (4,245)
+Before Loc initINIT LOCATION LP 1230 at (0,246)
+Before Loc initINIT LOCATION LP 1231 at (1,246)
+Before Loc initINIT LOCATION LP 1232 at (2,246)
+Before Loc initINIT LOCATION LP 1233 at (3,246)
+Before Loc initINIT LOCATION LP 1234 at (4,246)
+Before Loc initINIT LOCATION LP 1235 at (0,247)
+Before Loc initINIT LOCATION LP 1236 at (1,247)
+Before Loc initINIT LOCATION LP 1237 at (2,247)
+Before Loc initINIT LOCATION LP 1238 at (3,247)
+Before Loc initINIT LOCATION LP 1239 at (4,247)
+Before Per initINIT PERSON LP 1240 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Loc initINIT LOCATION LP 1260 at (0,252)
+Before Loc initINIT LOCATION LP 1261 at (1,252)
+Before Loc initINIT LOCATION LP 1262 at (2,252)
+Before Loc initINIT LOCATION LP 1263 at (3,252)
+Before Loc initINIT LOCATION LP 1264 at (4,252)
+Before Loc initINIT LOCATION LP 1265 at (0,253)
+Before Loc initINIT LOCATION LP 1266 at (1,253)
+Before Loc initINIT LOCATION LP 1267 at (2,253)
+Before Loc initINIT LOCATION LP 1268 at (3,253)
+Before Loc initINIT LOCATION LP 1269 at (4,253)
+Before Loc initINIT LOCATION LP 1270 at (0,254)
+Before Loc initINIT LOCATION LP 1271 at (1,254)
+Before Loc initINIT LOCATION LP 1272 at (2,254)
+Before Loc initINIT LOCATION LP 1273 at (3,254)
+Before Loc initINIT LOCATION LP 1274 at (4,254)
+Before Loc initINIT LOCATION LP 1275 at (0,255)
+Before Loc initINIT LOCATION LP 1276 at (1,255)
+Before Loc initINIT LOCATION LP 1277 at (2,255)
+Before Loc initINIT LOCATION LP 1278 at (3,255)
+Before Loc initINIT LOCATION LP 1279 at (4,255)
+Before Loc initINIT LOCATION LP 765 at (0,153)
+Before Loc initINIT LOCATION LP 766 at (1,153)
+Before Loc initINIT LOCATION LP 767 at (2,153)
+Before Loc initINIT LOCATION LP 768 at (3,153)
+Before Loc initINIT LOCATION LP 769 at (4,153)
+Before Loc initINIT LOCATION LP 770 at (0,154)
+Before Loc initINIT LOCATION LP 771 at (1,154)
+Before Loc initINIT LOCATION LP 772 at (2,154)
+Before Loc initINIT LOCATION LP 773 at (3,154)
+Before Loc initINIT LOCATION LP 774 at (4,154)
+Before Loc initINIT LOCATION LP 775 at (0,155)
+Before Loc initINIT LOCATION LP 776 at (1,155)
+Before Loc initINIT LOCATION LP 777 at (2,155)
+Before Loc initINIT LOCATION LP 778 at (3,155)
+Before Loc initINIT LOCATION LP 779 at (4,155)
+Before Loc initINIT LOCATION LP 780 at (0,156)
+Before Loc initINIT LOCATION LP 781 at (1,156)
+Before Loc initINIT LOCATION LP 782 at (2,156)
+Before Loc initINIT LOCATION LP 783 at (3,156)
+Before Loc initINIT LOCATION LP 784 at (4,156)
+Before Loc initINIT LOCATION LP 785 at (0,157)
+Before Loc initINIT LOCATION LP 786 at (1,157)
+Before Loc initINIT LOCATION LP 787 at (2,157)
+Before Loc initINIT LOCATION LP 788 at (3,157)
+Before Loc initINIT LOCATION LP 789 at (4,157)
+Before Per initINIT PERSON LP 790 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Loc initINIT LOCATION LP 1280 at (0,256)
+Before Loc initINIT LOCATION LP 1281 at (1,256)
+Before Loc initINIT LOCATION LP 1282 at (2,256)
+Before Loc initINIT LOCATION LP 1283 at (3,256)
+Before Loc initINIT LOCATION LP 1284 at (4,256)
+Before Per initINIT PERSON LP 1285 at (2,1). Infected: 0
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Before Per initINIT PERSON LP 971 at (4,0). Infected: 1
+Mapping LP 4 to PE 0
+Mapping LP 4 to PE 0
+Before Per initINIT PERSON LP 972 at (3,3). Infected: 0
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 973 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 974 at (2,2). Infected: 1
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 975 at (1,1). Infected: 0
+Mapping LP 6 to PE 0
+Mapping LP 6 to PE 0
+Before Per initINIT PERSON LP 976 at (1,2). Infected: 0
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 977 at (2,4). Infected: 0
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 978 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 979 at (0,1). Infected: 1
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 980 at (0,4). Infected: 0
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 981 at (3,4). Infected: 0
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 982 at (2,1). Infected: 0
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Before Per initINIT PERSON LP 983 at (1,0). Infected: 1
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 984 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 985 at (1,2). Infected: 0
+Before Per initINIT PERSON LP 1016 at (4,3). Infected: 0
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+Before Per initINIT PERSON LP 1017 at (2,4). Infected: 0
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 1018 at (3,4). Infected: 0
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 1019 at (2,4). Infected: 0
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 1020 at (2,1). Infected: 0
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Before Per initINIT PERSON LP 1021 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 1022 at (1,2). Infected: 1
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 1023 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 1024 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 1025 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 1026 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 1027 at (0,1). Infected: 1
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 1028 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 1029 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 1030 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 1031 at (2,1). Infected: 0
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Before Per initINIT PERSON LP 1032 at (1,2). Infected: 1
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 1033 at (0,1). Infected: 1
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 1034 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+*** START PARALLEL OPTIMISTIC SIMULATION WITH SUSPEND LP FEATURE ***
+
+LOCATION EVENT: LP 7 Type 0 for Person 668. Infected Count: 0, Total People: 0
+Mapping LP 668 to PE 14
+Mapping LP 668 to PE 14
+Before Per initINIT PERSON LP 1061 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 1062 at (2,2). Infected: 1
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 1063 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 1064 at (3,0). Infected: 1
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 1065 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 1066 at (3,1). Infected: 1
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 1067 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 1068 at (3,0). Infected: 1
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 1069 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 1070 at (3,4). Infected: 0
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 1071 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 1072 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 1073 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 1074 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 1075 at (2,3). Infected: 1
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 1076 at (0,3). Infected: 0
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+LOCATION EVENT: LP 12 Type 0 for Person 391. Infected Count: 0, Total People: 0
+Mapping LP 391 to PE 8
+Mapping LP 391 to PE 8
+LOCATION EVENT: LP 23 Type 0 for Person 618. Infected Count: 0, Total People: 0
+Mapping LP 618 to PE 13
+Mapping LP 618 to PE 13
+LOCATION EVENT: LP 20 Type 0 for Person 86. Infected Count: 0, Total People: 0
+Mapping LP 86 to PE 1
+Mapping LP 86 to PE 1
+LOCATION EVENT: LP 20 Type 0 for Person 1154. Infected Count: 0, Total People: 1
+Before Per initINIT PERSON LP 1151 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 1152 at (3,1). Infected: 0
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 1153 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 1154 at (0,4). Infected: 0
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 1155 at (2,1). Infected: 0
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Before Per initINIT PERSON LP 1156 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 1157 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 1158 at (1,2). Infected: 0
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 1159 at (3,3). Infected: 0
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 1160 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 1161 at (3,1). Infected: 0
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 1162 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 1163 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 1164 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 1165 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Mapping LP 1154 to PE 25
+Mapping LP 1154 to PE 25
+Before Per initINIT PERSON LP 1196 at (0,3). Infected: 0
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+Before Per initINIT PERSON LP 1197 at (3,3). Infected: 1
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 1198 at (2,4). Infected: 0
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 1199 at (4,2). Infected: 1
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 1200 at (1,3). Infected: 1
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 1201 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 1202 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 1203 at (1,1). Infected: 0
+Mapping LP 6 to PE 0
+Mapping LP 6 to PE 0
+Before Per initINIT PERSON LP 1204 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 1205 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 1206 at (4,3). Infected: 0
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+Before Per initINIT PERSON LP 1207 at (1,2). Infected: 0
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 1208 at (3,3). Infected: 1
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 1209 at (3,3). Infected: 0
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 1210 at (2,3). Infected: 0
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 1211 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 1212 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 1213 at (4,4). Infected: 1
+Mapping LP 24 to PE 0
+Mapping LP 24 to PE 0
+Before Per initINIT PERSON LP 1214 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+LOCATION EVENT: LP 0 Type 0 for Person 884. Infected Count: 0, Total People: 0
+Mapping LP 884 to PE 19
+Mapping LP 884 to PE 19
+Before Per initINIT PERSON LP 1241 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 1242 at (4,4). Infected: 0
+Mapping LP 24 to PE 0
+Mapping LP 24 to PE 0
+Before Per initINIT PERSON LP 1243 at (4,1). Infected: 1
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 1244 at (3,4). Infected: 1
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 1245 at (3,1). Infected: 0
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 1246 at (0,4). Infected: 1
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 1247 at (2,1). Infected: 1
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Before Per initINIT PERSON LP 1248 at (4,3). Infected: 0
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+Before Per initINIT PERSON LP 1249 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 1250 at (0,4). Infected: 1
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 1251 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 1252 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 1253 at (3,1). Infected: 0
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 1254 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 1255 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+LOCATION EVENT: LP 16 Type 0 for Person 612. Infected Count: 0, Total People: 0
+Mapping LP 612 to PE 13
+Mapping LP 612 to PE 13
+LOCATION EVENT: LP 23 Type 0 for Person 301. Infected Count: 1, Total People: 1
+Mapping LP 301 to PE 6
+Mapping LP 301 to PE 6
+LOCATION EVENT: LP 21 Type 0 for Person 1438. Infected Count: 0, Total People: 0
+Mapping LP 1438 to PE 31
+Mapping LP 1438 to PE 31
+Before Per initINIT PERSON LP 1286 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 1287 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 1288 at (2,4). Infected: 1
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 1289 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 1290 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 1291 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 1292 at (1,1). Infected: 0
+Mapping LP 6 to PE 0
+Mapping LP 6 to PE 0
+Before Per initINIT PERSON LP 1293 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 1294 at (4,4). Infected: 0
+Mapping LP 24 to PE 0
+Mapping LP 24 to PE 0
+Before Per initINIT PERSON LP 1295 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 1296 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 1297 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 1298 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 1299 at (4,4). Infected: 0
+Mapping LP 24 to PE 0
+Mapping LP 24 to PE 0
+Before Per initINIT PERSON LP 1300 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 1301 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 1302 at (3,4). Infected: 1
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 1303 at (2,4). Infected: 0
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 1304 at (1,3). Infected: 1
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+LOCATION EVENT: LP 1 Type 0 for Person 843. Infected Count: 0, Total People: 0
+Mapping LP 843 to PE 18
+Mapping LP 843 to PE 18
+Before Per initINIT PERSON LP 791 at (4,0). Infected: 0
+Mapping LP 4 to PE 0
+Mapping LP 4 to PE 0
+Before Per initINIT PERSON LP 792 at (0,4). Infected: 0
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 793 at (0,2). Infected: 1
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 794 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 795 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 796 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 797 at (1,4). Infected: 1
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 798 at (1,2). Infected: 0
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 799 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 800 at (0,3). Infected: 0
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+Before Per initINIT PERSON LP 801 at (4,3). Infected: 0
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+Before Per initINIT PERSON LP 802 at (0,4). Infected: 0
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 803 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 804 at (3,4). Infected: 0
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 805 at (1,1). Infected: 0
+Mapping LP 6 to PE 0
+Mapping LP 6 to PE 0
+Before Per initINIT PERSON LP 806 at (4,3). Infected: 0
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+Before Per initINIT PERSON LP 807 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+LOCATION EVENT: LP 20 Type 0 for Person 889. Infected Count: 0, Total People: 2
+Mapping LP 889 to PE 19
+Mapping LP 889 to PE 19
+LOCATION EVENT: LP 20 Type 0 for Person 344. Infected Count: 0, Total People: 3
+Mapping LP 344 to PE 7
+Mapping LP 344 to PE 7
+LOCATION EVENT: LP 10 Type 0 for Person 934. Infected Count: 0, Total People: 0
+Mapping LP 934 to PE 20
+Mapping LP 934 to PE 20
+Before Per initINIT PERSON LP 808 at (1,2). Infected: 0
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 809 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+LOCATION EVENT: LP 10 Type 0 for Person 1151. Infected Count: 0, Total People: 1
+Mapping LP 1151 to PE 25
+Mapping LP 1151 to PE 25
+LOCATION EVENT: LP 16 Type 0 for Person 1291. Infected Count: 1, Total People: 1
+Mapping LP 1291 to PE 28
+Mapping LP 1291 to PE 28
+Before Loc initINIT LOCATION LP 810 at (0,162)
+Before Loc initINIT LOCATION LP 811 at (1,162)
+Before Loc initINIT LOCATION LP 812 at (2,162)
+Before Loc initINIT LOCATION LP 813 at (3,162)
+Before Loc initINIT LOCATION LP 814 at (4,162)
+Before Loc initINIT LOCATION LP 815 at (0,163)
+Before Loc initINIT LOCATION LP 816 at (1,163)
+Before Loc initINIT LOCATION LP 817 at (2,163)
+Before Loc initINIT LOCATION LP 818 at (3,163)
+Before Loc initINIT LOCATION LP 819 at (4,163)
+Before Loc initINIT LOCATION LP 820 at (0,164)
+Before Loc initINIT LOCATION LP 821 at (1,164)
+Before Loc initINIT LOCATION LP 822 at (2,164)
+Before Loc initINIT LOCATION LP 823 at (3,164)
+Before Loc initINIT LOCATION LP 824 at (4,164)
+LOCATION EVENT: LP 0 Type 0 for Person 1025. Infected Count: 0, Total People: 1
+Mapping LP 1025 to PE 22
+Mapping LP 1025 to PE 22
+LOCATION EVENT: LP 9 Type 0 for Person 402. Infected Count: 0, Total People: 0
+Mapping LP 402 to PE 8
+Before Per initINIT PERSON LP 1256 at (3,4). Infected: 0
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 1257 at (4,2). Infected: 1
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 1258 at (4,3). Infected: 0
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+Before Per initINIT PERSON LP 1259 at (4,3). Infected: 0
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+Mapping LP 402 to PE 8
+LOCATION EVENT: LP 0 Type 0 for Person 30. Infected Count: 0, Total People: 2
+Mapping LP 30 to PE 0
+LOCATION EVENT: LP 1 Type 0 for Person 885. Infected Count: 0, Total People: 1
+Mapping LP 885 to PE 19
+Mapping LP 885 to PE 19
+LOCATION EVENT: LP 2 Type 0 for Person 935. Infected Count: 0, Total People: 0
+Mapping LP 935 to PE 20
+Mapping LP 935 to PE 20
+LOCATION EVENT: LP 1 Type 0 for Person 751. Infected Count: 0, Total People: 2
+Mapping LP 751 to PE 16
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 986 at (4,1). Infected: 1
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 987 at (2,3). Infected: 0
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 988 at (0,3). Infected: 1
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+Before Per initINIT PERSON LP 989 at (1,1). Infected: 0
+Mapping LP 6 to PE 0
+Mapping LP 6 to PE 0
+Mapping LP 751 to PE 16
+LOCATION EVENT: LP 6 Type 0 for Person 441. Infected Count: 0, Total People: 0
+Mapping LP 441 to PE 9
+Mapping LP 441 to PE 9
+LOCATION EVENT: LP 18 Type 0 for Person 581. Infected Count: 0, Total People: 0
+Mapping LP 581 to PE 12
+Mapping LP 581 to PE 12
+LOCATION EVENT: LP 11 Type 0 for Person 1032. Infected Count: 0, Total People: 0
+Before Per initINIT PERSON LP 1077 at (3,0). Infected: 1
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 1078 at (1,2). Infected: 1
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 1079 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Mapping LP 1032 to PE 22
+Mapping LP 1032 to PE 22
+LOCATION EVENT: LP 22 Type 0 for Person 1330. Infected Count: 0, Total People: 0
+Mapping LP 1330 to PE 29
+Mapping LP 1330 to PE 29
+LOCATION EVENT: LP 0 Type 0 for Person 349. Infected Count: 0, Total People: 3
+Mapping LP 349 to PE 7
+Before Per initINIT PERSON LP 1166 at (2,1). Infected: 0
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Before Per initINIT PERSON LP 1167 at (1,0). Infected: 1
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 1168 at (0,0). Infected: 1
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 1169 at (2,1). Infected: 0
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Mapping LP 349 to PE 7
+LOCATION EVENT: LP 3 Type 0 for Person 582. Infected Count: 0, Total People: 0
+Mapping LP 582 to PE 12
+Mapping LP 582 to PE 12
+LOCATION EVENT: LP 18 Type 0 for Person 210. Infected Count: 0, Total People: 1
+Mapping LP 210 to PE 4
+Mapping LP 210 to PE 4
+LOCATION EVENT: LP 17 Type 0 for Person 1382. Infected Count: 0, Total People: 0
+Mapping LP 1382 to PE 30
+Mapping LP 1382 to PE 30
+Before Loc initINIT LOCATION LP 720 at (0,144)
+Before Loc initINIT LOCATION LP 721 at (1,144)
+Before Loc initINIT LOCATION LP 722 at (2,144)
+Before Loc initINIT LOCATION LP 723 at (3,144)
+Before Loc initINIT LOCATION LP 724 at (4,144)
+Before Loc initINIT LOCATION LP 725 at (0,145)
+Before Loc initINIT LOCATION LP 726 at (1,145)
+Before Loc initINIT LOCATION LP 727 at (2,145)
+Before Loc initINIT LOCATION LP 728 at (3,145)
+LOCATION EVENT: LP 21 Type 0 for Person 43. Infected Count: 0, Total People: 1
+Mapping LP 43 to PE 0
+LOCATION EVENT: LP 16 Type 0 for Person 39. Infected Count: 1, Total People: 2
+Mapping LP 39 to PE 0
+LOCATION EVENT: LP 24 Type 0 for Person 539. Infected Count: 0, Total People: 0
+Mapping LP 539 to PE 11
+Mapping LP 539 to PE 11
+LOCATION EVENT: LP 21 Type 0 for Person 1383. Infected Count: 0, Total People: 2
+Mapping LP 1383 to PE 30
+Mapping LP 1383 to PE 30
+Before Loc initINIT LOCATION LP 825 at (0,165)
+Before Loc initINIT LOCATION LP 826 at (1,165)
+Before Loc initINIT LOCATION LP 827 at (2,165)
+Before Loc initINIT LOCATION LP 828 at (3,165)
+Before Loc initINIT LOCATION LP 829 at (4,165)
+Before Loc initINIT LOCATION LP 830 at (0,166)
+Before Loc initINIT LOCATION LP 831 at (1,166)
+Before Loc initINIT LOCATION LP 832 at (2,166)
+Before Loc initINIT LOCATION LP 833 at (3,166)
+Before Loc initINIT LOCATION LP 834 at (4,166)
+Before Per initINIT PERSON LP 835 at (0,3). Infected: 0
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+LOCATION EVENT: LP 9 Type 0 for Person 533. Infected Count: 0, Total People: 1
+Mapping LP 533 to PE 11
+Mapping LP 533 to PE 11
+LOCATION EVENT: LP 22 Type 0 for Person 1113. Infected Count: 1, Total People: 1
+Mapping LP 1113 to PE 24
+Mapping LP 1113 to PE 24
+LOCATION EVENT: LP 17 Type 0 for Person 845. Infected Count: 0, Total People: 1
+Mapping LP 845 to PE 18
+Mapping LP 845 to PE 18
+Before Loc initINIT LOCATION LP 1080 at (0,216)
+Before Loc initINIT LOCATION LP 1081 at (1,216)
+Before Loc initINIT LOCATION LP 1082 at (2,216)
+Before Loc initINIT LOCATION LP 1083 at (3,216)
+Before Loc initINIT LOCATION LP 1084 at (4,216)
+Before Loc initINIT LOCATION LP 1085 at (0,217)
+Before Loc initINIT LOCATION LP 1086 at (1,217)
+LOCATION EVENT: LP 18 Type 0 for Person 614. Infected Count: 0, Total People: 2
+Mapping LP 614 to PE 13
+Mapping LP 614 to PE 13
+LOCATION EVENT: LP 15 Type 0 for Person 933. Infected Count: 0, Total People: 0
+Mapping LP 933 to PE 20
+Mapping LP 933 to PE 20
+LOCATION EVENT: LP 7 Type 0 for Person 356. Infected Count: 0, Total People: 1
+Mapping LP 356 to PE 7
+Mapping LP 356 to PE 7
+LOCATION EVENT: LP 5 Type 0 for Person 1436. Infected Count: 0, Total People: 0
+Before Loc initINIT LOCATION LP 729 at (4,145)
+Before Loc initINIT LOCATION LP 730 at (0,146)
+Before Loc initINIT LOCATION LP 731 at (1,146)
+Before Loc initINIT LOCATION LP 732 at (2,146)
+Before Loc initINIT LOCATION LP 733 at (3,146)
+Before Loc initINIT LOCATION LP 734 at (4,146)
+Before Loc initINIT LOCATION LP 735 at (0,147)
+Before Loc initINIT LOCATION LP 736 at (1,147)
+Before Loc initINIT LOCATION LP 737 at (2,147)
+Before Loc initINIT LOCATION LP 738 at (3,147)
+Mapping LP 1436 to PE 31
+Mapping LP 1436 to PE 31
+LOCATION EVENT: LP 14 Type 0 for Person 387. Infected Count: 0, Total People: 0
+Mapping LP 387 to PE 8
+Mapping LP 387 to PE 8
+LOCATION EVENT: LP 16 Type 0 for Person 794. Infected Count: 1, Total People: 3
+Mapping LP 794 to PE 17
+Mapping LP 794 to PE 17
+LOCATION EVENT: LP 17 Type 0 for Person 207. Infected Count: 0, Total People: 2
+Mapping LP 207 to PE 4
+Mapping LP 207 to PE 4
+Before Per initINIT PERSON LP 836 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 837 at (4,0). Infected: 0
+Mapping LP 4 to PE 0
+Mapping LP 4 to PE 0
+Before Per initINIT PERSON LP 838 at (3,3). Infected: 0
+LOCATION EVENT: LP 1 Type 0 for Person 984. Infected Count: 1, Total People: 3
+Mapping LP 984 to PE 21
+Mapping LP 984 to PE 21
+LOCATION EVENT: LP 22 Type 0 for Person 1019. Infected Count: 1, Total People: 2
+Mapping LP 1019 to PE 22
+Mapping LP 1019 to PE 22
+LOCATION EVENT: LP 18 Type 0 for Person 1197. Infected Count: 0, Total People: 3
+Before Loc initINIT LOCATION LP 1350 at (0,270)
+Before Loc initINIT LOCATION LP 1351 at (1,270)
+Before Loc initINIT LOCATION LP 1352 at (2,270)
+Before Loc initINIT LOCATION LP 1353 at (3,270)
+Before Loc initINIT LOCATION LP 1354 at (4,270)
+Before Loc initINIT LOCATION LP 1355 at (0,271)
+Before Loc initINIT LOCATION LP 1356 at (1,271)
+Before Loc initINIT LOCATION LP 1357 at (2,271)
+Before Loc initINIT LOCATION LP 1358 at (3,271)
+Before Loc initINIT LOCATION LP 1359 at (4,271)
+Before Loc initINIT LOCATION LP 1360 at (0,272)
+Before Loc initINIT LOCATION LP 1361 at (1,272)
+Before Loc initINIT LOCATION LP 1362 at (2,272)
+Before Loc initINIT LOCATION LP 1363 at (3,272)
+Before Loc initINIT LOCATION LP 1364 at (4,272)
+Before Loc initINIT LOCATION LP 1365 at (0,273)
+Before Loc initINIT LOCATION LP 1366 at (1,273)
+Before Loc initINIT LOCATION LP 1367 at (2,273)
+Mapping LP 1197 to PE 26
+Mapping LP 1197 to PE 26
+LOCATION EVENT: LP 15 Type 0 for Person 531. Infected Count: 0, Total People: 1
+Mapping LP 531 to PE 11
+Mapping LP 531 to PE 11
+LOCATION EVENT: LP 12 Type 0 for Person 218. Infected Count: 1, Total People: 1
+Mapping LP 218 to PE 4
+Mapping LP 218 to PE 4
+LOCATION EVENT: LP 14 Type 0 for Person 309. Infected Count: 0, Total People: 1
+Mapping LP 309 to PE 6
+Mapping LP 309 to PE 6
+LOCATION EVENT: LP 4 Type 0 for Person 748. Infected Count: 0, Total People: 0
+Mapping LP 748 to PE 16
+Mapping LP 748 to PE 16
+Before Loc initINIT LOCATION LP 1087 at (2,217)
+Before Loc initINIT LOCATION LP 1088 at (3,217)
+Before Loc initINIT LOCATION LP 1089 at (4,217)
+Before Loc initINIT LOCATION LP 1090 at (0,218)
+Before Loc initINIT LOCATION LP 1091 at (1,218)
+Before Loc initINIT LOCATION LP 1092 at (2,218)
+Before Loc initINIT LOCATION LP 1093 at (3,218)
+Before Loc initINIT LOCATION LP 1094 at (4,218)
+Before Loc initINIT LOCATION LP 1095 at (0,219)
+Before Loc initINIT LOCATION LP 1096 at (1,219)
+Before Loc initINIT LOCATION LP 1097 at (2,219)
+Before Loc initINIT LOCATION LP 1098 at (3,219)
+Before Loc initINIT LOCATION LP 1099 at (4,219)
+Before Loc initINIT LOCATION LP 1100 at (0,220)
+Before Loc initINIT LOCATION LP 1101 at (1,220)
+Before Loc initINIT LOCATION LP 1102 at (2,220)
+Before Loc initINIT LOCATION LP 1103 at (3,220)
+Before Loc initINIT LOCATION LP 1104 at (4,220)
+Before Per initINIT PERSON LP 1105 at (1,2). Infected: 0
+Mapping LP 11 to PE 0
+LOCATION EVENT: LP 8 Type 0 for Person 941. Infected Count: 0, Total People: 0
+Mapping LP 941 to PE 20
+Mapping LP 941 to PE 20
+LOCATION EVENT: LP 20 Type 0 for Person 1250. Infected Count: 0, Total People: 4
+Mapping LP 1250 to PE 27
+Mapping LP 1250 to PE 27
+LOCATION EVENT: LP 18 Type 0 for Person 347. Infected Count: 1, Total People: 4
+Mapping LP 347 to PE 7
+Mapping LP 347 to PE 7
+LOCATION EVENT: LP 18 Type 0 for Person 972. Infected Count: 1, Total People: 5
+Mapping LP 972 to PE 21
+Mapping LP 972 to PE 21
+LOCATION EVENT: LP 8 Type 0 for Person 1245. Infected Count: 0, Total People: 1
+Before Loc initINIT LOCATION LP 1368 at (3,273)
+Before Loc initINIT LOCATION LP 1369 at (4,273)
+Before Loc initINIT LOCATION LP 1370 at (0,274)
+Before Loc initINIT LOCATION LP 1371 at (1,274)
+Before Loc initINIT LOCATION LP 1372 at (2,274)
+Before Loc initINIT LOCATION LP 1373 at (3,274)
+Before Loc initINIT LOCATION LP 1374 at (4,274)
+Before Per initINIT PERSON LP 1375 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Mapping LP 1245 to PE 27
+Mapping LP 1245 to PE 27
+LOCATION EVENT: LP 11 Type 0 for Person 1158. Infected Count: 1, Total People: 1
+Mapping LP 1158 to PE 25
+Mapping LP 1158 to PE 25
+LOCATION EVENT: LP 8 Type 0 for Person 217. Infected Count: 0, Total People: 2
+Mapping LP 217 to PE 4
+Mapping LP 217 to PE 4
+LOCATION EVENT: LP 19 Type 0 for Person 26. Infected Count: 0, Total People: 0
+Mapping LP 26 to PE 0
+Before Loc initINIT LOCATION LP 739 at (4,147)
+Before Loc initINIT LOCATION LP 740 at (0,148)
+Before Loc initINIT LOCATION LP 741 at (1,148)
+Before Loc initINIT LOCATION LP 742 at (2,148)
+Before Loc initINIT LOCATION LP 743 at (3,148)
+Before Loc initINIT LOCATION LP 744 at (4,148)
+Before Per initINIT PERSON LP 745 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+LOCATION EVENT: LP 23 Type 0 for Person 1244. Infected Count: 1, Total People: 2
+Mapping LP 1244 to PE 27
+Mapping LP 1244 to PE 27
+LOCATION EVENT: LP 8 Type 0 for Person 584. Infected Count: 1, Total People: 3
+Mapping LP 584 to PE 12
+Mapping LP 584 to PE 12
+LOCATION EVENT: LP 15 Type 0 for Person 127. Infected Count: 0, Total People: 2
+Mapping LP 127 to PE 2
+Mapping LP 127 to PE 2
+LOCATION EVENT: LP 22 Type 0 for Person 1303. Infected Count: 1, Total People: 3
+Mapping LP 1303 to PE 28
+Mapping LP 1303 to PE 28
+LOCATION EVENT: LP 17 Type 0 for Person 25. Infected Count: 0, Total People: 3
+Mapping LP 25 to PE 0
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 839 at (0,3). Infected: 0
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+Before Per initINIT PERSON LP 840 at (2,1). Infected: 0
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Before Per initINIT PERSON LP 841 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 842 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 843 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 844 at (1,2). Infected: 0
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 845 at (2,3). Infected: 0
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 846 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+LOCATION EVENT: LP 2 Type 0 for Person 359. Infected Count: 0, Total People: 1
+Mapping LP 359 to PE 7
+Mapping LP 359 to PE 7
+LOCATION EVENT: LP 17 Type 0 for Person 401. Infected Count: 0, Total People: 4
+Mapping LP 401 to PE 8
+Mapping LP 401 to PE 8
+LOCATION EVENT: LP 16 Type 0 for Person 1202. Infected Count: 1, Total People: 4
+Mapping LP 1202 to PE 26
+Mapping LP 1202 to PE 26
+LOCATION EVENT: LP 4 Type 0 for Person 837. Infected Count: 0, Total People: 1
+Mapping LP 837 to PE 18
+Mapping LP 837 to PE 18
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 1106 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+LOCATION EVENT: LP 15 Type 0 for Person 265. Infected Count: 0, Total People: 3
+Mapping LP 265 to PE 5
+Mapping LP 265 to PE 5
+LOCATION EVENT: LP 12 Type 0 for Person 1251. Infected Count: 1, Total People: 2
+Mapping LP 1251 to PE 27
+Mapping LP 1251 to PE 27
+LOCATION EVENT: LP 10 Type 0 for Person 251. Infected Count: 0, Total People: 2
+Mapping LP 251 to PE 5
+Mapping LP 251 to PE 5
+LOCATION EVENT: LP 0 Type 0 for Person 306. Infected Count: 0, Total People: 4
+Mapping LP 306 to PE 6
+Mapping LP 306 to PE 6
+LOCATION EVENT: LP 14 Type 0 for Person 436. Infected Count: 0, Total People: 2
+Mapping LP 436 to PE 9
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 847 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 848 at (0,1). Infected: 1
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 849 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 850 at (4,2). Infected: 1
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 851 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Mapping LP 436 to PE 9
+LOCATION EVENT: LP 22 Type 0 for Person 1381. Infected Count: 1, Total People: 4
+Mapping LP 1381 to PE 30
+Mapping LP 1381 to PE 30
+LOCATION EVENT: LP 12 Type 0 for Person 576. Infected Count: 1, Total People: 3
+Mapping LP 576 to PE 12
+Mapping LP 576 to PE 12
+LOCATION EVENT: LP 16 Type 0 for Person 1026. Infected Count: 1, Total People: 5
+Mapping LP 1026 to PE 22
+Mapping LP 1026 to PE 22
+LOCATION EVENT: LP 19 Type 0 for Person 801. Infected Count: 0, Total People: 1
+Mapping LP 801 to PE 17
+Mapping LP 801 to PE 17
+Before Per initINIT PERSON LP 1376 at (3,4). Infected: 0
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 1377 at (4,3). Infected: 1
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+LOCATION EVENT: LP 5 Type 0 for Person 714. Infected Count: 0, Total People: 1
+Mapping LP 714 to PE 15
+Mapping LP 714 to PE 15
+LOCATION EVENT: LP 20 Type 0 for Person 396. Infected Count: 1, Total People: 5
+Mapping LP 396 to PE 8
+Mapping LP 396 to PE 8
+LOCATION EVENT: LP 23 Type 0 for Person 673. Infected Count: 2, Total People: 3
+Mapping LP 673 to PE 14
+Mapping LP 673 to PE 14
+LOCATION EVENT: LP 1 Type 0 for Person 481. Infected Count: 1, Total People: 4
+Mapping LP 481 to PE 10
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 1107 at (3,4). Infected: 0
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 1108 at (2,4). Infected: 0
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 1109 at (4,1). Infected: 1
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Mapping LP 481 to PE 10
+LOCATION EVENT: LP 8 Type 0 for Person 1066. Infected Count: 1, Total People: 4
+Mapping LP 1066 to PE 23
+Mapping LP 1066 to PE 23
+LOCATION EVENT: LP 2 Type 0 for Person 389. Infected Count: 0, Total People: 2
+Mapping LP 389 to PE 8
+Mapping LP 389 to PE 8
+LOCATION EVENT: LP 17 Type 0 for Person 128. Infected Count: 0, Total People: 5
+Mapping LP 128 to PE 2
+Mapping LP 128 to PE 2
+LOCATION EVENT: LP 9 Type 0 for Person 1389. Infected Count: 0, Total People: 2
+Before Per initINIT PERSON LP 852 at (4,0). Infected: 0
+Mapping LP 4 to PE 0
+Mapping LP 4 to PE 0
+Before Per initINIT PERSON LP 853 at (1,2). Infected: 0
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 854 at (3,0). Infected: 1
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Mapping LP 1389 to PE 30
+Mapping LP 1389 to PE 30
+LOCATION EVENT: LP 7 Type 0 for Person 80. Infected Count: 0, Total People: 2
+Mapping LP 80 to PE 1
+Mapping LP 80 to PE 1
+LOCATION EVENT: LP 5 Type 0 for Person 1421. Infected Count: 0, Total People: 2
+Mapping LP 1421 to PE 31
+Mapping LP 1421 to PE 31
+Before Per initINIT PERSON LP 746 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+LOCATION EVENT: LP 1 Type 0 for Person 212. Infected Count: 1, Total People: 5
+Mapping LP 212 to PE 4
+Mapping LP 212 to PE 4
+LOCATION EVENT: LP 11 Type 0 for Person 1105. Infected Count: 1, Total People: 2
+Mapping LP 1105 to PE 24
+Mapping LP 1105 to PE 24
+LOCATION EVENT: LP 7 Type 0 for Person 1335. Infected Count: 1, Total People: 3
+Mapping LP 1335 to PE 29
+Mapping LP 1335 to PE 29
+LOCATION EVENT: LP 7 Type 0 for Person 893. Infected Count: 1, Total People: 4
+Mapping LP 893 to PE 19
+Mapping LP 893 to PE 19
+Before Per initINIT PERSON LP 1110 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 1111 at (2,4). Infected: 0
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 1112 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 1113 at (2,4). Infected: 0
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 1114 at (0,2). Infected: 0
+LOCATION EVENT: LP 3 Type 0 for Person 761. Infected Count: 0, Total People: 1
+Mapping LP 761 to PE 16
+Mapping LP 761 to PE 16
+LOCATION EVENT: LP 10 Type 0 for Person 793. Infected Count: 0, Total People: 3
+Mapping LP 793 to PE 17
+Mapping LP 793 to PE 17
+LOCATION EVENT: LP 0 Type 0 for Person 710. Infected Count: 0, Total People: 5
+Mapping LP 710 to PE 15
+Mapping LP 710 to PE 15
+LOCATION EVENT: LP 2 Type 0 for Person 1435. Infected Count: 0, Total People: 3
+Mapping LP 1435 to PE 31
+Mapping LP 1435 to PE 31
+LOCATION EVENT: LP 10 Type 0 for Person 536. Infected Count: 1, Total People: 4
+Mapping LP 536 to PE 11
+Before Per initINIT PERSON LP 1378 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 1379 at (3,3). Infected: 1
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 1380 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 1381 at (2,4). Infected: 0
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 1382 at (2,3). Infected: 0
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 1383 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Mapping LP 536 to PE 11
+LOCATION EVENT: LP 2 Type 0 for Person 177. Infected Count: 1, Total People: 4
+Mapping LP 177 to PE 3
+Mapping LP 177 to PE 3
+LOCATION EVENT: LP 8 Type 0 for Person 886. Infected Count: 2, Total People: 5
+Mapping LP 886 to PE 19
+Mapping LP 886 to PE 19
+LOCATION EVENT: LP 5 Type 0 for Person 1390. Infected Count: 1, Total People: 3
+Mapping LP 1390 to PE 30
+Mapping LP 1390 to PE 30
+Before Per initINIT PERSON LP 1384 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 1385 at (2,4). Infected: 0
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 1386 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+LOCATION EVENT: LP 24 Type 0 for Person 295. Infected Count: 0, Total People: 1
+Mapping LP 295 to PE 6
+Mapping LP 295 to PE 6
+LOCATION EVENT: LP 22 Type 0 for Person 308. Infected Count: 1, Total People: 5
+Mapping LP 308 to PE 6
+Mapping LP 308 to PE 6
+LOCATION EVENT: LP 13 Type 0 for Person 41. Infected Count: 0, Total People: 0
+Mapping LP 41 to PE 0
+LOCATION EVENT: LP 4 Type 0 for Person 32. Infected Count: 0, Total People: 2
+Mapping LP 32 to PE 0
+LOCATION EVENT: LP 10 Type 0 for Person 357. Infected Count: 2, Total People: 5
+Mapping LP 357 to PE 7
+Mapping LP 357 to PE 7
+LOCATION EVENT: LP 19 Type 0 for Person 1259. Infected Count: 0, Total People: 2
+Mapping LP 1259 to PE 27
+Mapping LP 1259 to PE 27
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 1115 at (2,1). Infected: 1
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Before Per initINIT PERSON LP 1116 at (4,3). Infected: 0
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+Before Per initINIT PERSON LP 1117 at (3,4). Infected: 1
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 1118 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 1119 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 1120 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+LOCATION EVENT: LP 12 Type 0 for Person 171. Infected Count: 2, Total People: 4
+Mapping LP 171 to PE 3
+Mapping LP 171 to PE 3
+LOCATION EVENT: LP 15 Type 0 for Person 988. Infected Count: 0, Total People: 4
+Mapping LP 988 to PE 21
+Mapping LP 988 to PE 21
+LOCATION EVENT: LP 14 Type 0 for Person 1069. Infected Count: 1, Total People: 3
+Mapping LP 1069 to PE 23
+Mapping LP 1069 to PE 23
+LOCATION EVENT: LP 12 Type 0 for Person 392. Infected Count: 2, Total People: 5
+Mapping LP 392 to PE 8
+Before Per initINIT PERSON LP 747 at (2,4). Infected: 0
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 748 at (4,0). Infected: 0
+Mapping LP 4 to PE 0
+Mapping LP 4 to PE 0
+Before Per initINIT PERSON LP 749 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Mapping LP 392 to PE 8
+LOCATION EVENT: LP 21 Type 0 for Person 488. Infected Count: 0, Total People: 3
+Mapping LP 488 to PE 10
+Mapping LP 488 to PE 10
+LOCATION EVENT: LP 21 Type 0 for Person 1165. Infected Count: 1, Total People: 4
+Mapping LP 1165 to PE 25
+Mapping LP 1165 to PE 25
+LOCATION EVENT: LP 21 Type 0 for Person 568. Infected Count: 1, Total People: 5
+Mapping LP 568 to PE 12
+Mapping LP 568 to PE 12
+LOCATION EVENT: LP 22 Type 0 for Person 565. Infected Count: 1, Total People: 6
+Mapping LP 565 to PE 12
+Mapping LP 565 to PE 12
+LOCATION EVENT: LP 22 Type 0 for Person 977. Infected Count: 1, Total People: 7
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 1121 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 1122 at (0,1). Infected: 0
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 1123 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Mapping LP 977 to PE 21
+Mapping LP 977 to PE 21
+LOCATION EVENT: LP 9 Type 0 for Person 841. Infected Count: 0, Total People: 3
+Mapping LP 841 to PE 18
+Mapping LP 841 to PE 18
+LOCATION EVENT: LP 14 Type 0 for Person 1110. Infected Count: 1, Total People: 4
+Mapping LP 1110 to PE 24
+Mapping LP 1110 to PE 24
+LOCATION EVENT: LP 4 Type 0 for Person 943. Infected Count: 0, Total People: 3
+Mapping LP 943 to PE 20
+Mapping LP 943 to PE 20
+LOCATION EVENT: LP 17 Type 0 for Person 208. Infected Count: 1, Total People: 6
+Mapping LP 208 to PE 4
+Mapping LP 208 to PE 4
+Before Per initINIT PERSON LP 750 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 751 at (1,0). Infected: 1
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+LOCATION EVENT: LP 14 Type 0 for Person 250. Infected Count: 1, Total People: 5
+Mapping LP 250 to PE 5
+Mapping LP 250 to PE 5
+LOCATION EVENT: LP 23 Type 0 for Person 804. Infected Count: 2, Total People: 4
+Mapping LP 804 to PE 17
+Mapping LP 804 to PE 17
+LOCATION EVENT: LP 7 Type 0 for Person 1285. Infected Count: 1, Total People: 5
+Mapping LP 1285 to PE 28
+Mapping LP 1285 to PE 28
+LOCATION EVENT: LP 14 Type 0 for Person 170. Infected Count: 1, Total People: 6
+Before Per initINIT PERSON LP 1387 at (1,2). Infected: 0
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 1388 at (1,1). Infected: 0
+Mapping LP 6 to PE 0
+Mapping LP 6 to PE 0
+Before Per initINIT PERSON LP 1389 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 1390 at (0,1). Infected: 1
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 1391 at (4,4). Infected: 0
+Mapping LP 170 to PE 3
+Mapping LP 170 to PE 3
+LOCATION EVENT: LP 18 Type 0 for Person 1159. Infected Count: 1, Total People: 6
+Mapping LP 1159 to PE 25
+Mapping LP 1159 to PE 25
+LOCATION EVENT: LP 2 Type 0 for Person 1295. Infected Count: 1, Total People: 5
+Mapping LP 1295 to PE 28
+Mapping LP 1295 to PE 28
+LOCATION EVENT: LP 15 Type 0 for Person 839. Infected Count: 1, Total People: 5
+Mapping LP 839 to PE 18
+Mapping LP 839 to PE 18
+Mapping LP 24 to PE 0
+Mapping LP 24 to PE 0
+Before Per initINIT PERSON LP 1392 at (4,2). Infected: 1
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 1393 at (1,1). Infected: 0
+Mapping LP 6 to PE 0
+Mapping LP 6 to PE 0
+Before Per initINIT PERSON LP 1394 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+LOCATION EVENT: LP 7 Type 0 for Person 982. Infected Count: 1, Total People: 6
+Mapping LP 982 to PE 21
+Mapping LP 982 to PE 21
+LOCATION EVENT: LP 2 Type 0 for Person 1073. Infected Count: 1, Total People: 6
+Mapping LP 1073 to PE 23
+Mapping LP 1073 to PE 23
+LOCATION EVENT: LP 3 Type 0 for Person 1437. Infected Count: 0, Total People: 2
+Mapping LP 1437 to PE 31
+Mapping LP 1437 to PE 31
+LOCATION EVENT: LP 2 Type 0 for Person 205. Infected Count: 1, Total People: 7
+Mapping LP 205 to PE 4
+Mapping LP 205 to PE 4
+LOCATION EVENT: LP 17 Type 0 for Person 443. Infected Count: 1, Total People: 7
+Mapping LP 443 to PE 9
+Mapping LP 443 to PE 9
+Before Loc initINIT LOCATION LP 900 at (0,180)
+Before Loc initINIT LOCATION LP 901 at (1,180)
+Before Loc initINIT LOCATION LP 902 at (2,180)
+Before Loc initINIT LOCATION LP 903 at (3,180)
+Before Loc initINIT LOCATION LP 904 at (4,180)
+Before Loc initINIT LOCATION LP 905 at (0,181)
+Before Loc initINIT LOCATION LP 906 at (1,181)
+Before Loc initINIT LOCATION LP 907 at (2,181)
+Before Loc initINIT LOCATION LP 908 at (3,181)
+Before Loc initINIT LOCATION LP 909 at (4,181)
+Before Loc initINIT LOCATION LP 910 at (0,182)
+Before Loc initINIT LOCATION LP 911 at (1,182)
+Before Loc initINIT LOCATION LP 912 at (2,182)
+Before Loc initINIT LOCATION LP 913 at (3,182)
+LOCATION EVENT: LP 13 Type 0 for Person 807. Infected Count: 0, Total People: 1
+Mapping LP 807 to PE 17
+Mapping LP 807 to PE 17
+LOCATION EVENT: LP 19 Type 0 for Person 1248. Infected Count: 0, Total People: 3
+Mapping LP 1248 to PE 27
+Mapping LP 1248 to PE 27
+LOCATION EVENT: LP 22 Type 0 for Person 297. Infected Count: 1, Total People: 8
+Mapping LP 297 to PE 6
+Mapping LP 297 to PE 6
+LOCATION EVENT: LP 10 Type 0 for Person 214. Infected Count: 2, Total People: 6
+Mapping LP 214 to PE 4
+Mapping LP 214 to PE 4
+Before Per initINIT PERSON LP 752 at (1,2). Infected: 1
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 753 at (3,3). Infected: 1
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 754 at (1,4). Infected: 1
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 755 at (4,0). Infected: 1
+Mapping LP 4 to PE 0
+Mapping LP 4 to PE 0
+Before Per initINIT PERSON LP 756 at (0,3). Infected: 0
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+Before Per initINIT PERSON LP 757 at (0,2). Infected: 1
+Mapping LP 10 to PE 0
+LOCATION EVENT: LP 7 Type 0 for Person 1166. Infected Count: 1, Total People: 7
+Mapping LP 1166 to PE 25
+Mapping LP 1166 to PE 25
+LOCATION EVENT: LP 0 Type 0 for Person 302. Infected Count: 0, Total People: 6
+Mapping LP 302 to PE 6
+Mapping LP 302 to PE 6
+LOCATION EVENT: LP 3 Type 0 for Person 621. Infected Count: 0, Total People: 3
+Mapping LP 621 to PE 13
+Mapping LP 621 to PE 13
+LOCATION EVENT: LP 21 Type 0 for Person 707. Infected Count: 1, Total People: 6
+Mapping LP 707 to PE 15
+Mapping LP 707 to PE 15
+LOCATION EVENT: LP 18 Type 0 for Person 168. Infected Count: 1, Total People: 7
+Mapping LP 168 to PE 3
+Mapping LP 168 to PE 3
+LOCATION EVENT: LP 16 Type 0 for Person 476. Infected Count: 1, Total People: 6
+Mapping LP 476 to PE 10
+Mapping LP 476 to PE 10
+Before Per initINIT PERSON LP 1124 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+LOCATION EVENT: LP 6 Type 0 for Person 386. Infected Count: 0, Total People: 1
+Mapping LP 386 to PE 8
+Mapping LP 386 to PE 8
+LOCATION EVENT: LP 17 Type 0 for Person 175. Infected Count: 2, Total People: 8
+Mapping LP 175 to PE 3
+Mapping LP 175 to PE 3
+LOCATION EVENT: LP 24 Type 0 for Person 27. Infected Count: 0, Total People: 2
+Mapping LP 27 to PE 0
+LOCATION EVENT: LP 19 Type 0 for Person 716. Infected Count: 0, Total People: 4
+Before Loc initINIT LOCATION LP 855 at (0,171)
+Before Loc initINIT LOCATION LP 856 at (1,171)
+Before Loc initINIT LOCATION LP 857 at (2,171)
+Before Loc initINIT LOCATION LP 858 at (3,171)
+Before Loc initINIT LOCATION LP 859 at (4,171)
+Mapping LP 716 to PE 15
+Mapping LP 716 to PE 15
+LOCATION EVENT: LP 17 Type 0 for Person 524. Infected Count: 3, Total People: 9
+Mapping LP 524 to PE 11
+Mapping LP 524 to PE 11
+LOCATION EVENT: LP 19 Type 0 for Person 1331. Infected Count: 0, Total People: 5
+Mapping LP 1331 to PE 29
+Mapping LP 1331 to PE 29
+LOCATION EVENT: LP 13 Type 0 for Person 258. Infected Count: 0, Total People: 2
+Mapping LP 258 to PE 5
+Mapping LP 258 to PE 5
+Mapping LP 12 to PE 0
+LOCATION EVENT: LP 4 Type 0 for Person 971. Infected Count: 0, Total People: 4
+Mapping LP 971 to PE 21
+Mapping LP 971 to PE 21
+LOCATION EVENT: LP 2 Type 0 for Person 121. Infected Count: 1, Total People: 8
+Mapping LP 121 to PE 2
+Mapping LP 121 to PE 2
+LOCATION EVENT: LP 5 Type 0 for Person 1122. Infected Count: 2, Total People: 4
+Mapping LP 1122 to PE 24
+Mapping LP 1122 to PE 24
+LOCATION EVENT: LP 21 Type 0 for Person 42. Infected Count: 1, Total People: 7
+Mapping LP 42 to PE 0
+LOCATION EVENT: LP 13 Type 0 for Person 881. Infected Count: 0, Total People: 3
+Mapping LP 881 to PE 19
+Mapping LP 881 to PE 19
+Before Loc initINIT LOCATION LP 914 at (4,182)
+Before Loc initINIT LOCATION LP 915 at (0,183)
+Before Loc initINIT LOCATION LP 916 at (1,183)
+Before Loc initINIT LOCATION LP 917 at (2,183)
+Before Loc initINIT LOCATION LP 918 at (3,183)
+Before Loc initINIT LOCATION LP 919 at (4,183)
+Before Loc initINIT LOCATION LP 920 at (0,184)
+Before Loc initINIT LOCATION LP 921 at (1,184)
+Before Loc initINIT LOCATION LP 922 at (2,184)
+Before Loc initINIT LOCATION LP 923 at (3,184)
+Before Loc initINIT LOCATION LP 924 at (4,184)
+Before Per initINIT PERSON LP 925 at (2,0). Infected: 1
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+LOCATION EVENT: LP 8 Type 0 for Person 166. Infected Count: 2, Total People: 6
+Mapping LP 166 to PE 3
+Mapping LP 166 to PE 3
+LOCATION EVENT: LP 15 Type 0 for Person 835. Infected Count: 1, Total People: 6
+Mapping LP 835 to PE 18
+Mapping LP 835 to PE 18
+LOCATION EVENT: LP 2 Type 0 for Person 629. Infected Count: 1, Total People: 9
+Mapping LP 629 to PE 13
+Mapping LP 629 to PE 13
+LOCATION EVENT: LP 11 Type 0 for Person 1434. Infected Count: 1, Total People: 3
+Mapping LP 1434 to PE 31
+Mapping LP 1434 to PE 31
+LOCATION EVENT: LP 23 Type 0 for Person 1070. Infected Count: 2, Total People: 5
+Mapping LP 1070 to PE 23
+Mapping LP 1070 to PE 23
+LOCATION EVENT: LP 17 Type 0 for Person 1195. Infected Count: 4, Total People: 10
+Mapping LP 1195 to PE 26
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 758 at (3,1). Infected: 0
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 759 at (4,3). Infected: 0
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+Before Per initINIT PERSON LP 760 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 761 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Before Per initINIT PERSON LP 762 at (3,2). Infected: 1
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 763 at (0,1). Infected: 0
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 764 at (0,0). Infected: 0
+Mapping LP 1195 to PE 26
+LOCATION EVENT: LP 15 Type 0 for Person 663. Infected Count: 1, Total People: 7
+Mapping LP 663 to PE 14
+Mapping LP 663 to PE 14
+LOCATION EVENT: LP 9 Type 0 for Person 674. Infected Count: 0, Total People: 4
+Mapping LP 674 to PE 14
+Mapping LP 674 to PE 14
+LOCATION EVENT: LP 11 Type 0 for Person 892. Infected Count: 1, Total People: 4
+Mapping LP 892 to PE 19
+Mapping LP 892 to PE 19
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+LOCATION EVENT: LP 13 Type 0 for Person 659. Infected Count: 0, Total People: 4
+Mapping LP 659 to PE 14
+Mapping LP 659 to PE 14
+LOCATION EVENT: LP 14 Type 0 for Person 1199. Infected Count: 1, Total People: 7
+Mapping LP 1199 to PE 26
+Mapping LP 1199 to PE 26
+LOCATION EVENT: LP 14 Type 0 for Person 1157. Infected Count: 2, Total People: 8
+Mapping LP 1157 to PE 25
+Mapping LP 1157 to PE 25
+LOCATION EVENT: LP 11 Type 0 for Person 798. Infected Count: 1, Total People: 5
+Mapping LP 798 to PE 17
+Before Loc initINIT LOCATION LP 860 at (0,172)
+Before Loc initINIT LOCATION LP 861 at (1,172)
+Before Loc initINIT LOCATION LP 862 at (2,172)
+Before Loc initINIT LOCATION LP 863 at (3,172)
+Before Loc initINIT LOCATION LP 864 at (4,172)
+Before Loc initINIT LOCATION LP 865 at (0,173)
+Mapping LP 798 to PE 17
+LOCATION EVENT: LP 4 Type 0 for Person 300. Infected Count: 1, Total People: 5
+Mapping LP 300 to PE 6
+Mapping LP 300 to PE 6
+LOCATION EVENT: LP 9 Type 0 for Person 87. Infected Count: 0, Total People: 5
+Mapping LP 87 to PE 1
+Mapping LP 87 to PE 1
+LOCATION EVENT: LP 2 Type 0 for Person 385. Infected Count: 1, Total People: 10
+Mapping LP 385 to PE 8
+Mapping LP 385 to PE 8
+LOCATION EVENT: LP 10 Type 0 for Person 883. Infected Count: 2, Total People: 7
+Mapping LP 883 to PE 19
+Before Per initINIT PERSON LP 926 at (2,3). Infected: 0
+Mapping LP 17 to PE 0
+Mapping LP 17 to PE 0
+Before Per initINIT PERSON LP 927 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 928 at (4,0). Infected: 0
+Mapping LP 4 to PE 0
+Mapping LP 883 to PE 19
+LOCATION EVENT: LP 16 Type 0 for Person 882. Infected Count: 1, Total People: 7
+Mapping LP 882 to PE 19
+Mapping LP 882 to PE 19
+LOCATION EVENT: LP 14 Type 0 for Person 1029. Infected Count: 2, Total People: 9
+Mapping LP 1029 to PE 22
+Mapping LP 1029 to PE 22
+LOCATION EVENT: LP 23 Type 0 for Person 1117. Infected Count: 2, Total People: 6
+Mapping LP 1117 to PE 24
+Mapping LP 1117 to PE 24
+LOCATION EVENT: LP 14 Type 0 for Person 660. Infected Count: 2, Total People: 10
+Before Loc initINIT LOCATION LP 866 at (1,173)
+Before Loc initINIT LOCATION LP 867 at (2,173)
+Before Loc initINIT LOCATION LP 868 at (3,173)
+Mapping LP 660 to PE 14
+Mapping LP 660 to PE 14
+LOCATION EVENT: LP 6 Type 0 for Person 1388. Infected Count: 1, Total People: 2
+Mapping LP 1388 to PE 30
+Mapping LP 1388 to PE 30
+LOCATION EVENT: LP 8 Type 0 for Person 664. Infected Count: 3, Total People: 7
+Mapping LP 664 to PE 14
+Mapping LP 664 to PE 14
+LOCATION EVENT: LP 2 Type 0 for Person 925. Infected Count: 2, Total People: 11
+Mapping LP 925 to PE 20
+Mapping LP 925 to PE 20
+Mapping LP 4 to PE 0
+Before Per initINIT PERSON LP 929 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 930 at (4,0). Infected: 0
+Mapping LP 4 to PE 0
+Mapping LP 4 to PE 0
+Before Per initINIT PERSON LP 931 at (0,1). Infected: 0
+Mapping LP 5 to PE 0
+LOCATION EVENT: LP 20 Type 0 for Person 342. Infected Count: 2, Total People: 6
+Mapping LP 342 to PE 7
+Mapping LP 342 to PE 7
+LOCATION EVENT: LP 8 Type 0 for Person 667. Infected Count: 3, Total People: 8
+Mapping LP 667 to PE 14
+Mapping LP 667 to PE 14
+LOCATION EVENT: LP 8 Type 0 for Person 1340. Infected Count: 3, Total People: 9
+Mapping LP 1340 to PE 29
+Mapping LP 1340 to PE 29
+LOCATION EVENT: LP 24 Type 0 for Person 44. Infected Count: 0, Total People: 3
+Mapping LP 44 to PE 0
+Before Loc initINIT LOCATION LP 869 at (4,173)
+Before Loc initINIT LOCATION LP 870 at (0,174)
+LOCATION EVENT: LP 17 Type 0 for Person 926. Infected Count: 4, Total People: 11
+Mapping LP 926 to PE 20
+Mapping LP 926 to PE 20
+LOCATION EVENT: LP 17 Type 0 for Person 625. Infected Count: 4, Total People: 12
+Mapping LP 625 to PE 13
+Mapping LP 625 to PE 13
+LOCATION EVENT: LP 17 Type 0 for Person 534. Infected Count: 4, Total People: 13
+Mapping LP 534 to PE 11
+Mapping LP 534 to PE 11
+LOCATION EVENT: LP 19 Type 0 for Person 665. Infected Count: 0, Total People: 6
+Mapping LP 665 to PE 14
+Mapping LP 665 to PE 14
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 932 at (0,1). Infected: 0
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 933 at (0,3). Infected: 0
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+Before Per initINIT PERSON LP 934 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+LOCATION EVENT: LP 16 Type 0 for Person 1162. Infected Count: 1, Total People: 8
+Mapping LP 1162 to PE 25
+Mapping LP 1162 to PE 25
+LOCATION EVENT: LP 23 Type 0 for Person 1302. Infected Count: 3, Total People: 7
+Mapping LP 1302 to PE 28
+Mapping LP 1302 to PE 28
+LOCATION EVENT: LP 7 Type 0 for Person 617. Infected Count: 1, Total People: 8
+Mapping LP 617 to PE 13
+Mapping LP 617 to PE 13
+LOCATION EVENT: LP 2 Type 0 for Person 1429. Infected Count: 3, Total People: 12
+Mapping LP 1429 to PE 31
+Mapping LP 1429 to PE 31
+Before Loc initINIT LOCATION LP 871 at (1,174)
+Before Loc initINIT LOCATION LP 872 at (2,174)
+Before Loc initINIT LOCATION LP 873 at (3,174)
+LOCATION EVENT: LP 1 Type 0 for Person 537. Infected Count: 1, Total People: 6
+Mapping LP 537 to PE 11
+Mapping LP 537 to PE 11
+LOCATION EVENT: LP 5 Type 0 for Person 932. Infected Count: 2, Total People: 5
+Mapping LP 932 to PE 20
+Mapping LP 932 to PE 20
+LOCATION EVENT: LP 2 Type 0 for Person 224. Infected Count: 3, Total People: 13
+Mapping LP 224 to PE 4
+Mapping LP 224 to PE 4
+Before Per initINIT PERSON LP 935 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 936 at (1,4). Infected: 1
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 937 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+LOCATION EVENT: LP 12 Type 0 for Person 887. Infected Count: 3, Total People: 6
+Mapping LP 887 to PE 19
+Mapping LP 887 to PE 19
+LOCATION EVENT: LP 18 Type 0 for Person 753. Infected Count: 1, Total People: 8
+Mapping LP 753 to PE 16
+Mapping LP 753 to PE 16
+LOCATION EVENT: LP 4 Type 0 for Person 117. Infected Count: 1, Total People: 6
+Mapping LP 117 to PE 2
+Mapping LP 117 to PE 2
+LOCATION EVENT: LP 6 Type 0 for Person 134. Infected Count: 1, Total People: 3
+Before Loc initINIT LOCATION LP 874 at (4,174)
+Before Loc initINIT LOCATION LP 875 at (0,175)
+Mapping LP 134 to PE 2
+Mapping LP 134 to PE 2
+LOCATION EVENT: LP 4 Type 0 for Person 669. Infected Count: 1, Total People: 7
+Mapping LP 669 to PE 14
+Mapping LP 669 to PE 14
+LOCATION EVENT: LP 13 Type 0 for Person 223. Infected Count: 0, Total People: 5
+Mapping LP 223 to PE 4
+Mapping LP 223 to PE 4
+LOCATION EVENT: LP 9 Type 0 for Person 393. Infected Count: 0, Total People: 6
+Mapping LP 393 to PE 8
+Mapping LP 393 to PE 8
+LOCATION EVENT: LP 11 Type 0 for Person 566. Infected Count: 1, Total People: 6
+Before Loc initINIT LOCATION LP 876 at (1,175)
+Before Loc initINIT LOCATION LP 877 at (2,175)
+Mapping LP 566 to PE 12
+Mapping LP 566 to PE 12
+LOCATION EVENT: LP 9 Type 0 for Person 439. Infected Count: 1, Total People: 7
+Mapping LP 439 to PE 9
+Mapping LP 439 to PE 9
+LOCATION EVENT: LP 23 Type 0 for Person 348. Infected Count: 4, Total People: 8
+Mapping LP 348 to PE 7
+Mapping LP 348 to PE 7
+LOCATION EVENT: LP 23 Type 0 for Person 702. Infected Count: 4, Total People: 9
+Mapping LP 702 to PE 15
+Mapping LP 702 to PE 15
+Before Per initINIT PERSON LP 938 at (3,1). Infected: 0
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 939 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 940 at (2,4). Infected: 0
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 941 at (3,1). Infected: 0
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+LOCATION EVENT: LP 21 Type 0 for Person 445. Infected Count: 2, Total People: 8
+Mapping LP 445 to PE 9
+Mapping LP 445 to PE 9
+LOCATION EVENT: LP 12 Type 0 for Person 666. Infected Count: 3, Total People: 7
+Mapping LP 666 to PE 14
+Mapping LP 666 to PE 14
+LOCATION EVENT: LP 1 Type 0 for Person 1433. Infected Count: 1, Total People: 7
+Mapping LP 1433 to PE 31
+Mapping LP 1433 to PE 31
+LOCATION EVENT: LP 14 Type 0 for Person 1124. Infected Count: 2, Total People: 11
+Mapping LP 1124 to PE 24
+Mapping LP 1124 to PE 24
+Before Per initINIT PERSON LP 942 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 943 at (4,0). Infected: 0
+Mapping LP 4 to PE 0
+Mapping LP 4 to PE 0
+LOCATION EVENT: LP 13 Type 0 for Person 345. Infected Count: 1, Total People: 6
+Mapping LP 345 to PE 7
+Mapping LP 345 to PE 7
+LOCATION EVENT: LP 19 Type 0 for Person 221. Infected Count: 0, Total People: 7
+Mapping LP 221 to PE 4
+Mapping LP 221 to PE 4
+LOCATION EVENT: LP 1 Type 0 for Person 1211. Infected Count: 1, Total People: 8
+Mapping LP 1211 to PE 26
+Mapping LP 1211 to PE 26
+LOCATION EVENT: LP 0 Type 0 for Person 220. Infected Count: 0, Total People: 7
+Mapping LP 220 to PE 4
+Before Loc initINIT LOCATION LP 878 at (3,175)
+Before Loc initINIT LOCATION LP 879 at (4,175)
+Mapping LP 220 to PE 4
+LOCATION EVENT: LP 7 Type 0 for Person 628. Infected Count: 1, Total People: 9
+Mapping LP 628 to PE 13
+Mapping LP 628 to PE 13
+LOCATION EVENT: LP 3 Type 0 for Person 1439. Infected Count: 1, Total People: 4
+Mapping LP 1439 to PE 31
+Mapping LP 1439 to PE 31
+LOCATION EVENT: LP 15 Type 0 for Person 627. Infected Count: 1, Total People: 8
+Mapping LP 627 to PE 13
+Mapping LP 627 to PE 13
+LOCATION EVENT: LP 12 Type 0 for Person 116. Infected Count: 3, Total People: 8
+Before Per initINIT PERSON LP 944 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Mapping LP 116 to PE 2
+Mapping LP 116 to PE 2
+LOCATION EVENT: LP 12 Type 0 for Person 447. Infected Count: 3, Total People: 9
+Mapping LP 447 to PE 9
+Mapping LP 447 to PE 9
+LOCATION EVENT: LP 16 Type 0 for Person 355. Infected Count: 1, Total People: 9
+Mapping LP 355 to PE 7
+Mapping LP 355 to PE 7
+LOCATION EVENT: LP 19 Type 0 for Person 1377. Infected Count: 0, Total People: 8
+Mapping LP 1377 to PE 30
+Mapping LP 1377 to PE 30
+Before Per initINIT PERSON LP 880 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+LOCATION EVENT: LP 7 Type 0 for Person 340. Infected Count: 2, Total People: 10
+Mapping LP 340 to PE 7
+Mapping LP 340 to PE 7
+LOCATION EVENT: LP 20 Type 0 for Person 571. Infected Count: 2, Total People: 7
+Mapping LP 571 to PE 12
+Mapping LP 571 to PE 12
+LOCATION EVENT: LP 16 Type 0 for Person 34. Infected Count: 2, Total People: 10
+Mapping LP 34 to PE 0
+LOCATION EVENT: LP 13 Type 0 for Person 622. Infected Count: 2, Total People: 7
+Mapping LP 622 to PE 13
+Mapping LP 622 to PE 13
+LOCATION EVENT: LP 14 Type 0 for Person 394. Infected Count: 2, Total People: 12
+Mapping LP 394 to PE 8
+Mapping LP 394 to PE 8
+Mapping LP 21 to PE 0
+LOCATION EVENT: LP 8 Type 0 for Person 492. Infected Count: 3, Total People: 10
+Mapping LP 492 to PE 10
+Mapping LP 492 to PE 10
+LOCATION EVENT: LP 17 Type 0 for Person 987. Infected Count: 5, Total People: 14
+Mapping LP 987 to PE 21
+Mapping LP 987 to PE 21
+LOCATION EVENT: LP 13 Type 0 for Person 927. Infected Count: 2, Total People: 8
+Mapping LP 927 to PE 20
+Mapping LP 927 to PE 20
+Before Loc initINIT LOCATION LP 1305 at (0,261)
+Before Loc initINIT LOCATION LP 1306 at (1,261)
+LOCATION EVENT: LP 0 Type 0 for Person 37. Infected Count: 0, Total People: 8
+Mapping LP 37 to PE 0
+LOCATION EVENT: LP 9 Type 0 for Person 577. Infected Count: 1, Total People: 8
+Mapping LP 577 to PE 12
+Mapping LP 577 to PE 12
+LOCATION EVENT: LP 20 Type 0 for Person 222. Infected Count: 2, Total People: 8
+Mapping LP 222 to PE 4
+Mapping LP 222 to PE 4
+LOCATION EVENT: LP 19 Type 0 for Person 115. Infected Count: 1, Total People: 9
+Mapping LP 115 to PE 2
+Mapping LP 115 to PE 2
+Before Loc initINIT LOCATION LP 1395 at (0,279)
+Before Loc initINIT LOCATION LP 1396 at (1,279)
+Before Loc initINIT LOCATION LP 1397 at (2,279)
+Before Loc initINIT LOCATION LP 1398 at (3,279)
+Before Loc initINIT LOCATION LP 1399 at (4,279)
+LOCATION EVENT: LP 15 Type 0 for Person 442. Infected Count: 2, Total People: 9
+Mapping LP 442 to PE 9
+Mapping LP 442 to PE 9
+LOCATION EVENT: LP 24 Type 0 for Person 256. Infected Count: 1, Total People: 4
+Mapping LP 256 to PE 5
+Mapping LP 256 to PE 5
+LOCATION EVENT: LP 2 Type 0 for Person 88. Infected Count: 3, Total People: 14
+Mapping LP 88 to PE 1
+Mapping LP 88 to PE 1
+LOCATION EVENT: LP 4 Type 0 for Person 79. Infected Count: 1, Total People: 8
+Mapping LP 79 to PE 1
+Mapping LP 79 to PE 1
+Before Loc initINIT LOCATION LP 1400 at (0,280)
+Before Loc initINIT LOCATION LP 1401 at (1,280)
+Before Loc initINIT LOCATION LP 1402 at (2,280)
+Before Loc initINIT LOCATION LP 1403 at (3,280)
+LOCATION EVENT: LP 10 Type 0 for Person 616. Infected Count: 2, Total People: 8
+Mapping LP 616 to PE 13
+Mapping LP 616 to PE 13
+LOCATION EVENT: LP 4 Type 0 for Person 928. Infected Count: 1, Total People: 9
+Mapping LP 928 to PE 20
+Mapping LP 928 to PE 20
+LOCATION EVENT: LP 9 Type 0 for Person 944. Infected Count: 2, Total People: 9
+Mapping LP 944 to PE 20
+Mapping LP 944 to PE 20
+LOCATION EVENT: LP 21 Type 0 for Person 484. Infected Count: 2, Total People: 9
+Mapping LP 484 to PE 10
+Before Loc initINIT LOCATION LP 1307 at (2,261)
+Before Loc initINIT LOCATION LP 1308 at (3,261)
+Before Loc initINIT LOCATION LP 1309 at (4,261)
+Before Loc initINIT LOCATION LP 1310 at (0,262)
+Before Loc initINIT LOCATION LP 1311 at (1,262)
+Before Loc initINIT LOCATION LP 1312 at (2,262)
+Before Loc initINIT LOCATION LP 1313 at (3,262)
+Mapping LP 484 to PE 10
+LOCATION EVENT: LP 10 Type 0 for Person 530. Infected Count: 2, Total People: 9
+Mapping LP 530 to PE 11
+Mapping LP 530 to PE 11
+LOCATION EVENT: LP 23 Type 0 for Person 71. Infected Count: 4, Total People: 10
+Mapping LP 71 to PE 1
+Mapping LP 71 to PE 1
+LOCATION EVENT: LP 8 Type 0 for Person 938. Infected Count: 4, Total People: 11
+Mapping LP 938 to PE 20
+Mapping LP 938 to PE 20
+Before Per initINIT PERSON LP 881 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Before Per initINIT PERSON LP 882 at (1,3). Infected: 0
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+LOCATION EVENT: LP 10 Type 0 for Person 1212. Infected Count: 2, Total People: 10
+Mapping LP 1212 to PE 26
+Mapping LP 1212 to PE 26
+Before Loc initINIT LOCATION LP 1314 at (4,262)
+Before Loc initINIT LOCATION LP 1315 at (0,263)
+Before Loc initINIT LOCATION LP 1316 at (1,263)
+Before Loc initINIT LOCATION LP 1317 at (2,263)
+Before Loc initINIT LOCATION LP 1318 at (3,263)
+LOCATION EVENT: LP 13 Type 0 for Person 28. Infected Count: 2, Total People: 9
+Mapping LP 28 to PE 0
+Before Loc initINIT LOCATION LP 1404 at (4,280)
+Before Loc initINIT LOCATION LP 1405 at (0,281)
+Before Loc initINIT LOCATION LP 1406 at (1,281)
+Before Loc initINIT LOCATION LP 1407 at (2,281)
+Before Loc initINIT LOCATION LP 1408 at (3,281)
+Before Loc initINIT LOCATION LP 1409 at (4,281)
+Before Loc initINIT LOCATION LP 1410 at (0,282)
+Before Loc initINIT LOCATION LP 1411 at (1,282)
+Before Loc initINIT LOCATION LP 1412 at (2,282)
+LOCATION EVENT: LP 14 Type 0 for Person 390. Infected Count: 2, Total People: 13
+Mapping LP 390 to PE 8
+Mapping LP 390 to PE 8
+LOCATION EVENT: LP 20 Type 0 for Person 1430. Infected Count: 2, Total People: 9
+Mapping LP 1430 to PE 31
+Mapping LP 1430 to PE 31
+LOCATION EVENT: LP 12 Type 0 for Person 76. Infected Count: 3, Total People: 10
+Mapping LP 76 to PE 1
+Mapping LP 76 to PE 1
+LOCATION EVENT: LP 10 Type 0 for Person 757. Infected Count: 2, Total People: 11
+Mapping LP 757 to PE 16
+Mapping LP 757 to PE 16
+Before Per initINIT PERSON LP 883 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 884 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 885 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+LOCATION EVENT: LP 6 Type 0 for Person 486. Infected Count: 1, Total People: 4
+Mapping LP 486 to PE 10
+Mapping LP 486 to PE 10
+LOCATION EVENT: LP 3 Type 0 for Person 1064. Infected Count: 1, Total People: 5
+Mapping LP 1064 to PE 23
+Mapping LP 1064 to PE 23
+LOCATION EVENT: LP 18 Type 0 for Person 1426. Infected Count: 2, Total People: 9
+Mapping LP 1426 to PE 31
+Mapping LP 1426 to PE 31
+LOCATION EVENT: LP 22 Type 0 for Person 1385. Infected Count: 2, Total People: 9
+Mapping LP 1385 to PE 30
+Mapping LP 1385 to PE 30
+Before Loc initINIT LOCATION LP 1413 at (3,282)
+Before Loc initINIT LOCATION LP 1414 at (4,282)
+Before Loc initINIT LOCATION LP 1415 at (0,283)
+Before Loc initINIT LOCATION LP 1416 at (1,283)
+Before Loc initINIT LOCATION LP 1417 at (2,283)
+Before Loc initINIT LOCATION LP 1418 at (3,283)
+Before Loc initINIT LOCATION LP 1419 at (4,283)
+Before Per initINIT PERSON LP 1420 at (0,2). Infected: 1
+LOCATION EVENT: LP 21 Type 0 for Person 1378. Infected Count: 2, Total People: 10
+Mapping LP 1378 to PE 30
+Mapping LP 1378 to PE 30
+LOCATION EVENT: LP 2 Type 0 for Person 1339. Infected Count: 3, Total People: 15
+Mapping LP 1339 to PE 29
+Mapping LP 1339 to PE 29
+LOCATION EVENT: LP 18 Type 0 for Person 257. Infected Count: 2, Total People: 10
+Mapping LP 257 to PE 5
+Mapping LP 257 to PE 5
+LOCATION EVENT: LP 10 Type 0 for Person 929. Infected Count: 3, Total People: 12
+Mapping LP 929 to PE 20
+Mapping LP 929 to PE 20
+Before Loc initINIT LOCATION LP 1319 at (4,263)
+Before Loc initINIT LOCATION LP 1320 at (0,264)
+Before Loc initINIT LOCATION LP 1321 at (1,264)
+Before Loc initINIT LOCATION LP 1322 at (2,264)
+Before Loc initINIT LOCATION LP 1323 at (3,264)
+Before Loc initINIT LOCATION LP 1324 at (4,264)
+Before Loc initINIT LOCATION LP 1325 at (0,265)
+Before Loc initINIT LOCATION LP 1326 at (1,265)
+Before Loc initINIT LOCATION LP 1327 at (2,265)
+Before Loc initINIT LOCATION LP 1328 at (3,265)
+Before Loc initINIT LOCATION LP 1329 at (4,265)
+Before Per initINIT PERSON LP 1330 at (2,4). Infected: 1
+LOCATION EVENT: LP 23 Type 0 for Person 1018. Infected Count: 4, Total People: 11
+Mapping LP 1018 to PE 22
+Mapping LP 1018 to PE 22
+LOCATION EVENT: LP 21 Type 0 for Person 973. Infected Count: 2, Total People: 11
+Mapping LP 973 to PE 21
+Mapping LP 973 to PE 21
+LOCATION EVENT: LP 7 Type 0 for Person 1169. Infected Count: 2, Total People: 11
+Mapping LP 1169 to PE 25
+Before Per initINIT PERSON LP 886 at (3,1). Infected: 0
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 887 at (2,2). Infected: 0
+Mapping LP 12 to PE 0
+Mapping LP 12 to PE 0
+Before Per initINIT PERSON LP 888 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+Mapping LP 1169 to PE 25
+LOCATION EVENT: LP 10 Type 0 for Person 160. Infected Count: 3, Total People: 13
+Mapping LP 160 to PE 3
+Mapping LP 160 to PE 3
+LOCATION EVENT: LP 17 Type 0 for Person 1075. Infected Count: 5, Total People: 15
+Mapping LP 1075 to PE 23
+Mapping LP 1075 to PE 23
+LOCATION EVENT: LP 16 Type 0 for Person 1030. Infected Count: 2, Total People: 11
+Mapping LP 1030 to PE 22
+Mapping LP 1030 to PE 22
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+LOCATION EVENT: LP 12 Type 0 for Person 799. Infected Count: 3, Total People: 11
+Mapping LP 799 to PE 17
+Mapping LP 799 to PE 17
+LOCATION EVENT: LP 15 Type 0 for Person 575. Infected Count: 2, Total People: 10
+Mapping LP 575 to PE 12
+Mapping LP 575 to PE 12
+LOCATION EVENT: LP 3 Type 0 for Person 211. Infected Count: 2, Total People: 6
+Mapping LP 211 to PE 4
+Mapping LP 211 to PE 4
+LOCATION EVENT: LP 10 Type 0 for Person 437. Infected Count: 3, Total People: 14
+Mapping LP 437 to PE 9
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Mapping LP 437 to PE 9
+LOCATION EVENT: LP 14 Type 0 for Person 978. Infected Count: 2, Total People: 14
+Mapping LP 978 to PE 21
+Mapping LP 978 to PE 21
+LOCATION EVENT: LP 9 Type 0 for Person 1021. Infected Count: 2, Total People: 10
+Mapping LP 1021 to PE 22
+Mapping LP 1021 to PE 22
+LOCATION EVENT: LP 9 Type 0 for Person 311. Infected Count: 2, Total People: 11
+Mapping LP 311 to PE 6
+Mapping LP 311 to PE 6
+LOCATION EVENT: LP 4 Type 0 for Person 261. Infected Count: 1, Total People: 10
+Before Per initINIT PERSON LP 889 at (0,4). Infected: 0
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 890 at (0,3). Infected: 0
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+Mapping LP 261 to PE 5
+Mapping LP 261 to PE 5
+LOCATION EVENT: LP 19 Type 0 for Person 661. Infected Count: 1, Total People: 10
+Mapping LP 661 to PE 14
+Mapping LP 661 to PE 14
+LOCATION EVENT: LP 15 Type 0 for Person 1076. Infected Count: 2, Total People: 11
+Mapping LP 1076 to PE 23
+Mapping LP 1076 to PE 23
+LOCATION EVENT: LP 12 Type 0 for Person 1289. Infected Count: 3, Total People: 12
+Mapping LP 1289 to PE 28
+Mapping LP 1289 to PE 28
+Before Per initINIT PERSON LP 1421 at (0,1). Infected: 1
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 1422 at (3,2). Infected: 0
+Mapping LP 13 to PE 0
+Mapping LP 13 to PE 0
+LOCATION EVENT: LP 2 Type 0 for Person 1123. Infected Count: 3, Total People: 16
+Mapping LP 1123 to PE 24
+Mapping LP 1123 to PE 24
+LOCATION EVENT: LP 10 Type 0 for Person 1034. Infected Count: 4, Total People: 15
+Mapping LP 1034 to PE 22
+Mapping LP 1034 to PE 22
+LOCATION EVENT: LP 23 Type 0 for Person 1376. Infected Count: 4, Total People: 12
+Mapping LP 1376 to PE 30
+Mapping LP 1376 to PE 30
+LOCATION EVENT: LP 8 Type 0 for Person 1152. Infected Count: 4, Total People: 12
+Mapping LP 1152 to PE 25
+Before Per initINIT PERSON LP 891 at (3,4). Infected: 0
+Mapping LP 23 to PE 0
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 892 at (1,2). Infected: 0
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 893 at (2,1). Infected: 0
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+Mapping LP 1152 to PE 25
+LOCATION EVENT: LP 21 Type 0 for Person 1425. Infected Count: 2, Total People: 12
+Mapping LP 1425 to PE 31
+Mapping LP 1425 to PE 31
+LOCATION EVENT: LP 2 Type 0 for Person 438. Infected Count: 3, Total People: 17
+Mapping LP 438 to PE 9
+Mapping LP 438 to PE 9
+LOCATION EVENT: LP 12 Type 0 for Person 1249. Infected Count: 3, Total People: 13
+Mapping LP 1249 to PE 27
+Mapping LP 1249 to PE 27
+Before Per initINIT PERSON LP 1331 at (4,3). Infected: 0
+Mapping LP 19 to PE 0
+Mapping LP 19 to PE 0
+Before Per initINIT PERSON LP 1332 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 1333 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+LOCATION EVENT: LP 21 Type 0 for Person 1204. Infected Count: 2, Total People: 13
+Mapping LP 1204 to PE 26
+Mapping LP 1204 to PE 26
+LOCATION EVENT: LP 16 Type 0 for Person 1296. Infected Count: 2, Total People: 12
+Mapping LP 1296 to PE 28
+Mapping LP 1296 to PE 28
+LOCATION EVENT: LP 18 Type 0 for Person 1208. Infected Count: 3, Total People: 11
+Mapping LP 1208 to PE 26
+Mapping LP 1208 to PE 26
+LOCATION EVENT: LP 4 Type 0 for Person 930. Infected Count: 1, Total People: 11
+Mapping LP 930 to PE 20
+Before Per initINIT PERSON LP 1423 at (0,2). Infected: 0
+Mapping LP 10 to PE 0
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 1424 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 1425 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Mapping LP 930 to PE 20
+LOCATION EVENT: LP 12 Type 0 for Person 120. Infected Count: 3, Total People: 14
+Mapping LP 120 to PE 2
+Mapping LP 120 to PE 2
+LOCATION EVENT: LP 7 Type 0 for Person 1031. Infected Count: 2, Total People: 12
+Mapping LP 1031 to PE 22
+Mapping LP 1031 to PE 22
+LOCATION EVENT: LP 0 Type 0 for Person 1079. Infected Count: 0, Total People: 9
+Mapping LP 1079 to PE 23
+Mapping LP 1079 to PE 23
+Mapping LP 10 to PE 0
+Before Per initINIT PERSON LP 1334 at (1,2). Infected: 0
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 1335 at (2,1). Infected: 0
+Mapping LP 7 to PE 0
+Mapping LP 7 to PE 0
+LOCATION EVENT: LP 5 Type 0 for Person 493. Infected Count: 2, Total People: 6
+Mapping LP 493 to PE 10
+Mapping LP 493 to PE 10
+LOCATION EVENT: LP 0 Type 0 for Person 435. Infected Count: 0, Total People: 10
+Mapping LP 435 to PE 9
+Mapping LP 435 to PE 9
+LOCATION EVENT: LP 21 Type 0 for Person 526. Infected Count: 2, Total People: 14
+Mapping LP 526 to PE 11
+Mapping LP 526 to PE 11
+LOCATION EVENT: LP 10 Type 0 for Person 1163. Infected Count: 4, Total People: 16
+Mapping LP 1163 to PE 25
+Mapping LP 1163 to PE 25
+Before Per initINIT PERSON LP 894 at (4,1). Infected: 0
+Mapping LP 9 to PE 0
+Mapping LP 9 to PE 0
+Before Per initINIT PERSON LP 895 at (2,4). Infected: 1
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 896 at (1,2). Infected: 0
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 897 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+LOCATION EVENT: LP 14 Type 0 for Person 656. Infected Count: 2, Total People: 15
+Mapping LP 656 to PE 14
+Mapping LP 656 to PE 14
+LOCATION EVENT: LP 15 Type 0 for Person 756. Infected Count: 2, Total People: 12
+Mapping LP 756 to PE 16
+Mapping LP 756 to PE 16
+LOCATION EVENT: LP 7 Type 0 for Person 1115. Infected Count: 2, Total People: 13
+Mapping LP 1115 to PE 24
+Mapping LP 1115 to PE 24
+Before Per initINIT PERSON LP 1426 at (3,3). Infected: 0
+Mapping LP 18 to PE 0
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 1427 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 1428 at (1,3). Infected: 1
+Mapping LP 16 to PE 0
+LOCATION EVENT: LP 16 Type 0 for Person 1428. Infected Count: 2, Total People: 13
+Mapping LP 1428 to PE 31
+Mapping LP 1428 to PE 31
+LOCATION EVENT: LP 0 Type 0 for Person 1342. Infected Count: 0, Total People: 11
+Mapping LP 1342 to PE 29
+Mapping LP 1342 to PE 29
+LOCATION EVENT: LP 3 Type 0 for Person 399. Infected Count: 2, Total People: 7
+Mapping LP 399 to PE 8
+Mapping LP 399 to PE 8
+LOCATION EVENT: LP 11 Type 0 for Person 671. Infected Count: 1, Total People: 7
+Mapping LP 671 to PE 14
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 898 at (4,2). Infected: 0
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 899 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 671 to PE 14
+LOCATION EVENT: LP 24 Type 0 for Person 70. Infected Count: 1, Total People: 5
+Mapping LP 70 to PE 1
+Mapping LP 70 to PE 1
+LOCATION EVENT: LP 24 Type 0 for Person 1294. Infected Count: 2, Total People: 6
+Mapping LP 1294 to PE 28
+Mapping LP 1294 to PE 28
+LOCATION EVENT: LP 1 Type 0 for Person 1071. Infected Count: 1, Total People: 9
+Mapping LP 1071 to PE 23
+Mapping LP 1071 to PE 23
+LOCATION EVENT: LP 14 Type 0 for Person 613. Infected Count: 2, Total People: 16
+Before Per initINIT PERSON LP 1336 at (0,1). Infected: 0
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 1337 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 1338 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Mapping LP 613 to PE 13
+Mapping LP 613 to PE 13
+LOCATION EVENT: LP 23 Type 0 for Person 1348. Infected Count: 4, Total People: 13
+Mapping LP 1348 to PE 29
+Mapping LP 1348 to PE 29
+LOCATION EVENT: LP 24 Type 0 for Person 351. Infected Count: 2, Total People: 7
+Mapping LP 351 to PE 7
+Mapping LP 351 to PE 7
+LOCATION EVENT: LP 5 Type 0 for Person 529. Infected Count: 2, Total People: 7
+Mapping LP 1 to PE 0
+Mapping LP 529 to PE 11
+Mapping LP 529 to PE 11
+LOCATION EVENT: LP 14 Type 0 for Person 745. Infected Count: 2, Total People: 17
+Mapping LP 745 to PE 16
+Mapping LP 745 to PE 16
+LOCATION EVENT: LP 0 Type 0 for Person 764. Infected Count: 0, Total People: 12
+Mapping LP 764 to PE 16
+Mapping LP 764 to PE 16
+LOCATION EVENT: LP 13 Type 0 for Person 305. Infected Count: 2, Total People: 10
+Mapping LP 305 to PE 6
+Mapping LP 305 to PE 6
+Mapping LP 16 to PE 0
+Before Per initINIT PERSON LP 1429 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 1430 at (0,4). Infected: 1
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 1431 at (3,3). Infected: 0
+Mapping LP 18 to PE 0
+LOCATION EVENT: LP 9 Type 0 for Person 172. Infected Count: 2, Total People: 12
+Mapping LP 172 to PE 3
+Mapping LP 172 to PE 3
+LOCATION EVENT: LP 0 Type 0 for Person 343. Infected Count: 0, Total People: 13
+Mapping LP 343 to PE 7
+Mapping LP 343 to PE 7
+LOCATION EVENT: LP 8 Type 0 for Person 523. Infected Count: 4, Total People: 13
+Mapping LP 523 to PE 11
+Mapping LP 523 to PE 11
+LOCATION EVENT: LP 16 Type 0 for Person 583. Infected Count: 3, Total People: 14
+Mapping LP 583 to PE 12
+Mapping LP 583 to PE 12
+Before Per initINIT PERSON LP 1339 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 1340 at (3,1). Infected: 0
+Mapping LP 8 to PE 0
+Mapping LP 8 to PE 0
+Before Per initINIT PERSON LP 1341 at (2,0). Infected: 0
+Mapping LP 2 to PE 0
+LOCATION EVENT: LP 24 Type 0 for Person 444. Infected Count: 2, Total People: 8
+Mapping LP 444 to PE 9
+Mapping LP 444 to PE 9
+LOCATION EVENT: LP 12 Type 0 for Person 574. Infected Count: 4, Total People: 15
+Mapping LP 574 to PE 12
+Mapping LP 574 to PE 12
+LOCATION EVENT: LP 14 Type 0 for Person 353. Infected Count: 2, Total People: 18
+Mapping LP 353 to PE 7
+Mapping LP 353 to PE 7
+LOCATION EVENT: LP 5 Type 0 for Person 521. Infected Count: 2, Total People: 8
+Mapping LP 521 to PE 11
+Mapping LP 521 to PE 11
+Mapping LP 18 to PE 0
+Before Per initINIT PERSON LP 1432 at (4,2). Infected: 1
+Mapping LP 14 to PE 0
+Mapping LP 14 to PE 0
+Before Per initINIT PERSON LP 1433 at (1,0). Infected: 0
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+LOCATION EVENT: LP 23 Type 0 for Person 1107. Infected Count: 4, Total People: 14
+Mapping LP 1107 to PE 24
+Mapping LP 1107 to PE 24
+LOCATION EVENT: LP 2 Type 0 for Person 1214. Infected Count: 3, Total People: 18
+Mapping LP 1214 to PE 26
+Mapping LP 1214 to PE 26
+LOCATION EVENT: LP 16 Type 0 for Person 176. Infected Count: 3, Total People: 15
+Mapping LP 176 to PE 3
+Mapping LP 176 to PE 3
+LOCATION EVENT: LP 4 Type 0 for Person 852. Infected Count: 1, Total People: 12
+Mapping LP 2 to PE 0
+Before Per initINIT PERSON LP 1342 at (0,0). Infected: 0
+Mapping LP 0 to PE 0
+Mapping LP 0 to PE 0
+Before Per initINIT PERSON LP 1343 at (0,3). Infected: 0
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+Mapping LP 852 to PE 18
+Mapping LP 852 to PE 18
+LOCATION EVENT: LP 1 Type 0 for Person 538. Infected Count: 1, Total People: 10
+Mapping LP 538 to PE 11
+Mapping LP 538 to PE 11
+LOCATION EVENT: LP 19 Type 0 for Person 255. Infected Count: 1, Total People: 11
+Mapping LP 255 to PE 5
+Mapping LP 255 to PE 5
+LOCATION EVENT: LP 9 Type 0 for Person 703. Infected Count: 2, Total People: 13
+Mapping LP 703 to PE 15
+Mapping LP 703 to PE 15
+Before Per initINIT PERSON LP 1344 at (0,3). Infected: 1
+Mapping LP 15 to PE 0
+Mapping LP 15 to PE 0
+Before Per initINIT PERSON LP 1345 at (1,0). Infected: 1
+LOCATION EVENT: LP 19 Type 0 for Person 1258. Infected Count: 2, Total People: 12
+Mapping LP 1258 to PE 27
+Mapping LP 1258 to PE 27
+LOCATION EVENT: LP 3 Type 0 for Person 446. Infected Count: 2, Total People: 8
+Mapping LP 446 to PE 9
+Mapping LP 446 to PE 9
+LOCATION EVENT: LP 7 Type 0 for Person 1020. Infected Count: 3, Total People: 14
+Mapping LP 1020 to PE 22
+Mapping LP 1020 to PE 22
+LOCATION EVENT: LP 10 Type 0 for Person 1114. Infected Count: 4, Total People: 17
+Mapping LP 1114 to PE 24
+Before Per initINIT PERSON LP 1434 at (1,2). Infected: 0
+Mapping LP 11 to PE 0
+Mapping LP 11 to PE 0
+Before Per initINIT PERSON LP 1435 at (2,0). Infected: 1
+Mapping LP 2 to PE 0
+Mapping LP 2 to PE 0
+Mapping LP 1114 to PE 24
+LOCATION EVENT: LP 10 Type 0 for Person 304. Infected Count: 4, Total People: 18
+Mapping LP 304 to PE 6
+Mapping LP 304 to PE 6
+LOCATION EVENT: LP 9 Type 0 for Person 1109. Infected Count: 2, Total People: 14
+Mapping LP 1109 to PE 24
+Mapping LP 1109 to PE 24
+LOCATION EVENT: LP 0 Type 0 for Person 1168. Infected Count: 0, Total People: 14
+Mapping LP 1168 to PE 25
+Mapping LP 1168 to PE 25
+LOCATION EVENT: LP 6 Type 0 for Person 299. Infected Count: 1, Total People: 5
+Before Per initINIT PERSON LP 1436 at (0,1). Infected: 0
+Mapping LP 5 to PE 0
+Mapping LP 5 to PE 0
+Before Per initINIT PERSON LP 1437 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Mapping LP 299 to PE 6
+Mapping LP 299 to PE 6
+LOCATION EVENT: LP 24 Type 0 for Person 1391. Infected Count: 2, Total People: 9
+Mapping LP 1391 to PE 30
+Mapping LP 1391 to PE 30
+LOCATION EVENT: LP 13 Type 0 for Person 1119. Infected Count: 3, Total People: 11
+Mapping LP 1119 to PE 24
+Mapping LP 1119 to PE 24
+LOCATION EVENT: LP 5 Type 0 for Person 848. Infected Count: 3, Total People: 9
+Mapping LP 848 to PE 18
+Mapping LP 1 to PE 0
+Mapping LP 1 to PE 0
+Before Per initINIT PERSON LP 1346 at (2,4). Infected: 0
+Mapping LP 22 to PE 0
+Mapping LP 22 to PE 0
+Before Per initINIT PERSON LP 1347 at (0,4). Infected: 0
+Mapping LP 20 to PE 0
+Mapping LP 20 to PE 0
+Before Per initINIT PERSON LP 1348 at (3,4). Infected: 0
+Mapping LP 23 to PE 0
+Mapping LP 848 to PE 18
+LOCATION EVENT: LP 1 Type 0 for Person 522. Infected Count: 2, Total People: 11
+Mapping LP 522 to PE 11
+Mapping LP 522 to PE 11
+LOCATION EVENT: LP 21 Type 0 for Person 1293. Infected Count: 2, Total People: 15
+Mapping LP 1293 to PE 28
+Mapping LP 1293 to PE 28
+LOCATION EVENT: LP 3 Type 0 for Person 854. Infected Count: 2, Total People: 9
+Mapping LP 854 to PE 18
+Mapping LP 854 to PE 18
+LOCATION EVENT: LP 22 Type 0 for Person 895. Infected Count: 2, Total People: 10
+Before Per initINIT PERSON LP 1438 at (1,4). Infected: 0
+Mapping LP 21 to PE 0
+Mapping LP 21 to PE 0
+Before Per initINIT PERSON LP 1439 at (3,0). Infected: 0
+Mapping LP 3 to PE 0
+Mapping LP 3 to PE 0
+Mapping LP 895 to PE 19
+Mapping LP 895 to PE 19
+LOCATION EVENT: LP 11 Type 0 for Person 752. Infected Count: 1, Total People: 8
+Mapping LP 752 to PE 16
+Mapping LP 752 to PE 16
+LOCATION EVENT: LP 12 Type 0 for Person 36. Infected Count: 4, Total People: 16
+Mapping LP 36 to PE 0
+LOCATION EVENT: LP 10 Type 0 for Person 657. Infected Count: 4, Total People: 19
+Mapping LP 657 to PE 14
+Mapping LP 657 to PE 14
+Mapping LP 23 to PE 0
+Before Per initINIT PERSON LP 1349 at (1,3). Infected: 1
+Mapping LP 16 to PE 0
+Mapping LP 16 to PE 0
+LOCATION EVENT: LP 6 Type 0 for Person 1203. Infected Count: 1, Total People: 6
+Mapping LP 1203 to PE 26
+Mapping LP 1203 to PE 26
+LOCATION EVENT: LP 3 Type 0 for Person 209. Infected Count: 3, Total People: 10
+Mapping LP 209 to PE 4
+Mapping LP 209 to PE 4
+LOCATION EVENT: LP 19 Type 0 for Person 1016. Infected Count: 2, Total People: 13
+Mapping LP 1016 to PE 22
+Mapping LP 1016 to PE 22
+LOCATION EVENT: LP 9 Type 0 for Person 1243. Infected Count: 3, Total People: 15
+Mapping LP 1243 to PE 27
+Mapping LP 1243 to PE 27
+LOCATION EVENT: LP 19 Type 0 for Person 161. Infected Count: 2, Total People: 14
+Mapping LP 161 to PE 3
+Mapping LP 161 to PE 3
+LOCATION EVENT: LP 3 Type 0 for Person 216. Infected Count: 3, Total People: 11
+Mapping LP 216 to PE 4
+Mapping LP 216 to PE 4
+LOCATION EVENT: LP 4 Type 0 for Person 430. Infected Count: 1, Total People: 13
+Mapping LP 430 to PE 9
+Mapping LP 430 to PE 9
+LOCATION EVENT: LP 14 Type 0 for Person 850. Infected Count: 2, Total People: 19
+Mapping LP 850 to PE 18
+Mapping LP 850 to PE 18
+LOCATION EVENT: LP 22 Type 0 for Person 72. Infected Count: 3, Total People: 11
+Mapping LP 72 to PE 1
+Mapping LP 72 to PE 1
+LOCATION EVENT: LP 21 Type 0 for Person 797. Infected Count: 2, Total People: 16
+Mapping LP 797 to PE 17
+Mapping LP 797 to PE 17
+LOCATION EVENT: LP 14 Type 0 for Person 796. Infected Count: 3, Total People: 20
+Mapping LP 796 to PE 17
+Mapping LP 796 to PE 17
+LOCATION EVENT: LP 16 Type 0 for Person 1121. Infected Count: 3, Total People: 16
+Mapping LP 1121 to PE 24
+Mapping LP 1121 to PE 24
+LOCATION EVENT: LP 3 Type 0 for Person 130. Infected Count: 3, Total People: 12
+Mapping LP 130 to PE 2
+Mapping LP 130 to PE 2
+LOCATION EVENT: LP 24 Type 0 for Person 310. Infected Count: 2, Total People: 10
+Mapping LP 310 to PE 6
+Mapping LP 310 to PE 6
+LOCATION EVENT: LP 16 Type 0 for Person 846. Infected Count: 3, Total People: 17
+Mapping LP 846 to PE 18
+Mapping LP 846 to PE 18
+LOCATION EVENT: LP 17 Type 0 for Person 124. Infected Count: 6, Total People: 16
+Mapping LP 124 to PE 2
+Mapping LP 124 to PE 2
+LOCATION EVENT: LP 18 Type 0 for Person 1209. Infected Count: 4, Total People: 12
+Mapping LP 1209 to PE 26
+Mapping LP 1209 to PE 26
+LOCATION EVENT: LP 5 Type 0 for Person 931. Infected Count: 4, Total People: 10
+Mapping LP 931 to PE 20
+Mapping LP 931 to PE 20
+LOCATION EVENT: LP 23 Type 0 for Person 480. Infected Count: 4, Total People: 15
+Mapping LP 480 to PE 10
+Mapping LP 480 to PE 10
+LOCATION EVENT: LP 16 Type 0 for Person 219. Infected Count: 3, Total People: 18
+Mapping LP 219 to PE 4
+Mapping LP 219 to PE 4
+LOCATION EVENT: LP 21 Type 0 for Person 880. Infected Count: 3, Total People: 17
+Mapping LP 880 to PE 19
+Mapping LP 880 to PE 19
+LOCATION EVENT: LP 16 Type 0 for Person 1200. Infected Count: 3, Total People: 19
+Mapping LP 1200 to PE 26
+Mapping LP 1200 to PE 26
+LOCATION EVENT: LP 21 Type 0 for Person 478. Infected Count: 3, Total People: 18
+Mapping LP 478 to PE 10
+Mapping LP 478 to PE 10
+LOCATION EVENT: LP 18 Type 0 for Person 1150. Infected Count: 4, Total People: 13
+Mapping LP 1150 to PE 25
+Mapping LP 1150 to PE 25
+LOCATION EVENT: LP 1 Type 0 for Person 266. Infected Count: 2, Total People: 12
+Mapping LP 266 to PE 5
+Mapping LP 266 to PE 5
+LOCATION EVENT: LP 5 Type 0 for Person 215. Infected Count: 4, Total People: 11
+Mapping LP 215 to PE 4
+Mapping LP 215 to PE 4
+LOCATION EVENT: LP 21 Type 0 for Person 532. Infected Count: 4, Total People: 19
+Mapping LP 532 to PE 11
+Mapping LP 532 to PE 11
+LOCATION EVENT: LP 1 Type 0 for Person 899. Infected Count: 2, Total People: 13
+Mapping LP 899 to PE 19
+Mapping LP 899 to PE 19
+LOCATION EVENT: LP 21 Type 0 for Person 1201. Infected Count: 4, Total People: 20
+Mapping LP 1201 to PE 26
+Mapping LP 1201 to PE 26
+LOCATION EVENT: LP 24 Type 0 for Person 491. Infected Count: 2, Total People: 11
+Mapping LP 491 to PE 10
+Mapping LP 491 to PE 10
+LOCATION EVENT: LP 6 Type 0 for Person 1292. Infected Count: 1, Total People: 7
+Mapping LP 1292 to PE 28
+Mapping LP 1292 to PE 28
+LOCATION EVENT: LP 9 Type 0 for Person 1106. Infected Count: 4, Total People: 16
+Mapping LP 1106 to PE 24
+Mapping LP 1106 to PE 24
+LOCATION EVENT: LP 21 Type 0 for Person 942. Infected Count: 4, Total People: 21
+Mapping LP 942 to PE 20
+Mapping LP 942 to PE 20
+LOCATION EVENT: LP 1 Type 0 for Person 440. Infected Count: 2, Total People: 14
+Mapping LP 440 to PE 9
+Mapping LP 440 to PE 9
+LOCATION EVENT: LP 2 Type 0 for Person 131. Infected Count: 3, Total People: 19
+Mapping LP 131 to PE 2
+Mapping LP 131 to PE 2
+LOCATION EVENT: LP 13 Type 0 for Person 842. Infected Count: 3, Total People: 12
+Mapping LP 842 to PE 18
+Mapping LP 842 to PE 18
+LOCATION EVENT: LP 0 Type 0 for Person 479. Infected Count: 1, Total People: 15
+Mapping LP 479 to PE 10
+Mapping LP 479 to PE 10
+LOCATION EVENT: LP 19 Type 0 for Person 350. Infected Count: 3, Total People: 15
+Mapping LP 350 to PE 7
+Mapping LP 350 to PE 7
+LOCATION EVENT: LP 12 Type 0 for Person 1062. Infected Count: 4, Total People: 17
+Mapping LP 1062 to PE 23
+Mapping LP 1062 to PE 23
+LOCATION EVENT: LP 24 Type 0 for Person 700. Infected Count: 2, Total People: 12
+Mapping LP 700 to PE 15
+Mapping LP 700 to PE 15
+LOCATION EVENT: LP 14 Type 0 for Person 1424. Infected Count: 3, Total People: 21
+Mapping LP 1424 to PE 31
+Mapping LP 1424 to PE 31
+LOCATION EVENT: LP 22 Type 0 for Person 624. Infected Count: 3, Total People: 12
+Mapping LP 624 to PE 13
+Mapping LP 624 to PE 13
+LOCATION EVENT: LP 13 Type 0 for Person 888. Infected Count: 3, Total People: 13
+Mapping LP 888 to PE 19
+Mapping LP 888 to PE 19
+LOCATION EVENT: LP 14 Type 0 for Person 449. Infected Count: 3, Total People: 22
+Mapping LP 449 to PE 9
+Mapping LP 449 to PE 9
+LOCATION EVENT: LP 19 Type 0 for Person 1206. Infected Count: 3, Total People: 16
+Mapping LP 1206 to PE 26
+Mapping LP 1206 to PE 26
+LOCATION EVENT: LP 22 Type 0 for Person 1346. Infected Count: 4, Total People: 13
+Mapping LP 1346 to PE 29
+Mapping LP 1346 to PE 29
+LOCATION EVENT: LP 12 Type 0 for Person 33. Infected Count: 5, Total People: 18
+Mapping LP 33 to PE 0
+LOCATION EVENT: LP 1 Type 0 for Person 307. Infected Count: 2, Total People: 15
+Mapping LP 307 to PE 6
+Mapping LP 307 to PE 6
+LOCATION EVENT: LP 18 Type 0 for Person 1431. Infected Count: 5, Total People: 14
+Mapping LP 1431 to PE 31
+Mapping LP 1431 to PE 31
+LOCATION EVENT: LP 2 Type 0 for Person 397. Infected Count: 3, Total People: 20
+Mapping LP 397 to PE 8
+Mapping LP 397 to PE 8
+LOCATION EVENT: LP 18 Type 0 for Person 1379. Infected Count: 5, Total People: 15
+Mapping LP 1379 to PE 30
+Mapping LP 1379 to PE 30
+LOCATION EVENT: LP 22 Type 0 for Person 1017. Infected Count: 4, Total People: 14
+Mapping LP 1017 to PE 22
+Mapping LP 1017 to PE 22
+LOCATION EVENT: LP 16 Type 0 for Person 1304. Infected Count: 4, Total People: 20
+Mapping LP 1304 to PE 28
+Mapping LP 1304 to PE 28
+LOCATION EVENT: LP 14 Type 0 for Person 520. Infected Count: 3, Total People: 23
+Mapping LP 520 to PE 11
+Mapping LP 520 to PE 11
+LOCATION EVENT: LP 21 Type 0 for Person 179. Infected Count: 4, Total People: 22
+Mapping LP 179 to PE 3
+Mapping LP 179 to PE 3
+LOCATION EVENT: LP 2 Type 0 for Person 717. Infected Count: 3, Total People: 21
+Mapping LP 717 to PE 15
+Mapping LP 717 to PE 15
+LOCATION EVENT: LP 23 Type 0 for Person 1256. Infected Count: 4, Total People: 16
+Mapping LP 1256 to PE 27
+Mapping LP 1256 to PE 27
+LOCATION EVENT: LP 22 Type 0 for Person 75. Infected Count: 4, Total People: 15
+Mapping LP 75 to PE 1
+Mapping LP 75 to PE 1
+LOCATION EVENT: LP 2 Type 0 for Person 897. Infected Count: 3, Total People: 22
+Mapping LP 897 to PE 19
+Mapping LP 897 to PE 19
+LOCATION EVENT: LP 21 Type 0 for Person 165. Infected Count: 4, Total People: 23
+Mapping LP 165 to PE 3
+Mapping LP 165 to PE 3
+LOCATION EVENT: LP 7 Type 0 for Person 1247. Infected Count: 3, Total People: 15
+Mapping LP 1247 to PE 27
+Mapping LP 1247 to PE 27
+LOCATION EVENT: LP 12 Type 0 for Person 84. Infected Count: 5, Total People: 19
+Mapping LP 84 to PE 1
+Mapping LP 84 to PE 1
+LOCATION EVENT: LP 1 Type 0 for Person 1345. Infected Count: 2, Total People: 16
+Mapping LP 1345 to PE 29
+Mapping LP 1345 to PE 29
+LOCATION EVENT: LP 22 Type 0 for Person 1111. Infected Count: 4, Total People: 16
+Mapping LP 1111 to PE 24
+Mapping LP 1111 to PE 24
+LOCATION EVENT: LP 10 Type 0 for Person 40. Infected Count: 4, Total People: 20
+Mapping LP 40 to PE 0
+LOCATION EVENT: LP 13 Type 0 for Person 706. Infected Count: 3, Total People: 14
+Mapping LP 706 to PE 15
+Mapping LP 706 to PE 15
+LOCATION EVENT: LP 21 Type 0 for Person 314. Infected Count: 4, Total People: 24
+Mapping LP 314 to PE 6
+Mapping LP 314 to PE 6
+LOCATION EVENT: LP 24 Type 0 for Person 711. Infected Count: 2, Total People: 13
+Mapping LP 711 to PE 15
+Mapping LP 711 to PE 15
+LOCATION EVENT: LP 1 Type 0 for Person 482. Infected Count: 3, Total People: 17
+Mapping LP 482 to PE 10
+Mapping LP 482 to PE 10
+LOCATION EVENT: LP 21 Type 0 for Person 754. Infected Count: 4, Total People: 25
+Mapping LP 754 to PE 16
+Mapping LP 754 to PE 16
+LOCATION EVENT: LP 23 Type 0 for Person 655. Infected Count: 4, Total People: 17
+Mapping LP 655 to PE 14
+Mapping LP 655 to PE 14
+LOCATION EVENT: LP 20 Type 0 for Person 398. Infected Count: 3, Total People: 10
+Mapping LP 398 to PE 8
+Mapping LP 398 to PE 8
+LOCATION EVENT: LP 15 Type 0 for Person 1196. Infected Count: 2, Total People: 13
+Mapping LP 1196 to PE 26
+Mapping LP 1196 to PE 26
+LOCATION EVENT: LP 0 Type 0 for Person 31. Infected Count: 1, Total People: 16
+Mapping LP 31 to PE 0
+LOCATION EVENT: LP 20 Type 0 for Person 573. Infected Count: 4, Total People: 11
+Mapping LP 573 to PE 12
+Mapping LP 573 to PE 12
+LOCATION EVENT: LP 21 Type 0 for Person 1375. Infected Count: 5, Total People: 26
+Mapping LP 1375 to PE 30
+Mapping LP 1375 to PE 30
+LOCATION EVENT: LP 14 Type 0 for Person 1392. Infected Count: 3, Total People: 24
+Mapping LP 1392 to PE 30
+Mapping LP 1392 to PE 30
+LOCATION EVENT: LP 4 Type 0 for Person 29. Infected Count: 1, Total People: 14
+Mapping LP 29 to PE 0
+LOCATION EVENT: LP 3 Type 0 for Person 1205. Infected Count: 4, Total People: 13
+Mapping LP 1205 to PE 26
+Mapping LP 1205 to PE 26
+LOCATION EVENT: LP 23 Type 0 for Person 891. Infected Count: 5, Total People: 18
+Mapping LP 891 to PE 19
+Mapping LP 891 to PE 19
+LOCATION EVENT: LP 0 Type 0 for Person 567. Infected Count: 1, Total People: 17
+Mapping LP 567 to PE 12
+Mapping LP 567 to PE 12
+LOCATION EVENT: LP 15 Type 0 for Person 701. Infected Count: 2, Total People: 14
+Mapping LP 701 to PE 15
+Mapping LP 701 to PE 15
+LOCATION EVENT: LP 21 Type 0 for Person 1065. Infected Count: 5, Total People: 27
+Mapping LP 1065 to PE 23
+Mapping LP 1065 to PE 23
+LOCATION EVENT: LP 5 Type 0 for Person 341. Infected Count: 4, Total People: 12
+Mapping LP 341 to PE 7
+Mapping LP 341 to PE 7
+LOCATION EVENT: LP 20 Type 0 for Person 89. Infected Count: 4, Total People: 12
+Mapping LP 89 to PE 1
+Mapping LP 89 to PE 1
+LOCATION EVENT: LP 9 Type 0 for Person 74. Infected Count: 4, Total People: 17
+Mapping LP 74 to PE 1
+Mapping LP 74 to PE 1
+LOCATION EVENT: LP 14 Type 0 for Person 178. Infected Count: 4, Total People: 25
+Mapping LP 178 to PE 3
+Mapping LP 178 to PE 3
+LOCATION EVENT: LP 21 Type 0 for Person 433. Infected Count: 5, Total People: 28
+Mapping LP 433 to PE 9
+Mapping LP 433 to PE 9
+LOCATION EVENT: LP 8 Type 0 for Person 1253. Infected Count: 4, Total People: 14
+Mapping LP 1253 to PE 27
+Mapping LP 1253 to PE 27
+LOCATION EVENT: LP 3 Type 0 for Person 1074. Infected Count: 4, Total People: 14
+Mapping LP 1074 to PE 23
+Mapping LP 1074 to PE 23
+LOCATION EVENT: LP 15 Type 0 for Person 715. Infected Count: 2, Total People: 15
+Mapping LP 715 to PE 15
+Mapping LP 715 to PE 15
+LOCATION EVENT: LP 4 Type 0 for Person 791. Infected Count: 1, Total People: 15
+Mapping LP 791 to PE 17
+Mapping LP 791 to PE 17
+LOCATION EVENT: LP 16 Type 0 for Person 1349. Infected Count: 5, Total People: 21
+Mapping LP 1349 to PE 29
+Mapping LP 1349 to PE 29
+LOCATION EVENT: LP 12 Type 0 for Person 1060. Infected Count: 5, Total People: 20
+Mapping LP 1060 to PE 23
+Mapping LP 1060 to PE 23
+LOCATION EVENT: LP 9 Type 0 for Person 83. Infected Count: 5, Total People: 18
+Mapping LP 83 to PE 1
+Mapping LP 83 to PE 1
+LOCATION EVENT: LP 1 Type 0 for Person 525. Infected Count: 3, Total People: 18
+Mapping LP 525 to PE 11
+Mapping LP 525 to PE 11
+LOCATION EVENT: LP 14 Type 0 for Person 626. Infected Count: 5, Total People: 26
+Mapping LP 626 to PE 13
+Mapping LP 626 to PE 13
+LOCATION EVENT: LP 11 Type 0 for Person 896. Infected Count: 2, Total People: 9
+Mapping LP 896 to PE 19
+Mapping LP 896 to PE 19
+LOCATION EVENT: LP 10 Type 0 for Person 267. Infected Count: 5, Total People: 21
+Mapping LP 267 to PE 5
+Mapping LP 267 to PE 5
+LOCATION EVENT: LP 10 Type 0 for Person 760. Infected Count: 6, Total People: 22
+Mapping LP 760 to PE 16
+Mapping LP 760 to PE 16
+LOCATION EVENT: LP 12 Type 0 for Person 1255. Infected Count: 5, Total People: 21
+Mapping LP 1255 to PE 27
+Mapping LP 1255 to PE 27
+LOCATION EVENT: LP 19 Type 0 for Person 806. Infected Count: 3, Total People: 17
+Mapping LP 806 to PE 17
+Mapping LP 806 to PE 17
+LOCATION EVENT: LP 10 Type 0 for Person 1072. Infected Count: 6, Total People: 23
+Mapping LP 1072 to PE 23
+Mapping LP 1072 to PE 23
+LOCATION EVENT: LP 19 Type 0 for Person 670. Infected Count: 3, Total People: 18
+Mapping LP 670 to PE 14
+Mapping LP 670 to PE 14
+LOCATION EVENT: LP 10 Type 0 for Person 611. Infected Count: 6, Total People: 24
+Mapping LP 611 to PE 13
+Mapping LP 611 to PE 13
+LOCATION EVENT: LP 5 Type 0 for Person 400. Infected Count: 5, Total People: 13
+Mapping LP 400 to PE 8
+Mapping LP 400 to PE 8
+LOCATION EVENT: LP 6 Type 0 for Person 975. Infected Count: 1, Total People: 8
+Mapping LP 975 to PE 21
+Mapping LP 975 to PE 21
+LOCATION EVENT: LP 22 Type 0 for Person 77. Infected Count: 4, Total People: 17
+Mapping LP 77 to PE 1
+Mapping LP 77 to PE 1
+LOCATION EVENT: LP 9 Type 0 for Person 167. Infected Count: 5, Total People: 19
+Mapping LP 167 to PE 3
+Mapping LP 167 to PE 3
+LOCATION EVENT: LP 10 Type 0 for Person 1290. Infected Count: 6, Total People: 25
+Mapping LP 1290 to PE 28
+Mapping LP 1290 to PE 28
+LOCATION EVENT: LP 3 Type 0 for Person 269. Infected Count: 4, Total People: 15
+Mapping LP 269 to PE 5
+Mapping LP 269 to PE 5
+LOCATION EVENT: LP 21 Type 0 for Person 809. Infected Count: 5, Total People: 29
+Mapping LP 809 to PE 17
+Mapping LP 809 to PE 17
+LOCATION EVENT: LP 15 Type 0 for Person 890. Infected Count: 2, Total People: 16
+Mapping LP 890 to PE 19
+Mapping LP 890 to PE 19
+LOCATION EVENT: LP 8 Type 0 for Person 313. Infected Count: 4, Total People: 15
+Mapping LP 313 to PE 6
+Mapping LP 313 to PE 6
+LOCATION EVENT: LP 8 Type 0 for Person 395. Infected Count: 5, Total People: 16
+Mapping LP 395 to PE 8
+Mapping LP 395 to PE 8
+LOCATION EVENT: LP 9 Type 0 for Person 749. Infected Count: 5, Total People: 20
+Mapping LP 749 to PE 16
+Mapping LP 749 to PE 16
+LOCATION EVENT: LP 7 Type 0 for Person 1155. Infected Count: 4, Total People: 16
+Mapping LP 1155 to PE 25
+Mapping LP 1155 to PE 25
+LOCATION EVENT: LP 4 Type 0 for Person 475. Infected Count: 1, Total People: 16
+Mapping LP 475 to PE 10
+Mapping LP 475 to PE 10
+LOCATION EVENT: LP 17 Type 0 for Person 610. Infected Count: 6, Total People: 17
+Mapping LP 610 to PE 13
+Mapping LP 610 to PE 13
+LOCATION EVENT: LP 20 Type 0 for Person 1347. Infected Count: 4, Total People: 13
+Mapping LP 1347 to PE 29
+Mapping LP 1347 to PE 29
+LOCATION EVENT: LP 24 Type 0 for Person 254. Infected Count: 2, Total People: 14
+Mapping LP 254 to PE 5
+Mapping LP 254 to PE 5
+LOCATION EVENT: LP 3 Type 0 for Person 847. Infected Count: 4, Total People: 16
+Mapping LP 847 to PE 18
+Mapping LP 847 to PE 18
+LOCATION EVENT: LP 10 Type 0 for Person 169. Infected Count: 6, Total People: 26
+Mapping LP 169 to PE 3
+Mapping LP 169 to PE 3
+LOCATION EVENT: LP 12 Type 0 for Person 132. Infected Count: 5, Total People: 22
+Mapping LP 132 to PE 2
+Mapping LP 132 to PE 2
+LOCATION EVENT: LP 18 Type 0 for Person 118. Infected Count: 6, Total People: 16
+Mapping LP 118 to PE 2
+Mapping LP 118 to PE 2
+LOCATION EVENT: LP 18 Type 0 for Person 253. Infected Count: 6, Total People: 17
+Mapping LP 253 to PE 5
+Mapping LP 253 to PE 5
+LOCATION EVENT: LP 13 Type 0 for Person 937. Infected Count: 3, Total People: 15
+Mapping LP 937 to PE 20
+Mapping LP 937 to PE 20
+LOCATION EVENT: LP 20 Type 0 for Person 1246. Infected Count: 4, Total People: 14
+Mapping LP 1246 to PE 27
+Mapping LP 1246 to PE 27
+LOCATION EVENT: LP 1 Type 0 for Person 1167. Infected Count: 3, Total People: 19
+Mapping LP 1167 to PE 25
+Mapping LP 1167 to PE 25
+LOCATION EVENT: LP 24 Type 0 for Person 1299. Infected Count: 2, Total People: 15
+Mapping LP 1299 to PE 28
+Mapping LP 1299 to PE 28
+LOCATION EVENT: LP 18 Type 0 for Person 838. Infected Count: 6, Total People: 18
+Mapping LP 838 to PE 18
+Mapping LP 838 to PE 18
+LOCATION EVENT: LP 4 Type 0 for Person 713. Infected Count: 1, Total People: 17
+Mapping LP 713 to PE 15
+Mapping LP 713 to PE 15
+LOCATION EVENT: LP 17 Type 0 for Person 125. Infected Count: 7, Total People: 18
+Mapping LP 125 to PE 2
+Mapping LP 125 to PE 2
+LOCATION EVENT: LP 16 Type 0 for Person 432. Infected Count: 6, Total People: 22
+Mapping LP 432 to PE 9
+Mapping LP 432 to PE 9
+LOCATION EVENT: LP 11 Type 0 for Person 1078. Infected Count: 2, Total People: 10
+Mapping LP 1078 to PE 23
+Mapping LP 1078 to PE 23
+LOCATION EVENT: LP 0 Type 0 for Person 803. Infected Count: 1, Total People: 18
+Mapping LP 803 to PE 17
+Mapping LP 803 to PE 17
+LOCATION EVENT: LP 4 Type 0 for Person 535. Infected Count: 2, Total People: 18
+Mapping LP 535 to PE 11
+Mapping LP 535 to PE 11
+LOCATION EVENT: LP 12 Type 0 for Person 718. Infected Count: 5, Total People: 23
+Mapping LP 718 to PE 15
+Mapping LP 718 to PE 15
+LOCATION EVENT: LP 21 Type 0 for Person 528. Infected Count: 5, Total People: 30
+Mapping LP 528 to PE 11
+Mapping LP 528 to PE 11
+LOCATION EVENT: LP 14 Type 0 for Person 1240. Infected Count: 5, Total People: 27
+Mapping LP 1240 to PE 27
+Mapping LP 1240 to PE 27
+LOCATION EVENT: LP 10 Type 0 for Person 1333. Infected Count: 6, Total People: 27
+Mapping LP 1333 to PE 29
+Mapping LP 1333 to PE 29
+LOCATION EVENT: LP 0 Type 0 for Person 1063. Infected Count: 1, Total People: 19
+Mapping LP 1063 to PE 23
+Mapping LP 1063 to PE 23
+LOCATION EVENT: LP 3 Type 0 for Person 1118. Infected Count: 4, Total People: 17
+Mapping LP 1118 to PE 24
+Mapping LP 1118 to PE 24
+LOCATION EVENT: LP 24 Type 0 for Person 133. Infected Count: 2, Total People: 16
+Mapping LP 133 to PE 2
+Mapping LP 133 to PE 2
+LOCATION EVENT: LP 20 Type 0 for Person 980. Infected Count: 5, Total People: 15
+Mapping LP 980 to PE 21
+Mapping LP 980 to PE 21
+LOCATION EVENT: LP 22 Type 0 for Person 704. Infected Count: 4, Total People: 18
+Mapping LP 704 to PE 15
+Mapping LP 704 to PE 15
+LOCATION EVENT: LP 13 Type 0 for Person 259. Infected Count: 3, Total People: 16
+Mapping LP 259 to PE 5
+Mapping LP 259 to PE 5
+LOCATION EVENT: LP 11 Type 0 for Person 985. Infected Count: 3, Total People: 11
+Mapping LP 985 to PE 21
+Mapping LP 985 to PE 21
+LOCATION EVENT: LP 14 Type 0 for Person 790. Infected Count: 5, Total People: 28
+Mapping LP 790 to PE 17
+Mapping LP 790 to PE 17
+LOCATION EVENT: LP 20 Type 0 for Person 346. Infected Count: 5, Total People: 16
+Mapping LP 346 to PE 7
+Mapping LP 346 to PE 7
+LOCATION EVENT: LP 5 Type 0 for Person 164. Infected Count: 5, Total People: 14
+Mapping LP 164 to PE 3
+Mapping LP 164 to PE 3
+LOCATION EVENT: LP 23 Type 0 for Person 206. Infected Count: 5, Total People: 19
+Mapping LP 206 to PE 4
+Mapping LP 206 to PE 4
+LOCATION EVENT: LP 13 Type 0 for Person 1422. Infected Count: 3, Total People: 17
+Mapping LP 1422 to PE 31
+Mapping LP 1422 to PE 31
+LOCATION EVENT: LP 5 Type 0 for Person 129. Infected Count: 5, Total People: 15
+Mapping LP 129 to PE 2
+Mapping LP 129 to PE 2
+LOCATION EVENT: LP 14 Type 0 for Person 213. Infected Count: 5, Total People: 29
+Mapping LP 213 to PE 4
+Mapping LP 213 to PE 4
+LOCATION EVENT: LP 5 Type 0 for Person 1336. Infected Count: 5, Total People: 16
+Mapping LP 1336 to PE 29
+Mapping LP 1336 to PE 29
+LOCATION EVENT: LP 2 Type 0 for Person 851. Infected Count: 3, Total People: 23
+Mapping LP 851 to PE 18
+Mapping LP 851 to PE 18
+LOCATION EVENT: LP 19 Type 0 for Person 1116. Infected Count: 3, Total People: 19
+Mapping LP 1116 to PE 24
+Mapping LP 1116 to PE 24
+LOCATION EVENT: LP 10 Type 0 for Person 73. Infected Count: 6, Total People: 28
+Mapping LP 73 to PE 1
+Mapping LP 73 to PE 1
+LOCATION EVENT: LP 1 Type 0 for Person 983. Infected Count: 4, Total People: 20
+Mapping LP 983 to PE 21
+Mapping LP 983 to PE 21
+LOCATION EVENT: LP 16 Type 0 for Person 268. Infected Count: 7, Total People: 23
+Mapping LP 268 to PE 5
+Mapping LP 268 to PE 5
+LOCATION EVENT: LP 11 Type 0 for Person 976. Infected Count: 3, Total People: 12
+Mapping LP 976 to PE 21
+Mapping LP 976 to PE 21
+LOCATION EVENT: LP 0 Type 0 for Person 1112. Infected Count: 1, Total People: 20
+Mapping LP 1112 to PE 24
+Mapping LP 1112 to PE 24
+LOCATION EVENT: LP 18 Type 0 for Person 527. Infected Count: 6, Total People: 19
+Mapping LP 527 to PE 11
+Mapping LP 527 to PE 11
+LOCATION EVENT: LP 1 Type 0 for Person 448. Infected Count: 5, Total People: 21
+Mapping LP 448 to PE 9
+Mapping LP 448 to PE 9
+LOCATION EVENT: LP 3 Type 0 for Person 1301. Infected Count: 4, Total People: 18
+Mapping LP 1301 to PE 28
+Mapping LP 1301 to PE 28
+LOCATION EVENT: LP 21 Type 0 for Person 746. Infected Count: 6, Total People: 31
+Mapping LP 746 to PE 16
+Mapping LP 746 to PE 16
+LOCATION EVENT: LP 17 Type 0 for Person 119. Infected Count: 8, Total People: 19
+Mapping LP 119 to PE 2
+Mapping LP 119 to PE 2
+LOCATION EVENT: LP 0 Type 0 for Person 619. Infected Count: 1, Total People: 21
+Mapping LP 619 to PE 13
+Mapping LP 619 to PE 13
+LOCATION EVENT: LP 20 Type 0 for Person 658. Infected Count: 6, Total People: 17
+Mapping LP 658 to PE 14
+Mapping LP 658 to PE 14
+LOCATION EVENT: LP 23 Type 0 for Person 78. Infected Count: 5, Total People: 20
+Mapping LP 78 to PE 1
+Mapping LP 78 to PE 1
+LOCATION EVENT: LP 3 Type 0 for Person 1023. Infected Count: 4, Total People: 19
+Mapping LP 1023 to PE 22
+Mapping LP 1023 to PE 22
+LOCATION EVENT: LP 11 Type 0 for Person 844. Infected Count: 3, Total People: 13
+Mapping LP 844 to PE 18
+Mapping LP 844 to PE 18
+LOCATION EVENT: LP 10 Type 0 for Person 572. Infected Count: 7, Total People: 29
+Mapping LP 572 to PE 12
+Mapping LP 572 to PE 12
+LOCATION EVENT: LP 7 Type 0 for Person 840. Infected Count: 4, Total People: 17
+Mapping LP 840 to PE 18
+Mapping LP 840 to PE 18
+LOCATION EVENT: LP 22 Type 0 for Person 940. Infected Count: 4, Total People: 19
+Mapping LP 940 to PE 20
+Mapping LP 940 to PE 20
+LOCATION EVENT: LP 11 Type 0 for Person 1387. Infected Count: 3, Total People: 14
+Mapping LP 1387 to PE 30
+Mapping LP 1387 to PE 30
+LOCATION EVENT: LP 9 Type 0 for Person 1164. Infected Count: 5, Total People: 21
+Mapping LP 1164 to PE 25
+Mapping LP 1164 to PE 25
+LOCATION EVENT: LP 21 Type 0 for Person 1254. Infected Count: 6, Total People: 32
+Mapping LP 1254 to PE 27
+Mapping LP 1254 to PE 27
+LOCATION EVENT: LP 11 Type 0 for Person 1334. Infected Count: 3, Total People: 15
+Mapping LP 1334 to PE 29
+Mapping LP 1334 to PE 29
+LOCATION EVENT: LP 14 Type 0 for Person 1432. Infected Count: 5, Total People: 30
+Mapping LP 1432 to PE 31
+Mapping LP 1432 to PE 31
+LOCATION EVENT: LP 14 Type 0 for Person 38. Infected Count: 6, Total People: 31
+Mapping LP 38 to PE 0
+LOCATION EVENT: LP 7 Type 0 for Person 81. Infected Count: 4, Total People: 18
+Mapping LP 81 to PE 1
+Mapping LP 81 to PE 1
+LOCATION EVENT: LP 2 Type 0 for Person 358. Infected Count: 3, Total People: 24
+Mapping LP 358 to PE 7
+Mapping LP 358 to PE 7
+LOCATION EVENT: LP 9 Type 0 for Person 1153. Infected Count: 5, Total People: 22
+Mapping LP 1153 to PE 25
+Mapping LP 1153 to PE 25
+LOCATION EVENT: LP 22 Type 0 for Person 1198. Infected Count: 4, Total People: 20
+Mapping LP 1198 to PE 26
+Mapping LP 1198 to PE 26
+LOCATION EVENT: LP 5 Type 0 for Person 163. Infected Count: 5, Total People: 17
+Mapping LP 163 to PE 3
+Mapping LP 163 to PE 3
+LOCATION EVENT: LP 1 Type 0 for Person 569. Infected Count: 5, Total People: 22
+Mapping LP 569 to PE 12
+Mapping LP 569 to PE 12
+LOCATION EVENT: LP 5 Type 0 for Person 979. Infected Count: 5, Total People: 18
+Mapping LP 979 to PE 21
+Mapping LP 979 to PE 21
+LOCATION EVENT: LP 14 Type 0 for Person 1380. Infected Count: 6, Total People: 32
+Mapping LP 1380 to PE 30
+Mapping LP 1380 to PE 30
+LOCATION EVENT: LP 11 Type 0 for Person 312. Infected Count: 3, Total People: 16
+Mapping LP 312 to PE 6
+Mapping LP 312 to PE 6
+LOCATION EVENT: LP 21 Type 0 for Person 1297. Infected Count: 6, Total People: 33
+Mapping LP 1297 to PE 28
+Mapping LP 1297 to PE 28
+LOCATION EVENT: LP 6 Type 0 for Person 260. Infected Count: 1, Total People: 9
+Mapping LP 260 to PE 5
+Mapping LP 260 to PE 5
+LOCATION EVENT: LP 10 Type 0 for Person 1423. Infected Count: 7, Total People: 30
+Mapping LP 1423 to PE 31
+Mapping LP 1423 to PE 31
+LOCATION EVENT: LP 15 Type 0 for Person 1343. Infected Count: 2, Total People: 17
+Mapping LP 1343 to PE 29
+Mapping LP 1343 to PE 29
+LOCATION EVENT: LP 3 Type 0 for Person 1077. Infected Count: 4, Total People: 20
+Mapping LP 1077 to PE 23
+Mapping LP 1077 to PE 23
+LOCATION EVENT: LP 17 Type 0 for Person 490. Infected Count: 8, Total People: 20
+Mapping LP 490 to PE 10
+Mapping LP 490 to PE 10
+LOCATION EVENT: LP 22 Type 0 for Person 1288. Infected Count: 4, Total People: 21
+Mapping LP 1288 to PE 28
+Mapping LP 1288 to PE 28
+LOCATION EVENT: LP 12 Type 0 for Person 1252. Infected Count: 5, Total People: 24
+Mapping LP 1252 to PE 27
+Mapping LP 1252 to PE 27
+LOCATION EVENT: LP 6 Type 0 for Person 579. Infected Count: 2, Total People: 10
+Mapping LP 579 to PE 12
+Mapping LP 579 to PE 12
+LOCATION EVENT: LP 9 Type 0 for Person 894. Infected Count: 5, Total People: 23
+Mapping LP 894 to PE 19
+Mapping LP 894 to PE 19
+LOCATION EVENT: LP 3 Type 0 for Person 1068. Infected Count: 5, Total People: 21
+Mapping LP 1068 to PE 23
+Mapping LP 1068 to PE 23
+LOCATION EVENT: LP 21 Type 0 for Person 1160. Infected Count: 6, Total People: 34
+Mapping LP 1160 to PE 25
+Mapping LP 1160 to PE 25
+LOCATION EVENT: LP 21 Type 0 for Person 719. Infected Count: 6, Total People: 35
+Mapping LP 719 to PE 15
+Mapping LP 719 to PE 15
+LOCATION EVENT: LP 22 Type 0 for Person 354. Infected Count: 5, Total People: 22
+Mapping LP 354 to PE 7
+Mapping LP 354 to PE 7
+LOCATION EVENT: LP 12 Type 0 for Person 750. Infected Count: 5, Total People: 25
+Mapping LP 750 to PE 16
+Mapping LP 750 to PE 16
+LOCATION EVENT: LP 14 Type 0 for Person 672. Infected Count: 6, Total People: 33
+Mapping LP 672 to PE 14
+Mapping LP 672 to PE 14
+LOCATION EVENT: LP 3 Type 0 for Person 122. Infected Count: 6, Total People: 22
+Mapping LP 122 to PE 2
+Mapping LP 122 to PE 2
+LOCATION EVENT: LP 11 Type 0 for Person 173. Infected Count: 3, Total People: 17
+Mapping LP 173 to PE 3
+Mapping LP 173 to PE 3
+LOCATION EVENT: LP 5 Type 0 for Person 578. Infected Count: 6, Total People: 19
+Mapping LP 578 to PE 12
+Mapping LP 578 to PE 12
+LOCATION EVENT: LP 3 Type 0 for Person 849. Infected Count: 6, Total People: 23
+Mapping LP 849 to PE 18
+Mapping LP 849 to PE 18
+LOCATION EVENT: LP 8 Type 0 for Person 487. Infected Count: 5, Total People: 17
+Mapping LP 487 to PE 10
+Mapping LP 487 to PE 10
+LOCATION EVENT: LP 22 Type 0 for Person 1108. Infected Count: 6, Total People: 23
+Mapping LP 1108 to PE 24
+Mapping LP 1108 to PE 24
+LOCATION EVENT: LP 16 Type 0 for Person 403. Infected Count: 7, Total People: 24
+Mapping LP 403 to PE 8
+Mapping LP 403 to PE 8
+LOCATION EVENT: LP 4 Type 0 for Person 755. Infected Count: 3, Total People: 19
+Mapping LP 755 to PE 16
+Mapping LP 755 to PE 16
+LOCATION EVENT: LP 22 Type 0 for Person 747. Infected Count: 6, Total People: 24
+Mapping LP 747 to PE 16
+Mapping LP 747 to PE 16
+LOCATION EVENT: LP 4 Type 0 for Person 620. Infected Count: 4, Total People: 20
+Mapping LP 620 to PE 13
+Mapping LP 620 to PE 13
+LOCATION EVENT: LP 16 Type 0 for Person 1015. Infected Count: 7, Total People: 25
+Mapping LP 1015 to PE 22
+Mapping LP 1015 to PE 22
+LOCATION EVENT: LP 21 Type 0 for Person 936. Infected Count: 6, Total People: 36
+Mapping LP 936 to PE 20
+Mapping LP 936 to PE 20
+LOCATION EVENT: LP 2 Type 0 for Person 1332. Infected Count: 4, Total People: 25
+Mapping LP 1332 to PE 29
+Mapping LP 1332 to PE 29
+LOCATION EVENT: LP 16 Type 0 for Person 836. Infected Count: 7, Total People: 26
+Mapping LP 836 to PE 18
+Mapping LP 836 to PE 18
+LOCATION EVENT: LP 6 Type 0 for Person 805. Infected Count: 2, Total People: 11
+Mapping LP 805 to PE 17
+Mapping LP 805 to PE 17
+LOCATION EVENT: LP 12 Type 0 for Person 1394. Infected Count: 5, Total People: 26
+Mapping LP 1394 to PE 30
+Mapping LP 1394 to PE 30
+LOCATION EVENT: LP 16 Type 0 for Person 939. Infected Count: 7, Total People: 27
+Mapping LP 939 to PE 20
+Mapping LP 939 to PE 20
+LOCATION EVENT: LP 20 Type 0 for Person 712. Infected Count: 6, Total People: 18
+Mapping LP 712 to PE 15
+Mapping LP 712 to PE 15
+LOCATION EVENT: LP 17 Type 0 for Person 162. Infected Count: 8, Total People: 21
+Mapping LP 162 to PE 3
+Mapping LP 162 to PE 3
+LOCATION EVENT: LP 8 Type 0 for Person 758. Infected Count: 5, Total People: 18
+Mapping LP 758 to PE 16
+Mapping LP 758 to PE 16
+LOCATION EVENT: LP 10 Type 0 for Person 1420. Infected Count: 7, Total People: 31
+Mapping LP 1420 to PE 31
+Mapping LP 1420 to PE 31
+LOCATION EVENT: LP 12 Type 0 for Person 974. Infected Count: 5, Total People: 27
+Mapping LP 974 to PE 21
+Mapping LP 974 to PE 21
+LOCATION EVENT: LP 20 Type 0 for Person 802. Infected Count: 6, Total People: 19
+Mapping LP 802 to PE 17
+Mapping LP 802 to PE 17
+LOCATION EVENT: LP 13 Type 0 for Person 762. Infected Count: 3, Total People: 18
+Mapping LP 762 to PE 16
+Mapping LP 762 to PE 16
+LOCATION EVENT: LP 14 Type 0 for Person 1024. Infected Count: 6, Total People: 34
+Mapping LP 1024 to PE 22
+Mapping LP 1024 to PE 22
+LOCATION EVENT: LP 23 Type 0 for Person 981. Infected Count: 5, Total People: 21
+Mapping LP 981 to PE 21
+Mapping LP 981 to PE 21
+LOCATION EVENT: LP 7 Type 0 for Person 494. Infected Count: 4, Total People: 19
+Mapping LP 494 to PE 10
+Mapping LP 494 to PE 10
+LOCATION EVENT: LP 23 Type 0 for Person 126. Infected Count: 5, Total People: 22
+Mapping LP 126 to PE 2
+Mapping LP 126 to PE 2
+LOCATION EVENT: LP 1 Type 0 for Person 1300. Infected Count: 5, Total People: 23
+Mapping LP 1300 to PE 28
+Mapping LP 1300 to PE 28
+LOCATION EVENT: LP 5 Type 0 for Person 1027. Infected Count: 6, Total People: 20
+Mapping LP 1027 to PE 22
+Mapping LP 1027 to PE 22
+LOCATION EVENT: LP 14 Type 0 for Person 615. Infected Count: 6, Total People: 35
+Mapping LP 615 to PE 13
+Mapping LP 615 to PE 13
+LOCATION EVENT: LP 11 Type 0 for Person 808. Infected Count: 4, Total People: 18
+Mapping LP 808 to PE 17
+Mapping LP 808 to PE 17
+LOCATION EVENT: LP 9 Type 0 for Person 795. Infected Count: 5, Total People: 24
+Mapping LP 795 to PE 17
+Mapping LP 795 to PE 17
+LOCATION EVENT: LP 14 Type 0 for Person 1067. Infected Count: 7, Total People: 36
+Mapping LP 1067 to PE 23
+Mapping LP 1067 to PE 23
+LOCATION EVENT: LP 20 Type 0 for Person 252. Infected Count: 6, Total People: 20
+Mapping LP 252 to PE 5
+Mapping LP 252 to PE 5
+LOCATION EVENT: LP 15 Type 0 for Person 800. Infected Count: 2, Total People: 18
+Mapping LP 800 to PE 17
+Mapping LP 800 to PE 17
+LOCATION EVENT: LP 15 Type 0 for Person 1344. Infected Count: 2, Total People: 19
+Mapping LP 1344 to PE 29
+Mapping LP 1344 to PE 29
+LOCATION EVENT: LP 5 Type 0 for Person 1033. Infected Count: 7, Total People: 21
+Mapping LP 1033 to PE 22
+Mapping LP 1033 to PE 22
+LOCATION EVENT: LP 2 Type 0 for Person 1156. Infected Count: 4, Total People: 26
+Mapping LP 1156 to PE 25
+Mapping LP 1156 to PE 25
+LOCATION EVENT: LP 11 Type 0 for Person 970. Infected Count: 4, Total People: 19
+Mapping LP 970 to PE 21
+Mapping LP 970 to PE 21
+LOCATION EVENT: LP 20 Type 0 for Person 580. Infected Count: 6, Total People: 21
+Mapping LP 580 to PE 12
+Mapping LP 580 to PE 12
+LOCATION EVENT: LP 24 Type 0 for Person 1242. Infected Count: 2, Total People: 17
+Mapping LP 1242 to PE 27
+Mapping LP 1242 to PE 27
+LOCATION EVENT: LP 13 Type 0 for Person 388. Infected Count: 4, Total People: 19
+Mapping LP 388 to PE 8
+Mapping LP 388 to PE 8
+LOCATION EVENT: LP 24 Type 0 for Person 708. Infected Count: 2, Total People: 18
+Mapping LP 708 to PE 15
+Mapping LP 708 to PE 15
+LOCATION EVENT: LP 0 Type 0 for Person 82. Infected Count: 1, Total People: 22
+Mapping LP 82 to PE 1
+Mapping LP 82 to PE 1
+LOCATION EVENT: LP 10 Type 0 for Person 1241. Infected Count: 8, Total People: 32
+Mapping LP 1241 to PE 27
+Mapping LP 1241 to PE 27
+LOCATION EVENT: LP 9 Type 0 for Person 1120. Infected Count: 5, Total People: 25
+Mapping LP 1120 to PE 24
+Mapping LP 1120 to PE 24
+LOCATION EVENT: LP 17 Type 0 for Person 298. Infected Count: 8, Total People: 22
+Mapping LP 298 to PE 6
+Mapping LP 298 to PE 6
+LOCATION EVENT: LP 7 Type 0 for Person 262. Infected Count: 4, Total People: 20
+Mapping LP 262 to PE 5
+Mapping LP 262 to PE 5
+LOCATION EVENT: LP 5 Type 0 for Person 763. Infected Count: 8, Total People: 22
+Mapping LP 763 to PE 16
+Mapping LP 763 to PE 16
+LOCATION EVENT: LP 11 Type 0 for Person 853. Infected Count: 4, Total People: 20
+Mapping LP 853 to PE 18
+Mapping LP 853 to PE 18
+LOCATION EVENT: LP 16 Type 0 for Person 1028. Infected Count: 7, Total People: 28
+Mapping LP 1028 to PE 22
+Mapping LP 1028 to PE 22
+LOCATION EVENT: LP 11 Type 0 for Person 1022. Infected Count: 4, Total People: 21
+Mapping LP 1022 to PE 22
+Mapping LP 1022 to PE 22
+LOCATION EVENT: LP 3 Type 0 for Person 1338. Infected Count: 6, Total People: 24
+Mapping LP 1338 to PE 29
+Mapping LP 1338 to PE 29
+LOCATION EVENT: LP 11 Type 0 for Person 1207. Infected Count: 5, Total People: 22
+Mapping LP 1207 to PE 26
+Mapping LP 1207 to PE 26
+LOCATION EVENT: LP 18 Type 0 for Person 662. Infected Count: 6, Total People: 20
+Mapping LP 662 to PE 14
+Mapping LP 662 to PE 14
+LOCATION EVENT: LP 5 Type 0 for Person 263. Infected Count: 8, Total People: 23
+Mapping LP 263 to PE 5
+Mapping LP 263 to PE 5
+LOCATION EVENT: LP 2 Type 0 for Person 1341. Infected Count: 4, Total People: 27
+Mapping LP 1341 to PE 29
+Mapping LP 1341 to PE 29
+LOCATION EVENT: LP 8 Type 0 for Person 483. Infected Count: 5, Total People: 19
+Mapping LP 483 to PE 10
+Mapping LP 483 to PE 10
+LOCATION EVENT: LP 13 Type 0 for Person 431. Infected Count: 4, Total People: 20
+Mapping LP 431 to PE 9
+Mapping LP 431 to PE 9
+LOCATION EVENT: LP 0 Type 0 for Person 485. Infected Count: 2, Total People: 23
+Mapping LP 485 to PE 10
+Mapping LP 485 to PE 10
+LOCATION EVENT: LP 21 Type 0 for Person 1427. Infected Count: 7, Total People: 37
+Mapping LP 1427 to PE 31
+Mapping LP 1427 to PE 31
+LOCATION EVENT: LP 12 Type 0 for Person 709. Infected Count: 6, Total People: 28
+Mapping LP 709 to PE 15
+Mapping LP 709 to PE 15
+LOCATION EVENT: LP 13 Type 0 for Person 1287. Infected Count: 4, Total People: 21
+Mapping LP 1287 to PE 28
+Mapping LP 1287 to PE 28
+LOCATION EVENT: LP 2 Type 0 for Person 296. Infected Count: 4, Total People: 28
+Mapping LP 296 to PE 6
+Mapping LP 296 to PE 6
+LOCATION EVENT: LP 9 Type 0 for Person 1298. Infected Count: 5, Total People: 26
+Mapping LP 1298 to PE 28
+Mapping LP 1298 to PE 28
+LOCATION EVENT: LP 17 Type 0 for Person 1210. Infected Count: 8, Total People: 23
+Mapping LP 1210 to PE 26
+Mapping LP 1210 to PE 26
+LOCATION EVENT: LP 14 Type 0 for Person 898. Infected Count: 7, Total People: 37
+Mapping LP 898 to PE 19
+Mapping LP 898 to PE 19
+LOCATION EVENT: LP 1 Type 0 for Person 1337. Infected Count: 5, Total People: 24
+Mapping LP 1337 to PE 29
+Mapping LP 1337 to PE 29
+LOCATION EVENT: LP 6 Type 0 for Person 123. Infected Count: 2, Total People: 12
+Mapping LP 123 to PE 2
+Mapping LP 123 to PE 2
+LOCATION EVENT: LP 15 Type 0 for Person 623. Infected Count: 3, Total People: 20
+Mapping LP 623 to PE 13
+Mapping LP 623 to PE 13
+LOCATION EVENT: LP 17 Type 0 for Person 174. Infected Count: 8, Total People: 24
+Mapping LP 174 to PE 3
+Mapping LP 174 to PE 3
+LOCATION EVENT: LP 13 Type 0 for Person 404. Infected Count: 4, Total People: 22
+Mapping LP 404 to PE 8
+Mapping LP 404 to PE 8
+LOCATION EVENT: LP 3 Type 0 for Person 35. Infected Count: 6, Total People: 25
+Mapping LP 35 to PE 0
+LOCATION EVENT: LP 12 Type 0 for Person 705. Infected Count: 6, Total People: 29
+Mapping LP 705 to PE 15
+Mapping LP 705 to PE 15
+LOCATION EVENT: LP 19 Type 0 for Person 759. Infected Count: 3, Total People: 20
+Mapping LP 759 to PE 16
+Mapping LP 759 to PE 16
+LOCATION EVENT: LP 0 Type 0 for Person 264. Infected Count: 2, Total People: 24
+Mapping LP 264 to PE 5
+Mapping LP 264 to PE 5
+LOCATION EVENT: LP 1 Type 0 for Person 434. Infected Count: 5, Total People: 25
+Mapping LP 434 to PE 9
+Mapping LP 434 to PE 9
+LOCATION EVENT: LP 20 Type 0 for Person 792. Infected Count: 7, Total People: 22
+Mapping LP 792 to PE 17
+Mapping LP 792 to PE 17
+LOCATION EVENT: LP 6 Type 0 for Person 1393. Infected Count: 2, Total People: 13
+Mapping LP 1393 to PE 30
+Mapping LP 1393 to PE 30
+LOCATION EVENT: LP 18 Type 0 for Person 477. Infected Count: 6, Total People: 21
+Mapping LP 477 to PE 10
+Mapping LP 477 to PE 10
+LOCATION EVENT: LP 14 Type 0 for Person 1286. Infected Count: 7, Total People: 38
+Mapping LP 1286 to PE 28
+Mapping LP 1286 to PE 28
+LOCATION EVENT: LP 13 Type 0 for Person 489. Infected Count: 5, Total People: 23
+Mapping LP 489 to PE 10
+Mapping LP 489 to PE 10
+LOCATION EVENT: LP 13 Type 0 for Person 1061. Infected Count: 5, Total People: 24
+Mapping LP 1061 to PE 23
+Mapping LP 1061 to PE 23
+LOCATION EVENT: LP 12 Type 0 for Person 352. Infected Count: 6, Total People: 30
+Mapping LP 352 to PE 7
+Mapping LP 352 to PE 7
+LOCATION EVENT: LP 2 Type 0 for Person 1384. Infected Count: 4, Total People: 29
+Mapping LP 1384 to PE 30
+Mapping LP 1384 to PE 30
+LOCATION EVENT: LP 14 Type 0 for Person 1257. Infected Count: 7, Total People: 39
+Mapping LP 1257 to PE 27
+Mapping LP 1257 to PE 27
+LOCATION EVENT: LP 21 Type 0 for Person 1386. Infected Count: 7, Total People: 38
+Mapping LP 1386 to PE 30
+Mapping LP 1386 to PE 30
+LOCATION EVENT: LP 8 Type 0 for Person 1161. Infected Count: 5, Total People: 20
+Mapping LP 1161 to PE 25
+Mapping LP 1161 to PE 25
+LOCATION EVENT: LP 10 Type 0 for Person 85. Infected Count: 8, Total People: 33
+Mapping LP 85 to PE 1
+Mapping LP 85 to PE 1
+LOCATION EVENT: LP 6 Type 0 for Person 989. Infected Count: 2, Total People: 14
+Mapping LP 989 to PE 21
+Mapping LP 989 to PE 21
+LOCATION EVENT: LP 18 Type 0 for Person 570. Infected Count: 6, Total People: 22
+Mapping LP 570 to PE 12
+Mapping LP 570 to PE 12
+LOCATION EVENT: LP 9 Type 0 for Person 986. Infected Count: 5, Total People: 27
+Mapping LP 986 to PE 21
+Mapping LP 986 to PE 21
+LOCATION EVENT: LP 24 Type 0 for Person 1213. Infected Count: 2, Total People: 19
+Mapping LP 1213 to PE 26
+Mapping LP 1213 to PE 26
+LOCATION EVENT: LP 14 Type 0 for Person 303. Infected Count: 8, Total People: 40
+Mapping LP 303 to PE 6
+Mapping LP 303 to PE 6
+GVT #4: simulation 100% complete, max event queue size 640 (GVT = MAX).
+AVL tree size: 0
+*** END SIMULATION ***
+
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+
+	: Running Time = 0.1886 seconds
+
+TW Library Statistics:
+	Total Events Processed                                    1448
+	Events Aborted (part of RBs)                                 0
+	Events Rolled Back                                         168
+	Event Ties Detected in PE Queues                             0
+	Efficiency                                               86.88 %
+	Total Remote (shared mem) Events Processed                   0
+	Percent Remote Events                                     0.00 %
+	Total Remote (network) Events Processed                   1240
+	Percent Remote Events                                    96.88 %
+
+	Total Roll Backs                                           119
+	Primary Roll Backs                                         119
+	Secondary Roll Backs                                         0
+	Fossil Collect Attempts                                    160
+	Total GVT Computations                                       5
+
+	Net Events Processed                                      1280
+	Event Rate (events/sec)                                 6785.6
+	Total Events Scheduled Past End Time                         0
+
+TW Memory Statistics:
+	Events Allocated                                          2065
+	Memory Allocated                                         20466
+	Memory Wasted                                              574
+
+TW Network Statistics:
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+	Remote sends                                              1240
+	Remote recvs                                              1240
+
+TW Data Structure sizes in bytes (sizeof):
+	PE struct                                                 3888
+	KP struct                                                  960
+	LP struct                                                  960
+	LP Model struct                                             40
+	LP RNGs                                                     80
+	Total LP                                                  1080
+	Event struct                                               976
+	Event struct with Model                                   1040
+
+TW Clock Cycle Statistics (MAX values in secs at 0.5120 GHz):
+	Initialization                                          0.4534
+	Priority Queue (enq/deq)                                0.0004
+	AVL Tree (insert/delete)                                0.0004
+	LZ4 (de)compression                                     0.0000
+	Buddy system                                            0.0000
+	Event Processing                                        0.0108
+	Event Cancel                                            0.0000
+	Event Abort                                             0.0000
+
+	GVT                                                     0.0395
+	Fossil Collect                                          0.1491
+	Primary Rollbacks                                       0.0000
+	Network Read                                            0.0001
+	Other Network                                           0.0047
+	Instrumentation (computation)                           0.0000
+	Instrumentation (write)                                 0.0000
+	Total Time (Note: Using Running Time above for Speedup)      0.1886
+
+TW GVT Statistics: MPI AllReduce
+	GVT Interval                                                16
+	GVT Real Time Interval (cycles)                    0
+	GVT Real Time Interval (sec)                        0.00000000
+	Batch Size                                                  16
+
+	Forced GVT                                                   0
+	Total GVT Computations                                       5
+	Total All Reduce Calls                                      13
+	Average Reduction / GVT                                   2.60
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
+After tw_run()
