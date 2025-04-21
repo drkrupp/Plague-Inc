@@ -545,7 +545,7 @@ int main(int argc, char **argv, char **env)
 	g_tw_custom_initial_mapping = &custom_mapping_setup;
 	g_tw_custom_lp_global_to_local_map = &custom_mapping_lpgid_to_local;
 	// g_tw_custom_lp_global_to_pe_map = &custom_mapping_lp_to_pe;
-	g_tw_lp_types = lp_types;
+	g_tw_lp_types = my_lps;
 
 	tw_define_lps(n_lps, sizeof(Msg_Data));
 
