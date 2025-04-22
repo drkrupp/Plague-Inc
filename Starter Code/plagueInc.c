@@ -56,6 +56,7 @@ void location_init(location_state *s, tw_lp *lp)
     }
 }
 
+
 void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 {
 	int person_index;
@@ -148,33 +149,42 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		//LOOK INTO HOW THIS MOVEMENT WORKS - DONT FORGET IT
 		case 0:
 			// Fly north
-			if(lp->gid < 32)
+			//nlp_per_pe is 1024 in airplane version (32*32)
+			//could be keeping each section of the grid independant
+			//Should try two different things,
+			//Could have 32 = GRID_WIDTH, 31 = GRID_WIDTH -1
+			//Could have 32 = GRID_WIDTH/tw_nnodes, 31 = (GRID_WIDTH/tw_nnodes) - 1
+			//Could have another value involving grid width divided by other factor
+			//Like GRID_WIDTH and GRID_WIDTH -1 
+			int width = GRID_WIDTH;
+			int one_less = GRID_WIDTH -1;
+			if(lp->gid < width)
 			// Wrap around
-			dst_lp = lp->gid + 31 * 32;
+			dst_lp = lp->gid + one_less * width;
 			else
-			dst_lp = lp->gid - 31;
+			dst_lp = lp->gid - one_less;
 			break;
 		case 1:
 			// Fly south
-			if(lp->gid >= 31 * 32)
+			if(lp->gid >= one_less * width)
 			// Wrap around
-			dst_lp = lp->gid - 31 * 32;
+			dst_lp = lp->gid - one_less * width;
 			else
-			dst_lp = lp->gid + 31;
+			dst_lp = lp->gid + one_less;
 			break;
 		case 2:
 			// Fly east
-			if((lp->gid % 32) == 31)
+			if((lp->gid % width) == one_less)
 			// Wrap around
-			dst_lp = lp->gid - 31;
+			dst_lp = lp->gid - one_less;
 			else
 			dst_lp = lp->gid + 1;
 			break;
 		case 3:
 			// Fly west
-			if((lp->gid % 32) == 0)
+			if((lp->gid % width) == 0)
 			// Wrap around
-			dst_lp = lp->gid + 31;
+			dst_lp = lp->gid + one_less;
 			else
 			dst_lp = lp->gid - 1;
 			break;
