@@ -1,3 +1,4 @@
+/**
 #include "plagueInc.h"
 
 // Global counters for summary statistics
@@ -26,13 +27,18 @@ void custom_mapping_setup(void)
 	int min_num_lps_per_pe = total_lps / tw_nnodes();
 	int remainder = total_lps % tw_nnodes();
 	int lps_on_this_pe = min_num_lps_per_pe + (g_tw_mynode < remainder ? 1 : 0);
-
+	printf("entered\n");
 	for (int i = 0; i < lps_on_this_pe; i++)
 	{
+		printf("her1\n");
 		tw_lp_onkp(g_tw_lp[i], g_tw_kp[0]);
+		printf("her2\n");
 		tw_lpid gid = g_tw_mynode + (i * tw_nnodes());
-		tw_lp_onpe(i, g_tw_pe, gid);
+		printf("her3\n");
+		tw_lp_onpe(g_tw_lp[i], g_tw_pe, gid);
+		printf("her4\n");
 	}
+	printf("leaving\n");
 }
 
 // Map LP to type: 0 = person, 1 = location
@@ -604,6 +610,190 @@ int main(int argc, char **argv, char **env)
 		fflush(stdout);
 	}
 
+	tw_end();
+	return 0;
+}
+
+
+*/
+#include "plagueInc.h"
+
+void location_init(location_state *s, tw_lp *lp)
+{
+	printf("location_init: LP %lu | state ptr: %p | rng: %p\n", lp->gid, s, lp->rng);
+
+	if (!lp->rng)
+	{
+		tw_error(TW_LOC, "location_init: RNG is NULL for LP %lu\n", lp->gid);
+	}
+
+	// Set LP grid coordinates
+	s->x = lp->gid % GRID_WIDTH;
+	s->y = lp->gid / GRID_WIDTH;
+	printf("LP %lu mapped to grid (%d, %d)\n", lp->gid, s->x, s->y);
+
+	for (int i = 0; i < PEOPLE_PER_LOCATION; i++)
+	{
+		printf("  Init person[%d] for LP %lu\n", i, lp->gid);
+		s->people[i].x = s->x;
+		s->people[i].y = s->y;
+		s->people[i].alive = true;
+		s->people[i].infected = false;
+		s->people[i].immune = false;
+		s->people[i].susceptible = true;
+
+		double r = tw_rand_unif(lp->rng);
+		printf("    person[%d] random init val: %f\n", i, r);
+
+		if (r < INITIAL_INFECTED_RATE)
+		{
+			s->people[i].infected = true;
+			s->people[i].infected_time = 0.0;
+			s->people[i].susceptible = false;
+			printf("    person[%d] initialized as infected\n", i);
+		}
+	}
+
+	tw_event *e = tw_event_new(lp->gid, 1.0, lp);
+	if (!e)
+	{
+		tw_error(TW_LOC, "location_init: Failed to allocate event for LP %lu\n", lp->gid);
+	}
+
+	event_msg *m = tw_event_data(e);
+	m->type = STATUS_UPDATE;
+	m->person_index = -1;
+	printf("LP %lu scheduling first STATUS_UPDATE event at time 1.0\n", lp->gid);
+	tw_event_send(e);
+}
+
+void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
+{
+	printf("location_event: LP %lu at time %lf | msg type: %d\n", lp->gid, tw_now(lp), m->type);
+
+	for (int i = 0; i < PEOPLE_PER_LOCATION; i++)
+	{
+		person_state *p = &s->people[i];
+
+		if (!p->alive)
+			continue;
+
+		if (p->infected && (tw_now(lp) - p->infected_time > INFECTION_TIME))
+		{
+			double r = tw_rand_unif(lp->rng);
+			printf("  person[%d] infected for long enough, rand: %f\n", i, r);
+			// ADD DEATH FOR PEOPLE THAT JUST GOT SICK
+			if (r < RECOVERY_RATE)
+			{
+				p->infected = false;
+				p->immune = true;
+				p->immune_start = tw_now(lp);
+				printf("    person[%d] recovered\n", i);
+			}
+			else if (tw_rand_unif(lp->rng) < DEATH_RATE)
+			{
+				p->alive = false;
+				printf("    person[%d] died\n", i);
+			}
+		}
+		else if (p->susceptible)
+		{
+			for (int j = 0; j < PEOPLE_PER_LOCATION; j++)
+			{
+				if (i == j || !s->people[j].infected || !s->people[j].alive)
+					continue;
+
+				if (tw_rand_unif(lp->rng) < TRANSMISSION_RATE)
+				{
+					p->susceptible = false;
+					p->infected = true;
+					p->infected_time = tw_now(lp);
+					printf("    person[%d] got infected by person[%d]\n", i, j);
+					break;
+				}
+			}
+		}
+
+		if (p->immune && (tw_now(lp) - p->immune_start > IMMUNITY_TIME))
+		{
+			p->immune = false;
+			p->susceptible = true;
+			printf("    person[%d] lost immunity\n", i);
+		}
+	}
+
+	tw_event *e = tw_event_new(lp->gid, 1.0, lp);
+	if (!e)
+	{
+		tw_error(TW_LOC, "location_event: Failed to allocate next event for LP %lu\n", lp->gid);
+	}
+
+	event_msg *next = tw_event_data(e);
+	next->type = STATUS_UPDATE;
+	next->person_index = -1;
+	printf("LP %lu rescheduling STATUS_UPDATE event for next cycle\n", lp->gid);
+	tw_event_send(e);
+}
+
+void location_event_reverse(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
+{
+	// Not implemented
+	printf("location_event_reverse: LP %lu (unimplemented)\n", lp->gid);
+}
+
+void location_final(location_state *s, tw_lp *lp)
+{
+	int alive = 0, dead = 0, infected = 0;
+
+	for (int i = 0; i < PEOPLE_PER_LOCATION; i++)
+	{
+		if (!s->people[i].alive)
+			dead++;
+		else
+			alive++;
+		if (s->people[i].infected)
+			infected++;
+	}
+
+	printf("FINAL: LP %lu | Alive: %d | Dead: %d | Infected: %d\n", lp->gid, alive, dead, infected);
+}
+
+// tw_lpid map_location(tw_lpid gid)
+// {
+// 	printf("map_location: mapping gid %lu to itself\n", gid);
+// 	return gid;
+// }
+
+tw_lptype my_lps[] = {
+	{.init = (init_f)location_init,
+	 .pre_run = NULL,
+	 .event = (event_f)location_event,
+	 .revent = (revent_f)location_event_reverse,
+	 .commit = NULL,
+	 .final = (final_f)location_final,
+	 .map = (map_f)NULL,
+	 .state_sz = sizeof(location_state)},
+	{0},
+};
+
+int main(int argc, char **argv, char **env)
+{
+	printf("main: Starting ROSS plague simulation\n");
+
+	tw_opt_add(NULL);
+	tw_init(&argc, &argv);
+
+	int num_locations = GRID_WIDTH * GRID_HEIGHT;
+	printf("main: Initializing %d LPs with state size %zu\n", num_locations, sizeof(location_state));
+	g_tw_mapping = LINEAR;
+	tw_define_lps(num_locations, sizeof(event_msg));
+	g_tw_lp_types = my_lps;
+	printf("main: LP types registered\n");
+
+	printf("main: Running simulation...\n");
+	tw_run();
+
+	printf("main: Simulation finished\n");
 	tw_end();
 	return 0;
 }

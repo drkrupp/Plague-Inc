@@ -7,6 +7,9 @@
 #SBATCH --time=00:30:00
 #SBATCH --partition=el8
 #SBATCH --gres=gpu:4
+#SBATCH --exclusive 
+#SBATCH --mail-type=END,FAIL
+#SBATCH --mail-user=kruppd@rpi.edu
 
 echo "Running on $(hostname) at $(date)"
 echo "ROSS path: $ROSS_DIR"
