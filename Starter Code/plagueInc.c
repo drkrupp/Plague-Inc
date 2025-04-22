@@ -44,13 +44,8 @@ void location_init(location_state *s, tw_lp *lp)
 		}
 	}
 
-	tw_event *e = tw_event_new(lp->gid, 1.0, lp);
-	if (!e)
-	{
-		tw_error(TW_LOC, "location_init: Failed to allocate event for LP %lu\n", lp->gid);
-	}
-
-
+	tw_event *e;
+	event_msg *m;
 	for(i = 0; i < planes_per_airport; i++)
     {
       e = tw_event_new(lp->gid, tw_rand_exponential(lp->rng, 1.0), lp);
@@ -146,81 +141,70 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 	}
 
 	if(tw_rand_unif(lp->rng) < MOVE_PROBABILITY){
-		//move
+		rand_result = tw_rand_integer(lp->rng, 0, 3);
+		dst_lp = 0;
+		switch(rand_result)
+		{
+		//LOOK INTO HOW THIS MOVEMENT WORKS - DONT FORGET IT
+		case 0:
+			// Fly north
+			if(lp->gid < 32)
+			// Wrap around
+			dst_lp = lp->gid + 31 * 32;
+			else
+			dst_lp = lp->gid - 31;
+			break;
+		case 1:
+			// Fly south
+			if(lp->gid >= 31 * 32)
+			// Wrap around
+			dst_lp = lp->gid - 31 * 32;
+			else
+			dst_lp = lp->gid + 31;
+			break;
+		case 2:
+			// Fly east
+			if((lp->gid % 32) == 31)
+			// Wrap around
+			dst_lp = lp->gid - 31;
+			else
+			dst_lp = lp->gid + 1;
+			break;
+		case 3:
+			// Fly west
+			if((lp->gid % 32) == 0)
+			// Wrap around
+			dst_lp = lp->gid + 31;
+			else
+			dst_lp = lp->gid - 1;
+			break;
+		}
+
+		tw_event *e_leave;
+		event_msg *m_leave;
+		e_leave = tw_event_new(lp->gid, tw_rand_exponential(lp->rng, 1.0), lp);
+		m_leave = tw_event_data(e);
+		m_leave->type = DEPARTURE;
+		m_leave->person_index = person_index;
+		tw_event_send(e_leave);
+
+		tw_event *e_arrive;
+		event_msg *m_arrive;
+		e_arrive = tw_event_new(lp->gid, tw_rand_exponential(lp->rng, 1.0), lp);
+		m_arrive = tw_event_data(e_arrive);
+		m_arrive->type = ARRIVAL;
+		m_arrive->arriving_state = p;
+		tw_event_send(e_arrive);
+
 	}
 	else{
-		//status update to self
+		tw_event *e_stay;
+		event_msg *m_stay;
+		m_stay = tw_event_data(e_arrive);
+		m_stay->type = STATUS_UPDATE;
+		m_stay->person_index = person_index;
+		tw_event_send(e_stay);
 	}
-
-
-
-
-
-	printf("location_event: LP %lu at time %lf | msg type: %d\n", lp->gid, tw_now(lp), m->type);
-
-	for (int i = 0; i < PEOPLE_PER_LOCATION; i++)
-	{
-		
-		person_state *p = &s->people[i];
-
-		if (!p->alive)
-			continue;
-
-		if (p->infected && (tw_now(lp) - p->infected_time > INFECTION_TIME))
-		{
-			double r = tw_rand_unif(lp->rng);
-			printf("  person[%d] infected for long enough, rand: %f\n", i, r);
-			// ADD DEATH FOR PEOPLE THAT JUST GOT SICK
-			if (r < RECOVERY_RATE)
-			{
-				p->infected = false;
-				p->immune = true;
-				p->immune_start = tw_now(lp);
-				printf("    person[%d] recovered\n", i);
-			}
-			else if (tw_rand_unif(lp->rng) < DEATH_RATE)
-			{
-				p->alive = false;
-				printf("    person[%d] died\n", i);
-			}
-		}
-		else if (p->susceptible)
-		{
-			for (int j = 0; j < PEOPLE_PER_LOCATION; j++)
-			{
-				if (i == j || !s->people[j].infected || !s->people[j].alive)
-					continue;
-
-				if (tw_rand_unif(lp->rng) < TRANSMISSION_RATE)
-				{
-					p->susceptible = false;
-					p->infected = true;
-					p->infected_time = tw_now(lp);
-					printf("    person[%d] got infected by person[%d]\n", i, j);
-					break;
-				}
-			}
-		}
-
-		if (p->immune && (tw_now(lp) - p->immune_start > IMMUNITY_TIME))
-		{
-			p->immune = false;
-			p->susceptible = true;
-			printf("    person[%d] lost immunity\n", i);
-		}
-	}
-
-	tw_event *e = tw_event_new(lp->gid, 1.0, lp);
-	if (!e)
-	{
-		tw_error(TW_LOC, "location_event: Failed to allocate next event for LP %lu\n", lp->gid);
-	}
-
-	event_msg *next = tw_event_data(e);
-	next->type = STATUS_UPDATE;
-	next->person_index = -1;
-	printf("LP %lu rescheduling STATUS_UPDATE event for next cycle\n", lp->gid);
-	tw_event_send(e);
 }
 
 void location_event_reverse(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
