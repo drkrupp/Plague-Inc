@@ -61,22 +61,25 @@ void location_init(location_state *s, tw_lp *lp)
 	}
 }
 
-person_state *deep_copy_person_states(const person_state *original, size_t length) {
-    if (original == NULL || length == 0) return NULL;
+person_state *deep_copy_person_states(const person_state *original, size_t length)
+{
+	if (original == NULL || length == 0)
+		return NULL;
 
-    person_state *copy = (person_state *)malloc(length * sizeof(person_state));
-    if (copy == NULL) {
-        perror("Failed to allocate memory for array copy");
-        exit(EXIT_FAILURE);
-    }
+	person_state *copy = (person_state *)malloc(length * sizeof(person_state));
+	if (copy == NULL)
+	{
+		perror("Failed to allocate memory for array copy");
+		exit(EXIT_FAILURE);
+	}
 
-    memcpy(copy, original, length * sizeof(person_state));
-    return copy;
+	memcpy(copy, original, length * sizeof(person_state));
+	return copy;
 }
 
 void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 {
-	person_state* initial_people = deep_copy_person_states(m->people, s->max_people_held);
+	person_state *initial_people = deep_copy_person_states(m->people, s->max_people_held);
 	int initial_max_people = s->max_people_held;
 	int person_index;
 	person_state arriving_state;
@@ -261,23 +264,24 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 
 void location_event_reverse(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 {
-    switch(m->type){
-        case ARRIVAL:
-        {
-            s->num_people--;
-            break;
-        }
-        case DEPARTURE:
-        {
-            s->num_people++;
-            break;
-        }
-        default:
-        {
-            break;
-        }
-    }
-    s->people = deep_copy_person_states(m->people, m->max_people_count);
+	switch (m->type)
+	{
+	case ARRIVAL:
+	{
+		s->num_people--;
+		break;
+	}
+	case DEPARTURE:
+	{
+		s->num_people++;
+		break;
+	}
+	default:
+	{
+		break;
+	}
+	}
+	s->people = deep_copy_person_states(m->people, m->max_people_count);
 }
 
 void location_final(location_state *s, tw_lp *lp)
@@ -356,7 +360,7 @@ int main(int argc, char **argv, char **env)
 
 	int NUM_LOCATIONS = GRID_WIDTH * GRID_HEIGHT;
 	// nlp_per_pe = NUM_LOCATIONS / (tw_nnodes() * g_tw_npe);
-	// 2 processes
+	// NUM_LOCATIONS / NUM_PROCESSES (-np)
 	long nlp_per_pe = NUM_LOCATIONS / 2;
 
 	tw_define_lps(nlp_per_pe, sizeof(event_msg));
@@ -373,8 +377,8 @@ int main(int argc, char **argv, char **env)
 	{
 		printf("\nAModel Statistics:\n");
 		// 2 processes
-		printf("\t%-50s %11ld\n", "Number of locations", nlp_per_pe * 2 * tw_nnodes());
-		printf("\t%-50s %11ld\n", "Number of people", PEOPLE_PER_LOCATION * nlp_per_pe * 2 * tw_nnodes());
+		printf("\t%-50s %11ld\n", "Number of locations", nlp_per_pe * 2);
+		printf("\t%-50s %11ld\n", "Number of people", PEOPLE_PER_LOCATION * nlp_per_pe * 2);
 	}
 
 	tw_end();
