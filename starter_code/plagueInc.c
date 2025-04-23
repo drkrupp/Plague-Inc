@@ -194,6 +194,8 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 	s->people[person_index].alive = p->alive;
 	s->people[person_index].infected = p->infected;
 	s->people[person_index].susceptible = p->susceptible;
+	s->people[person_index].infected_time = p->infected_time;
+	s->people[person_index].immune_start = p->immune_start; 
 
 
 	//move
