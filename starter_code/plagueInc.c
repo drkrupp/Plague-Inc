@@ -319,6 +319,7 @@ void location_final(location_state *s, tw_lp *lp)
 	MPI_File_write_at(mpi_file, offset, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
 
 	tw_output(lp, "FINAL: LP %lu | Alive: %d | Dead: %d | Infected: %d\n", lp->gid, alive, dead, infected);
+	free(s->people);
 }
 
 void location_commit(location_state *s, tw_bf *bf, event_msg *in_msg, tw_lp *lp)
