@@ -339,20 +339,12 @@ void location_commit(location_state *s, tw_bf *bf, event_msg *in_msg, tw_lp *lp)
 
 	int buf_length = 256;
 	char buf[256];
-	int len = snprintf(buf, sizeof(buf), "LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d | Time: %f\n", lp->gid, s->x, s->y, alive, dead, infected, tw_now(lp));
+	int len = snprintf(buf, sizeof(buf), "INIT-LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d | Time: %f\n", lp->gid, s->x, s->y, alive, dead, infected, tw_now(lp));
 	int steps = 1001;
 	int space_needed = buf_length * steps;
-	MPI_Offset offset = (MPI_Offset)(lp->gid * space_needed + (long)((tw_now(lp) + 1) * buf_length));
-	// MPI_Offset offset = (MPI_Offset)((long)(tw_now(lp)) * GRID_WIDTH * GRID_HEIGHT + lp->gid) * 256;
+	MPI_Offset offset = (MPI_Offset)(lp->gid * space_needed);
 	MPI_File_write_at(mpi_file, offset, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
-	// MPI_File_write_ordered(mpi_file, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
 }
-
-// tw_lpid map_location(tw_lpid gid)
-// {
-// 	printf("map_location: mapping gid %lu to itself\n", gid);
-// 	return gid;
-// }
 
 tw_lptype my_lps[] =
 	{
