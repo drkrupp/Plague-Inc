@@ -82,236 +82,194 @@ void location_init(location_state *s, tw_lp *lp)
 	MPI_File_write_at(mpi_file, offset, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
 }
 
-person_state *deep_copy_person_states(const person_state *original, size_t length)
-{
-	if (original == NULL || length == 0)
-		return NULL;
-
-	person_state *copy = (person_state *)malloc(length * sizeof(person_state));
-	if (copy == NULL)
-	{
-		perror("Failed to allocate memory for array copy");
-		exit(EXIT_FAILURE);
-	}
-
-	memcpy(copy, original, length * sizeof(person_state));
-	return copy;
-}
-
 void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 {
-	person_state *initial_people = deep_copy_person_states(m->people, s->max_people_held);
-	int initial_max_people = s->max_people_held;
 	int person_index;
 	person_state arriving_state;
-	if (m == NULL)
-	{
-		printf("PROBLEMS\n");
-	}
 
 	printf("SET STATES, gid: %d, m_type: %d\n", lp->gid, (int)m->type);
 	switch (m->type)
 	{
-	case ARRIVAL:
-	{
-		arriving_state = m->arriving_state;
-		if (s->num_people == s->max_people_held)
+		case ARRIVAL:
 		{
-			s->max_people_held *= 2;
-			s->people = (person_state *)realloc(s->people, sizeof(person_state) * s->max_people_held);
-		}
-		s->people[s->num_people] = arriving_state;
-		person_index = s->num_people;
-		s->num_people++;
-		printf("ARRIVAL-- Person Index: %d, num_people: %d, max_people: %d gid: %d, m_type: %d\n", person_index, s->num_people, s->max_people_held, lp->gid, (int)m->type);
-
-		break;
-	}
-	case DEPARTURE:
-	{
-		person_index = m->person_index;
-		printf("DEPARTURE-- Person Index: %d, num_people: %d, time: %f, gid:%d, m_type: %d\n", person_index, s->num_people, tw_now(lp), lp->gid, (int)m->type);
-		if (person_index != s->num_people - 1)
-		{
-			s->people[person_index] = s->people[s->num_people - 1];
-		}
-		printf("bomboclaat check time: %f, gid:%d, m_type: %d\n", tw_now(lp), lp->gid, (int)m->type);
-
-		s->num_people--;
-		return; // don't handle status updates for people who have left the location
-	}
-	default:
-	{
-		printf("default time: %f, gid: %d, m_type: %d\n", tw_now(lp), lp->gid, (int)m->type);
-		person_index = m->person_index;
-		break;
-	}
-	}
-
-	printf("defaultclaat-1: %f, gid%d, m_type: %d\n", tw_now(lp), lp->gid, (int)m->type);
-	person_state p = s->people[person_index];
-	printf("defaultclaat check time: %f, gid: %d, m_type: %d\n", tw_now(lp), lp->gid, (int)m->type);
-	if (!p.alive)
-		return;
-
-	// Calculating infections death
-	if (p.infected)
-	{
-		if (tw_rand_unif(lp->rng) < DEATH_RATE)
-		{
-			s->people[person_index].alive = false;
-			s->people[person_index].infected = false;
-			s->people[person_index].susceptible = false;
-			// printf("    person[%d] died\n", p.id);
-
-			return;
-		}
-	}
-	else if (!p.susceptible && (tw_now(lp) - p.immune_start > IMMUNITY_TIME))
-	{
-		p.susceptible = true;
-		// printf("    person[%d] lost immunity\n", person_index);
-	}
-
-	// Calculating recovery from infected
-	if (p.infected && (tw_now(lp) - p.infected_time > INFECTION_TIME))
-	{
-		double r = tw_rand_unif(lp->rng);
-		// printf("  person[%d] infected for long enough, rand: %f\n", p.id, r);
-
-		if (r < RECOVERY_RATE)
-		{
-			p.infected = false;
-			p.susceptible = false;
-			p.immune_start = tw_now(lp);
-			// tw_output(lp, "    person[%d] recovered\n", p.id);
-		}
-	}
-	else if (p.susceptible)
-	{
-		for (int j = 0; j < s->num_people; j++)
-		{
-			if (person_index == j || !s->people[j].infected || !s->people[j].alive)
-				continue;
-
-			if (tw_rand_unif(lp->rng) < TRANSMISSION_RATE)
+			arriving_state = m->arriving_state;
+			if (s->num_people == s->max_people_held)
 			{
-				p.susceptible = false;
-				p.infected = true;
-				p.infected_time = tw_now(lp);
-				// tw_output(lp, "    person[%d] got infected by person[%d]\n", p.id, s->people[j].id);
-				break;
+				s->max_people_held *= 2;
+				s->people = (person_state *)realloc(s->people, sizeof(person_state) * s->max_people_held);
+			}
+			s->people[s->num_people] = arriving_state;
+			person_index = s->num_people;
+			s->num_people++;
+			printf("ARRIVAL-- Person Index: %d, num_people: %d, max_people: %d gid: %d, m_type: %d\n", person_index, s->num_people, s->max_people_held, lp->gid, (int)m->type);
+			tw_event *e_status;
+			event_msg *m_status;
+			e_status = tw_event_new(lp->gid, tw_rand_exponential(lp->rng, 1.0), lp);
+			m_stay = tw_event_data(e_status);
+			m_status->type = STATUS_UPDATE;
+			m_status->person_index = person_index;
+			tw_event_send(e_status);
+		}
+		case DEPARTURE:
+		{
+			person_index = m->person_index;
+			printf("DEPARTURE-- Person Index: %d, num_people: %d, time: %f, gid:%d, m_type: %d\n", person_index, s->num_people, tw_now(lp), lp->gid, (int)m->type);
+			if (person_index != s->num_people - 1)
+			{
+				s->people[person_index] = s->people[s->num_people - 1];
+			}
+			printf("bomboclaat check time: %f, gid:%d, m_type: %d\n", tw_now(lp), lp->gid, (int)m->type);
+
+			s->num_people--;
+			return; // don't handle status updates for people who have left the location
+		}
+		case STATUS_UPDATE:
+		{
+			printf("default time: %f, gid: %d, m_type: %d\n", tw_now(lp), lp->gid, (int)m->type);
+			person_index = m->person_index;
+			person_state p = s->people[person_index];
+			if (!p.alive)
+					return;
+
+		// Calculating infections death
+			if (p.infected)
+			{
+				if (tw_rand_unif(lp->rng) < DEATH_RATE)
+				{
+					s->people[person_index].alive = false;
+					s->people[person_index].infected = false;
+					s->people[person_index].susceptible = false;
+					tw_output(lp, "    person[%d] died\n", p.id);
+
+					return;
+				}
+			}
+			else if (!p.susceptible && (tw_now(lp) - p.immune_start > IMMUNITY_TIME))
+			{
+				p.susceptible = true;
+				tw_output(lp, "    person[%d] lost immunity\n", person_index);
+			}
+
+			// Calculating recovery from infected
+			if (p.infected && (tw_now(lp) - p.infected_time > INFECTION_TIME))
+			{
+				double r = tw_rand_unif(lp->rng);
+				tw_output(lp, "  person[%d] infected for long enough, rand: %f\n", p.id, r);
+
+				if (r < RECOVERY_RATE)
+				{
+					p.infected = false;
+					p.susceptible = false;
+					p.immune_start = tw_now(lp);
+					tw_output(lp, "    person[%d] recovered\n", p.id);
+				}
+			}
+			else if (p.susceptible)
+			{
+				for (int j = 0; j < s->num_people; j++)
+				{
+					if (person_index == j || !s->people[j].infected || !s->people[j].alive)
+						continue;
+
+					if (tw_rand_unif(lp->rng) < TRANSMISSION_RATE)
+					{
+						p.susceptible = false;
+						p.infected = true;
+						p.infected_time = tw_now(lp);
+						tw_output(lp, "    person[%d] got infected by person[%d]\n", p.id, s->people[j].id);
+						break;
+					}
+				}
+			}
+
+			// update state
+			s->people[person_index].alive = p.alive;
+			s->people[person_index].infected = p.infected;
+			s->people[person_index].susceptible = p.susceptible;
+			s->people[person_index].infected_time = p.infected_time;
+			s->people[person_index].immune_start = p.immune_start;
+
+			if (tw_rand_unif(lp->rng) < MOVE_PROBABILITY)
+			{
+				int rand_result = tw_rand_integer(lp->rng, 0, 3);
+				tw_lpid dst_lp = 0;
+				int width = GRID_WIDTH;
+				int one_less = GRID_WIDTH - 1;
+				printf("gid: %d, m_type: %d,person %d moving ", lp->gid, (int)m->type, p.id);
+				switch (rand_result)
+				{
+				case 0: // NORTH
+				{
+					printf("north\n");
+					if (s->y == one_less)
+						// Wrap around
+						dst_lp = s->x;
+					else
+						dst_lp = lp->gid + width;
+
+					break;
+				}
+				case 1: // SOUTH
+				{
+					printf("south\n");
+					if (s->y == 0)
+						// Wrap around
+						dst_lp = width * one_less + s->x;
+					else
+						dst_lp = lp->gid - width;
+					break;
+				}
+				case 2:
+				{
+					printf("east\n");
+					// Fly east
+					if (s->x == one_less)
+						// Wrap around
+						dst_lp = lp->gid - one_less;
+					else
+						dst_lp = lp->gid + 1;
+					break;
+				}
+				case 3:
+				{
+					printf("west\n");
+					// Fly west
+					if (s->x == 0)
+						// Wrap around
+						dst_lp = lp->gid + one_less;
+					else
+						dst_lp = lp->gid - 1;
+					break;
+				}
+				}
+				printf("movingdone :), gid: %d, type: %d\n", lp->gid, (int)m->type);
+				if (dst_lp >= GRID_WIDTH * GRID_HEIGHT || dst_lp < 0)
+				{
+					printf("Invalid destination LP %lu from LP %lu\n", dst_lp, lp->gid);
+				}
+
+				printf("DONE MOVING, gid: %d, type: %d\n", lp->gid, (int)m->type);
+				tw_event *e_leave;
+				event_msg *m_leave;
+				e_leave = tw_event_new(lp->gid, tw_rand_exponential(lp->rng, 1.0), lp);
+				m_leave = tw_event_data(e_leave);
+				m_leave->type = DEPARTURE;
+				m_leave->person_index = person_index;
+				printf("DEPARTURE-1, from: %d, time: %f, gid: %d, type: %s", lp->gid, tw_now(lp), lp->gid, (int)m->type);
+				tw_event_send(e_leave);
+				// printf("DEPARTURE-2, from: %d, time: %f", lp->gid, tw_now(lp));
+
+				tw_event *e_arrive;
+				event_msg *m_arrive;
+				e_arrive = tw_event_new(dst_lp, tw_rand_exponential(lp->rng, 1.0), lp);
+				m_arrive = tw_event_data(e_arrive);
+				m_arrive->type = ARRIVAL;
+				m_arrive->arriving_state = p;
+				printf("ARRIVAL-1, from: %d, to: %d, time: %f, gid: %d, type: %s", lp->gid, dst_lp, tw_now(lp), lp->gid, (int)m->type);
+				tw_event_send(e_arrive);
+				printf("ARRIVAL-2, from: %d, to: %d, time: %f, gid: %d, type: %s", lp->gid, dst_lp, tw_now(lp), lp->gid, (int)m->type);
 			}
 		}
-	}
-
-	// update state
-	printf("persnoclaat-1 time: %f, gid: %d, m_type: %d\n", tw_now(lp), lp->gid, (int)m->type);
-	s->people[person_index].alive = p.alive;
-	s->people[person_index].infected = p.infected;
-	s->people[person_index].susceptible = p.susceptible;
-	s->people[person_index].infected_time = p.infected_time;
-	s->people[person_index].immune_start = p.immune_start;
-	printf("persnoclaat-2 time: %f, gid %d, m_type: %d\n", tw_now(lp), lp->gid, (int)m->type);
-
-	printf("MOVING, gid: %d, m_type: %d\n", lp->gid, (int)m->type);
-	// move
-	if (tw_rand_unif(lp->rng) < MOVE_PROBABILITY)
-	{
-		int rand_result = tw_rand_integer(lp->rng, 0, 3);
-		tw_lpid dst_lp = 0;
-		int width = GRID_WIDTH;
-		int one_less = GRID_WIDTH - 1;
-		printf("gid: %d, m_type: %d,person %d moving ", lp->gid, (int)m->type, p.id);
-		switch (rand_result)
-		{
-		case 0: // NORTH
-		{
-			printf("north\n");
-			if (s->y == one_less)
-				// Wrap around
-				dst_lp = s->x;
-			else
-				dst_lp = lp->gid + width;
-
-			break;
-		}
-		case 1: // SOUTH
-		{
-			printf("south\n");
-			if (s->y == 0)
-				// Wrap around
-				dst_lp = width * one_less + s->x;
-			else
-				dst_lp = lp->gid - width;
-			break;
-		}
-		case 2:
-		{
-			printf("east\n");
-			// Fly east
-			if (s->x == one_less)
-				// Wrap around
-				dst_lp = lp->gid - one_less;
-			else
-				dst_lp = lp->gid + 1;
-			break;
-		}
-		case 3:
-		{
-			printf("west\n");
-			// Fly west
-			if (s->x == 0)
-				// Wrap around
-				dst_lp = lp->gid + one_less;
-			else
-				dst_lp = lp->gid - 1;
-			break;
-		}
-		}
-		printf("movingdone :), gid: %d, type: %d\n", lp->gid, (int)m->type);
-		if (dst_lp >= GRID_WIDTH * GRID_HEIGHT || dst_lp < 0)
-		{
-			printf("Invalid destination LP %lu from LP %lu\n", dst_lp, lp->gid);
-		}
-
-		printf("DONE MOVING, gid: %d, type: %d\n", lp->gid, (int)m->type);
-		tw_event *e_leave;
-		event_msg *m_leave;
-		e_leave = tw_event_new(lp->gid, tw_rand_exponential(lp->rng, 1.0), lp);
-		m_leave = tw_event_data(e_leave);
-		m_leave->type = DEPARTURE;
-		m_leave->person_index = person_index;
-		m_leave->max_people_count = initial_max_people;
-		m_leave->people = initial_people;
-		printf("DEPARTURE-1, from: %d, time: %f, gid: %d, type: %s", lp->gid, tw_now(lp), lp->gid, (int)m->type);
-		tw_event_send(e_leave);
-		// printf("DEPARTURE-2, from: %d, time: %f", lp->gid, tw_now(lp));
-
-		tw_event *e_arrive;
-		event_msg *m_arrive;
-		e_arrive = tw_event_new(dst_lp, tw_rand_exponential(lp->rng, 1.0), lp);
-		m_arrive = tw_event_data(e_arrive);
-		m_arrive->type = ARRIVAL;
-		m_arrive->arriving_state = p;
-		m_arrive->max_people_count = initial_max_people;
-		m_arrive->people = initial_people;
-		printf("ARRIVAL-1, from: %d, to: %d, time: %f, gid: %d, type: %s", lp->gid, dst_lp, tw_now(lp), lp->gid, (int)m->type);
-		tw_event_send(e_arrive);
-		printf("ARRIVAL-2, from: %d, to: %d, time: %f, gid: %d, type: %s", lp->gid, dst_lp, tw_now(lp), lp->gid, (int)m->type);
-	}
-	// Not moving
-	else
-	{
-		tw_event *e_stay;
-		event_msg *m_stay;
-		e_stay = tw_event_new(lp->gid, tw_rand_exponential(lp->rng, 1.0), lp);
-		m_stay = tw_event_data(e_stay);
-		m_stay->type = STATUS_UPDATE;
-		m_stay->person_index = person_index;
-		m_stay->max_people_count = initial_max_people;
-		m_stay->people = initial_people;
-		tw_event_send(e_stay);
 	}
 }
 void location_event_reverse(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
@@ -334,7 +292,6 @@ void location_event_reverse(location_state *s, tw_bf *bf, event_msg *m, tw_lp *l
 		break;
 	}
 	}
-	s->people = deep_copy_person_states(m->people, m->max_people_count);
 }
 
 void location_final(location_state *s, tw_lp *lp)
