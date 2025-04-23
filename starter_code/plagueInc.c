@@ -76,7 +76,7 @@ void location_init(location_state *s, tw_lp *lp)
 	int buf_length = 256;
 	char buf[256];
 	int len = snprintf(buf, sizeof(buf), "INIT-LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d | Time: %f\n", lp->gid, s->x, s->y, alive, dead, infected, tw_now(lp));
-	int steps = 1001;
+	int steps = STEPS + 1;
 	int space_needed = buf_length * steps;
 	MPI_Offset offset = (MPI_Offset)(lp->gid * space_needed);
 	MPI_File_write_at(mpi_file, offset, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
@@ -324,7 +324,7 @@ void location_final(location_state *s, tw_lp *lp)
 	int buf_length = 256;
 	char buf[256];
 	int len = snprintf(buf, sizeof(buf), "FINAL: LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d | Time: %f\n", lp->gid, s->x, s->y, alive, dead, infected, tw_now(lp));
-	int steps = 1001;
+	int steps = STEPS + 1;
 	int space_needed_per_lp = buf_length * steps;
 	int num_lps = GRID_HEIGHT * GRID_WIDTH;
 	int end_spot = num_lps * space_needed_per_lp;
@@ -351,7 +351,7 @@ void location_commit(location_state *s, tw_bf *bf, event_msg *in_msg, tw_lp *lp)
 	int buf_length = 256;
 	char buf[256];
 	int len = snprintf(buf, sizeof(buf), "LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d | Time: %f\n", lp->gid, s->x, s->y, alive, dead, infected, tw_now(lp));
-	int steps = 1001;
+	int steps = STEPS + 1;
 	int space_needed = buf_length * steps;
 	MPI_Offset offset = (MPI_Offset)(lp->gid * space_needed + (long)tw_now(lp) * buf_length);
 	MPI_File_write_at(mpi_file, offset, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
@@ -381,6 +381,7 @@ int main(int argc, char **argv, char **env)
 {
 	printf("main: Starting ROSS plague simulation\n");
 	g_tw_lookahead = 1.0;
+	// events per pe seems like num num people * grid width * grid height - he said to mult by 2
 	g_tw_events_per_pe = 8192;
 	tw_opt_add(NULL);
 	tw_init(&argc, &argv);
@@ -388,7 +389,7 @@ int main(int argc, char **argv, char **env)
 	int NUM_LOCATIONS = GRID_WIDTH * GRID_HEIGHT;
 	// nlp_per_pe = NUM_LOCATIONS / (tw_nnodes() * g_tw_npe);
 	// NUM_LOCATIONS / NUM_PROCESSES (-np)
-	long nlp_per_pe = NUM_LOCATIONS / 2;
+	long nlp_per_pe = NUM_LOCATIONS / NUM_PROCESSES;
 
 	tw_define_lps(nlp_per_pe, sizeof(event_msg));
 	printf("main: LP types registered\n");
@@ -420,8 +421,8 @@ int main(int argc, char **argv, char **env)
 	{
 		printf("\nModel Statistics:\n");
 		// 2 processes
-		printf("\t%-50s %11ld\n", "Number of locations", nlp_per_pe * 2);
-		printf("\t%-50s %11ld\n", "Number of people", PEOPLE_PER_LOCATION * nlp_per_pe * 2);
+		printf("\t%-50s %11ld\n", "Number of locations", nlp_per_pe * NUM_PROCESSES);
+		printf("\t%-50s %11ld\n", "Number of people", PEOPLE_PER_LOCATION * nlp_per_pe * NUM_PROCESSES);
 	}
 
 	tw_end();
