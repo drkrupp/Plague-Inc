@@ -322,7 +322,7 @@ void location_commit(location_state *s, tw_bf *bf, event_msg *in_msg, tw_lp *lp)
 	int len = snprintf(buf, sizeof(buf), "LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d\n", lp->gid, s->x, s->y, alive, dead, infected);
 	int steps = 10;
 	int space_needed = buf_length*steps;
-	MPI_Offset offset = (MPI_Offset)(lp->gid * space_needed + (long)(tw_now(lp) * 10));
+	MPI_Offset offset = (MPI_Offset)(lp->gid * space_needed + (long)(tw_now(lp)));
 	MPI_File_write_at(mpi_file, offset, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
 
 }
