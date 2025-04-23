@@ -286,6 +286,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 }
 void location_event_reverse(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 {
+	tw_output(lp, "BIG LOCATION REVERSE YA BOMBOCLAAT");
 	switch (m->type)
 	{
 	case ARRIVAL:
