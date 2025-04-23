@@ -1,6 +1,8 @@
 
 #include "plagueInc.h"
 
+MPI_File mpi_file;
+
 tw_peid mapping(tw_lpid gid)
 {
 	return (tw_peid)gid / g_tw_nlp;
@@ -315,13 +317,14 @@ void location_commit(location_state *s, tw_bf *bf, event_msg *in_msg, tw_lp *lp)
 			infected++;
 	}
 
-	tw_output(lp, "LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d\n", lp->gid, s->x, s->y, alive, dead, infected);
-	tw_output(lp, "People IDs: ");
-	for (int i = 0; i < s->num_people; i++)
-	{
-		tw_output(lp, "%d, ", s->people[i].id);
-	}
-	tw_output(lp, "\n");
+	int buf_length = 256;
+	char buf[256];
+	int len = snprintf(buf, sizeof(buf), "LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d\n", lp->gid, s->x, s->y, alive, dead, infected);
+	int steps = 10;
+	int space_needed = buf_length*steps;
+	MPI_Offset offset = (MPI_Offset)(lp->gid * space_needed + (long)(tw_now(lp) * 10));
+	MPI_File_write_at(mpi_file, offset, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
+
 }
 
 // tw_lpid map_location(tw_lpid gid)
@@ -371,6 +374,14 @@ int main(int argc, char **argv, char **env)
 	tw_lp_setup_types();
 
 	printf("main: Running simulation...\n");
+
+	MPI_Comm comm = MPI_COMM_WORLD;
+	if (MPI_File_open(comm, "output.dat", MPI_MODE_CREATE | MPI_MODE_WRONLY, MPI_INFO_NULL, &mpi_file) != MPI_SUCCESS)
+	{
+		printf("MPI_File_open failed\n");
+		fflush(stdout);
+	}
+
 	tw_run();
 
 	if (tw_ismaster())
