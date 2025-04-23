@@ -330,6 +330,16 @@ void location_final(location_state *s, tw_lp *lp)
 			infected++;
 	}
 
+	int buf_length = 256;
+	char buf[256];
+	int len = snprintf(buf, sizeof(buf), "LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d | Time: %f\n", lp->gid, s->x, s->y, alive, dead, infected, tw_now(lp));
+	int steps = 1001;
+	int space_needed_per_lp = buf_length * steps;
+	int num_lps = GRID_HEIGHT*GRID_WIDTH;
+	int end_spot = num_lps * space_needed_per_lp; 
+	MPI_Offset offset = (MPI_Offset)(end_spot + lp->gid * buf_length);
+	MPI_File_write_at(mpi_file, offset, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
+
 	tw_output(lp, "FINAL: LP %lu | Alive: %d | Dead: %d | Infected: %d\n", lp->gid, alive, dead, infected);
 }
 
