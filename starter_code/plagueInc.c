@@ -153,7 +153,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		tw_lpid dst_lp = 0;
 		int width = GRID_WIDTH;
 		int one_less = GRID_WIDTH - 1;
-		printf("person %d moving ");
+		printf("person %d moving ", p.id);
 		switch (rand_result)
 		{
 		// LOOK INTO HOW THIS MOVEMENT WORKS - DONT FORGET IT
