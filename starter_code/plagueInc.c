@@ -153,6 +153,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		tw_lpid dst_lp = 0;
 		int width = GRID_WIDTH;
 		int one_less = GRID_WIDTH - 1;
+		printf("person %d moving ");
 		switch (rand_result)
 		{
 		// LOOK INTO HOW THIS MOVEMENT WORKS - DONT FORGET IT
@@ -166,7 +167,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 			// Could have 32 = GRID_WIDTH/tw_nnodes, 31 = (GRID_WIDTH/tw_nnodes) - 1
 			// Could have another value involving grid width divided by other factor
 			// Like GRID_WIDTH and GRID_WIDTH -1
-
+			printf("north\n");
 			if (lp->gid < width)
 				// Wrap around
 				dst_lp = lp->gid + one_less * width;
@@ -176,6 +177,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		}
 		case 1:
 		{
+			printf("south\n");
 			// Fly south
 			if (lp->gid >= one_less * width)
 				// Wrap around
@@ -186,6 +188,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		}
 		case 2:
 		{
+			printf("east\n");
 			// Fly east
 			if ((lp->gid % width) == one_less)
 				// Wrap around
@@ -196,6 +199,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		}
 		case 3:
 		{
+			printf("west\n");
 			// Fly west
 			if ((lp->gid % width) == 0)
 				// Wrap around
