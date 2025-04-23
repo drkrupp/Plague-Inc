@@ -105,7 +105,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 			tw_event *e_status;
 			event_msg *m_status;
 			e_status = tw_event_new(lp->gid, tw_rand_exponential(lp->rng, 1.0), lp);
-			m_stay = tw_event_data(e_status);
+			m_status = tw_event_data(e_status);
 			m_status->type = STATUS_UPDATE;
 			m_status->person_index = person_index;
 			tw_event_send(e_status);
