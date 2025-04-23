@@ -265,7 +265,7 @@ void location_commit(location_state *s, tw_bf *bf, event_msg *in_msg, tw_lp *lp)
 {
 	int alive = 0, dead = 0, infected = 0;
 
-	for (int i = 0; i < PEOPLE_PER_LOCATION; i++)
+	for (int i = 0; i < s->num_people; i++)
 	{
 		if (!s->people[i].alive)
 			dead++;
