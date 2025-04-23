@@ -325,6 +325,7 @@ int main(int argc, char **argv, char **env)
 	int NUM_LOCATIONS = GRID_WIDTH * GRID_HEIGHT;
 	// nlp_per_pe = NUM_LOCATIONS / (tw_nnodes() * g_tw_npe);
 	// 2 processes
+	// NUM_LOCATIONS / num_processes (-np ##)
 	long nlp_per_pe = NUM_LOCATIONS / 2;
 
 	tw_define_lps(nlp_per_pe, sizeof(event_msg));
