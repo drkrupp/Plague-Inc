@@ -19,7 +19,7 @@
 #define RECOVERY_RATE 1.0
 #define IMMUNITY_TIME 30.0
 #define INFECTION_TIME 50.0
-#define MOVE_PROBABILITY 0.4
+#define MOVE_PROBABILITY 0.0
 #define MAX_PEOPLE 100
 #define DEATH_RATE 0.0
 // #define lookahead 0
@@ -62,6 +62,17 @@ typedef struct
     int max_people_count;
     person_state *people;
     int person_index; // -1 for all people
+    int before_num_people;
+    person_state before_people[MAX_PEOPLE_PER_LOCATION];
 } event_msg;
+
+// typedef struct
+// {
+//     event_t type;
+//     person_state arriving_state;
+//     int max_people_count;
+//     person_state *people;
+//     int person_index; // -1 for all people
+// } event_msg;
 
 #endif

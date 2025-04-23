@@ -85,14 +85,21 @@ void location_init(location_state *s, tw_lp *lp)
 void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 {
 	int person_index;
-	person_state arriving_state;
+	person_state arriving;
+
+	// 1) Take a full snapshot of the array for rollback
+	m->before_num_people = s->num_people;
+	memcpy(
+		m->before_people,
+		s->people,
+		sizeof(person_state) * (size_t)s->num_people);
 
 	printf("SET STATES, gid: %d, m_type: %d\n", lp->gid, (int)m->type);
 	switch (m->type)
 	{
 	case ARRIVAL:
 	{
-		arriving_state = m->arriving_state;
+		person_state arriving_state = m->arriving_state;
 		if (s->num_people == s->max_people_held)
 		{
 			s->max_people_held *= 2;
@@ -122,7 +129,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		printf("bomboclaat check time: %f, gid:%d, m_type: %d\n", tw_now(lp), lp->gid, (int)m->type);
 
 		s->num_people--;
-		return; // don't handle status updates for people who have left the location
+		break; // don't handle status updates for people who have left the location
 	}
 	case STATUS_UPDATE:
 	{
@@ -184,11 +191,12 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		}
 
 		// update state
-		s->people[person_index].alive = p.alive;
-		s->people[person_index].infected = p.infected;
-		s->people[person_index].susceptible = p.susceptible;
-		s->people[person_index].infected_time = p.infected_time;
-		s->people[person_index].immune_start = p.immune_start;
+		s->people[person_index] = p;
+		// s->people[person_index].alive = p.alive;
+		// s->people[person_index].infected = p.infected;
+		// s->people[person_index].susceptible = p.susceptible;
+		// s->people[person_index].infected_time = p.infected_time;
+		// s->people[person_index].immune_start = p.immune_start;
 
 		if (tw_rand_unif(lp->rng) < MOVE_PROBABILITY)
 		{
@@ -270,29 +278,43 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 			tw_event_send(e_arrive);
 			printf("ARRIVAL-2, from: %d, to: %d, time: %f, gid: %d, type: %s", lp->gid, dst_lp, tw_now(lp), lp->gid, (int)m->type);
 		}
+		else
+		{
+			tw_event *e = tw_event_new(lp->gid, tw_rand_exponential(lp->rng, 1.0), lp);
+			event_msg *mm = tw_event_data(e);
+			mm->type = STATUS_UPDATE;
+			mm->person_index = person_index;
+			tw_event_send(e);
+		}
+		break;
 	}
 	}
 }
+
 void location_event_reverse(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 {
-	tw_output(lp, "BIG LOCATION REVERSE YA BOMBOCLAAT\n");
-	switch (m->type)
-	{
-	case ARRIVAL:
-	{
-		s->num_people--;
-		break;
-	}
-	case DEPARTURE:
-	{
-		s->num_people++;
-		break;
-	}
-	default:
-	{
-		break;
-	}
-	}
+	s->num_people = m->before_num_people;
+	memcpy(s->people,
+		   m->before_people,
+		   sizeof(person_state) * m->before_num_people);
+	// 	tw_output(lp, "BIG LOCATION REVERSE YA BOMBOCLAAT\n");
+	// 	switch (m->type)
+	// 	{
+	// 	case ARRIVAL:
+	// 	{
+	// 		s->num_people--;
+	// 		break;
+	// 	}
+	// 	case DEPARTURE:
+	// 	{
+	// 		s->num_people++;
+	// 		break;
+	// 	}
+	// 	default:
+	// 	{
+	// 		break;
+	// 	}
+	// 	}
 }
 
 void location_final(location_state *s, tw_lp *lp)
