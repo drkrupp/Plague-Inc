@@ -27,8 +27,8 @@ void location_init(location_state *s, tw_lp *lp)
 
 	for (int i = 0; i < PEOPLE_PER_LOCATION; i++)
 	{
-		printf("  Init person[%d] for LP %lu\n", i, lp->gid);
-		int id = lp->gid + i;
+		// printf("  Init person[%d] for LP %lu\n", i, lp->gid);
+		int id = (lp->gid) * PEOPLE_PER_LOCATION + i;
 		s->people[i].x = s->x;
 		s->people[i].y = s->y;
 		s->people[i].alive = true;
