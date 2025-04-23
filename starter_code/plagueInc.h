@@ -8,14 +8,14 @@
 #include <stdbool.h>
 
 // Simulation parameters
-#define GRID_WIDTH 2
-#define GRID_HEIGHT 2
-#define PEOPLE_PER_LOCATION 2
+#define GRID_WIDTH 4
+#define GRID_HEIGHT 4
+#define PEOPLE_PER_LOCATION 10
 #define NUM_PROCESSES 2
-#define STEPS 300
+#define STEPS 1000
 #define MAX_PEOPLE_PER_LOCATION 25
 #define TRANSMISSION_RATE 0.1
-#define INITIAL_INFECTED_RATE 0.0
+#define INITIAL_INFECTED_RATE 0.5
 #define RECOVERY_RATE 1.0
 #define IMMUNITY_TIME 30.0
 #define INFECTION_TIME 50.0
