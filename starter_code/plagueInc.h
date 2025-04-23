@@ -21,6 +21,7 @@
 #define MOVE_PROBABILITY 0.3
 #define MAX_PEOPLE 100
 #define DEATH_RATE 0.0001
+#define TIME_END 10
 // #define lookahead 0
 // #define opt_mem 0
 
@@ -60,8 +61,6 @@ typedef struct
     event_t type;
     person_state arriving_state;
     int person_index; // -1 for all people
-    int max_people_count;
-    person_state *people;
 } event_msg;
 
 #endif

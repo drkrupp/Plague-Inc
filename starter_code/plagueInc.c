@@ -9,8 +9,7 @@ tw_peid mapping(tw_lpid gid)
 void location_init(location_state *s, tw_lp *lp)
 {
 
-	tw_output(lp, "location_init: LP %lu | state ptr: %p | rng: %p\n", lp->gid, s, lp->rng);
-	// printf("location_init: LP %lu | state ptr: %p | rng: %p\n", lp->gid, s, lp->rng);
+	printf("location_init: LP %lu | state ptr: %p | rng: %p\n", lp->gid, s, lp->rng);
 
 	if (!lp->rng)
 	{
@@ -22,30 +21,31 @@ void location_init(location_state *s, tw_lp *lp)
 	s->y = lp->gid / GRID_WIDTH;
 	s->max_people_held = MAX_PEOPLE_PER_LOCATION;
 	s->people = (person_state *)malloc(sizeof(person_state) * s->max_people_held);
-	s->num_people = 0;
+	s->num_people = PEOPLE_PER_LOCATION;
 
 	printf("LP %lu mapped to grid (%d, %d)\n", lp->gid, s->x, s->y);
 
 	for (int i = 0; i < PEOPLE_PER_LOCATION; i++)
 	{
-		printf("  Init person[%d] for LP %lu\n", i, lp->gid);
+		// printf("  Init person[%d] for LP %lu\n", i, lp->gid);
+		int id = (lp->gid) * PEOPLE_PER_LOCATION + i;
 		s->people[i].x = s->x;
 		s->people[i].y = s->y;
 		s->people[i].alive = true;
 		s->people[i].infected = false;
 		s->people[i].immune = false;
 		s->people[i].susceptible = true;
-		s->people[i].id = lp->gid + i;
+		s->people[i].id = id;
 
 		double r = tw_rand_unif(lp->rng);
-		printf("    person[%d] random init val: %f\n", i, r);
+		printf("    person[%d] random init val: %f\n", id, r);
 
 		if (r < INITIAL_INFECTED_RATE)
 		{
 			s->people[i].infected = true;
 			s->people[i].infected_time = 0.0;
 			s->people[i].susceptible = false;
-			printf("    person[%d] initialized as infected\n", i);
+			printf("    person[%d] initialized as infected\n", id);
 		}
 	}
 
@@ -61,13 +61,14 @@ void location_init(location_state *s, tw_lp *lp)
 	}
 }
 
-
 void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 {
-
+	// if (TIME_END < tw_now(lp))
+	// {
+	// 	return;
+	// }
 	int person_index;
 	person_state arriving_state;
-
 	switch (m->type)
 	{
 	case ARRIVAL:
@@ -107,7 +108,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		if (tw_rand_unif(lp->rng) < DEATH_RATE)
 		{
 			p.alive = false;
-			printf("    person[%d] died\n", p.id);
+			tw_output(lp, "    person[%d] died\n", p.id);
 			return;
 		}
 	}
@@ -115,14 +116,14 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 	if (p.infected && (tw_now(lp) - p.infected_time > INFECTION_TIME))
 	{
 		double r = tw_rand_unif(lp->rng);
-		printf("  person[%d] infected for long enough, rand: %f\n", p.id, r);
+		tw_output(lp, "  person[%d] infected for long enough, rand: %f\n", p.id, r);
 		// ADD DEATH FOR PEOPLE THAT JUST GOT SICK
 		if (r < RECOVERY_RATE)
 		{
 			p.infected = false;
 			p.immune = true;
 			p.immune_start = tw_now(lp);
-			printf("    person[%d] recovered\n", p.id);
+			tw_output(lp, "    person[%d] recovered\n", p.id);
 		}
 	}
 	else if (p.susceptible)
@@ -137,7 +138,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 				p.susceptible = false;
 				p.infected = true;
 				p.infected_time = tw_now(lp);
-				printf("    person[%d] got infected by person[%d]\n", p.id, s->people[j].id);
+				tw_output(lp, "    person[%d] got infected by person[%d]\n", p.id, s->people[j].id);
 				break;
 			}
 		}
@@ -147,7 +148,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 	{
 		p.immune = false;
 		p.susceptible = true;
-		printf("    person[%d] lost immunity\n", person_index);
+		tw_output(lp, "    person[%d] lost immunity\n", person_index);
 	}
 
 	if (tw_rand_unif(lp->rng) < MOVE_PROBABILITY)
@@ -156,7 +157,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		tw_lpid dst_lp = 0;
 		int width = GRID_WIDTH;
 		int one_less = GRID_WIDTH - 1;
-		printf("person %d moving ", p.id);
+		tw_output(lp, "person %d moving ", p.id);
 		switch (rand_result)
 		{
 		// LOOK INTO HOW THIS MOVEMENT WORKS - DONT FORGET IT
@@ -170,7 +171,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 			// Could have 32 = GRID_WIDTH/tw_nnodes, 31 = (GRID_WIDTH/tw_nnodes) - 1
 			// Could have another value involving grid width divided by other factor
 			// Like GRID_WIDTH and GRID_WIDTH -1
-			printf("north\n");
+			tw_output(lp, "north\n");
 			if (lp->gid < width)
 				// Wrap around
 				dst_lp = lp->gid + one_less * width;
@@ -180,7 +181,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		}
 		case 1:
 		{
-			printf("south\n");
+			tw_output(lp, "south\n");
 			// Fly south
 			if (lp->gid >= one_less * width)
 				// Wrap around
@@ -191,7 +192,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		}
 		case 2:
 		{
-			printf("east\n");
+			tw_output(lp, "east\n");
 			// Fly east
 			if ((lp->gid % width) == one_less)
 				// Wrap around
@@ -202,7 +203,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		}
 		case 3:
 		{
-			printf("west\n");
+			tw_output(lp, "west\n");
 			// Fly west
 			if ((lp->gid % width) == 0)
 				// Wrap around
@@ -241,12 +242,10 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 	}
 }
 
-
-
 void location_event_reverse(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 {
 	// Not implemented
-	printf("location_event_reverse: LP %lu (unimplemented)\n", lp->gid);
+	tw_output(lp, "location_event_reverse: LP %lu (unimplemented)\n", lp->gid);
 }
 
 void location_final(location_state *s, tw_lp *lp)
@@ -263,7 +262,7 @@ void location_final(location_state *s, tw_lp *lp)
 			infected++;
 	}
 
-	printf("FINAL: LP %lu | Alive: %d | Dead: %d | Infected: %d\n", lp->gid, alive, dead, infected);
+	tw_output(lp, "FINAL: LP %lu | Alive: %d | Dead: %d | Infected: %d\n", lp->gid, alive, dead, infected);
 }
 
 void location_commit(location_state *s, tw_bf *bf, event_msg *in_msg, tw_lp *lp)
@@ -280,13 +279,13 @@ void location_commit(location_state *s, tw_bf *bf, event_msg *in_msg, tw_lp *lp)
 			infected++;
 	}
 
-	printf("LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d\n", lp->gid, s->x, s->y, alive, dead, infected);
-	printf("People IDs: ");
+	tw_output(lp, "LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d\n", lp->gid, s->x, s->y, alive, dead, infected);
+	tw_output(lp, "People IDs: ");
 	for (int i = 0; i < s->num_people; i++)
 	{
-		printf("%d, ", s->people[i].id);
+		tw_output(lp, "%d, ", s->people[i].id);
 	}
-	printf("\n");
+	tw_output(lp, "\n");
 }
 
 // tw_lpid map_location(tw_lpid gid)
