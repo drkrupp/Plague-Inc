@@ -298,6 +298,7 @@ int main(int argc, char **argv, char **env)
 
 	int NUM_LOCATIONS = GRID_WIDTH * GRID_HEIGHT;
 	// nlp_per_pe = NUM_LOCATIONS / (tw_nnodes() * g_tw_npe);
+	//2 processes
 	long nlp_per_pe = NUM_LOCATIONS / 2;
 
 	tw_define_lps(nlp_per_pe, sizeof(event_msg));
@@ -306,13 +307,14 @@ int main(int argc, char **argv, char **env)
 	g_tw_lp_types = my_lps;
 	g_tw_lp_typemap = lp_typemap;
 	tw_lp_setup_types();
-	
+
 	printf("main: Running simulation...\n");
 	tw_run();
 
 	if (tw_ismaster())
 	{
 		printf("\nAModel Statistics:\n");
+		//2 processes
 		printf("\t%-50s %11lld\n", "Number of locations",
 			   nlp_per_pe * 2 * tw_nnodes());
 		printf("\t%-50s %11lld\n", "Number of people",
