@@ -8,9 +8,9 @@
 #include <stdbool.h>
 
 // Simulation parameters
-#define GRID_WIDTH 2
-#define GRID_HEIGHT 2
-#define PEOPLE_PER_LOCATION 2
+#define GRID_WIDTH 4
+#define GRID_HEIGHT 4
+#define PEOPLE_PER_LOCATION 8
 #define MAX_PEOPLE_PER_LOCATION 25
 #define TRANSMISSION_RATE 0.3
 #define INITIAL_INFECTED_RATE 0.1

@@ -61,6 +61,26 @@ void location_init(location_state *s, tw_lp *lp)
 		m->person_index = i;
 		tw_event_send(e);
 	}
+
+	int alive = 0, dead = 0, infected = 0;
+
+	for (int i = 0; i < s->num_people; i++)
+	{
+		if (!s->people[i].alive)
+			dead++;
+		else
+			alive++;
+		if (s->people[i].infected)
+			infected++;
+	}
+
+	int buf_length = 256;
+	char buf[256];
+	int len = snprintf(buf, sizeof(buf), "INIT-LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d | Time: %f\n", lp->gid, s->x, s->y, alive, dead, infected, tw_now(lp));
+	int steps = 1001;
+	int space_needed = buf_length * steps;
+	MPI_Offset offset = (MPI_Offset)(lp->gid * space_needed);
+	MPI_File_write_at(mpi_file, offset, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
 }
 
 person_state *deep_copy_person_states(const person_state *original, size_t length)
@@ -319,12 +339,13 @@ void location_commit(location_state *s, tw_bf *bf, event_msg *in_msg, tw_lp *lp)
 
 	int buf_length = 256;
 	char buf[256];
-	int len = snprintf(buf, sizeof(buf), "LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d\n", lp->gid, s->x, s->y, alive, dead, infected);
-	int steps = 10;
-	int space_needed = buf_length*steps;
-	MPI_Offset offset = (MPI_Offset)(lp->gid * space_needed + (long)(tw_now(lp) * 10));
+	int len = snprintf(buf, sizeof(buf), "LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d | Time: %f\n", lp->gid, s->x, s->y, alive, dead, infected, tw_now(lp));
+	int steps = 1001;
+	int space_needed = buf_length * steps;
+	MPI_Offset offset = (MPI_Offset)(lp->gid * space_needed + (long)((tw_now(lp) + 1) * buf_length));
+	// MPI_Offset offset = (MPI_Offset)((long)(tw_now(lp)) * GRID_WIDTH * GRID_HEIGHT + lp->gid) * 256;
 	MPI_File_write_at(mpi_file, offset, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
-
+	// MPI_File_write_ordered(mpi_file, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
 }
 
 // tw_lpid map_location(tw_lpid gid)
@@ -376,10 +397,18 @@ int main(int argc, char **argv, char **env)
 	printf("main: Running simulation...\n");
 
 	MPI_Comm comm = MPI_COMM_WORLD;
-	if (MPI_File_open(comm, "output.dat", MPI_MODE_CREATE | MPI_MODE_WRONLY, MPI_INFO_NULL, &mpi_file) != MPI_SUCCESS)
+	int rc = MPI_File_open(comm, "output.dat",
+						   MPI_MODE_CREATE | MPI_MODE_WRONLY,
+						   MPI_INFO_NULL, &mpi_file);
+	if (rc != MPI_SUCCESS)
 	{
 		printf("MPI_File_open failed\n");
 		fflush(stdout);
+	}
+	else
+	{
+		// Explicitly truncate the file to clear old content
+		MPI_File_set_size(mpi_file, 0);
 	}
 
 	tw_run();
