@@ -60,6 +60,8 @@ typedef struct
 {
     event_t type;
     person_state arriving_state;
+    int max_people_count;
+    person_state *people;
     int person_index; // -1 for all people
 } event_msg;
 
