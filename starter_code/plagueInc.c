@@ -206,41 +206,31 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		tw_output(lp, "person %d moving ", p.id);
 		switch (rand_result)
 		{
-		// LOOK INTO HOW THIS MOVEMENT WORKS - DONT FORGET IT
-		case 0:
+		case 0: // NORTH
 		{
-			// Fly north
-			// nlp_per_pe is 1024 in airplane version (32*32)
-			// could be keeping each section of the grid independant
-			// Should try two different things,
-			// Could have 32 = GRID_WIDTH, 31 = GRID_WIDTH -1
-			// Could have 32 = GRID_WIDTH/tw_nnodes, 31 = (GRID_WIDTH/tw_nnodes) - 1
-			// Could have another value involving grid width divided by other factor
-			// Like GRID_WIDTH and GRID_WIDTH -1
 			tw_output(lp, "north\n");
-			if (lp->gid < width)
+			if (s->y == one_less)
 				// Wrap around
-				dst_lp = lp->gid + one_less * width;
+				dst_lp = s->x;
 			else
-				dst_lp = lp->gid - one_less;
+				dst_lp = lp->gid + width;
 			break;
 		}
-		case 1:
+		case 1: // SOUTH
 		{
 			tw_output(lp, "south\n");
-			// Fly south
-			if (lp->gid >= one_less * width)
+			if (s->y == 0)
 				// Wrap around
-				dst_lp = lp->gid - one_less * width;
+				dst_lp = width * one_less + s->x;
 			else
-				dst_lp = lp->gid + one_less;
+				dst_lp = lp->gid - width;
 			break;
 		}
 		case 2:
 		{
 			tw_output(lp, "east\n");
 			// Fly east
-			if ((lp->gid % width) == one_less)
+			if (s->x == one_less)
 				// Wrap around
 				dst_lp = lp->gid - one_less;
 			else
@@ -251,7 +241,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		{
 			tw_output(lp, "west\n");
 			// Fly west
-			if ((lp->gid % width) == 0)
+			if (s->x == 0)
 				// Wrap around
 				dst_lp = lp->gid + one_less;
 			else
@@ -272,7 +262,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 
 		tw_event *e_arrive;
 		event_msg *m_arrive;
-		e_arrive = tw_event_new(lp->gid, tw_rand_exponential(lp->rng, 1.0), lp);
+		e_arrive = tw_event_new(dst_lp, tw_rand_exponential(lp->rng, 1.0), lp);
 		m_arrive = tw_event_data(e_arrive);
 		m_arrive->type = ARRIVAL;
 		m_arrive->arriving_state = p;
@@ -280,6 +270,7 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		m_arrive->people = initial_people;
 		tw_event_send(e_arrive);
 	}
+	// Not moving
 	else
 	{
 		tw_event *e_stay;
@@ -332,11 +323,11 @@ void location_final(location_state *s, tw_lp *lp)
 
 	int buf_length = 256;
 	char buf[256];
-	int len = snprintf(buf, sizeof(buf), "LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d | Time: %f\n", lp->gid, s->x, s->y, alive, dead, infected, tw_now(lp));
+	int len = snprintf(buf, sizeof(buf), "FINAL: LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d | Time: %f\n", lp->gid, s->x, s->y, alive, dead, infected, tw_now(lp));
 	int steps = 1001;
 	int space_needed_per_lp = buf_length * steps;
-	int num_lps = GRID_HEIGHT*GRID_WIDTH;
-	int end_spot = num_lps * space_needed_per_lp; 
+	int num_lps = GRID_HEIGHT * GRID_WIDTH;
+	int end_spot = num_lps * space_needed_per_lp;
 	MPI_Offset offset = (MPI_Offset)(end_spot + lp->gid * buf_length);
 	MPI_File_write_at(mpi_file, offset, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
 
@@ -427,7 +418,7 @@ int main(int argc, char **argv, char **env)
 
 	if (tw_ismaster())
 	{
-		printf("\nAModel Statistics:\n");
+		printf("\nModel Statistics:\n");
 		// 2 processes
 		printf("\t%-50s %11ld\n", "Number of locations", nlp_per_pe * 2);
 		printf("\t%-50s %11ld\n", "Number of people", PEOPLE_PER_LOCATION * nlp_per_pe * 2);
