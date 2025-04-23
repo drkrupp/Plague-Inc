@@ -40,7 +40,7 @@ typedef struct
     bool immune;
     bool susceptible;
     int x, y; // coordinates of the current location
-    int id; //unique identifier for person
+    int id;   // unique identifier for person
     tw_stime infected_time;
     tw_stime immune_start;
 } person_state;
@@ -51,7 +51,7 @@ typedef struct
     int x, y;
     int num_people;
     int max_people_held;
-    person_state people[MAX_PEOPLE_PER_LOCATION];
+    person_state *people;
 } location_state;
 
 // Event payload

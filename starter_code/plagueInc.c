@@ -8,6 +8,7 @@ tw_peid mapping(tw_lpid gid)
 
 void location_init(location_state *s, tw_lp *lp)
 {
+
 	tw_output(lp, "location_init: LP %lu | state ptr: %p | rng: %p\n", lp->gid, s, lp->rng);
 	// printf("location_init: LP %lu | state ptr: %p | rng: %p\n", lp->gid, s, lp->rng);
 
@@ -20,6 +21,9 @@ void location_init(location_state *s, tw_lp *lp)
 	s->x = lp->gid % GRID_WIDTH;
 	s->y = lp->gid / GRID_WIDTH;
 	s->max_people_held = MAX_PEOPLE_PER_LOCATION;
+	s->people = (person_state *)malloc(sizeof(person_state) * s->max_people_held);
+	s->num_people = 0;
+
 	printf("LP %lu mapped to grid (%d, %d)\n", lp->gid, s->x, s->y);
 
 	for (int i = 0; i < PEOPLE_PER_LOCATION; i++)
@@ -47,154 +51,165 @@ void location_init(location_state *s, tw_lp *lp)
 
 	tw_event *e;
 	event_msg *m;
-	for(i = 0; i < planes_per_airport; i++)
-    {
-      e = tw_event_new(lp->gid, tw_rand_exponential(lp->rng, 1.0), lp);
-      m = tw_event_data(e);
-      m->type = STATUS_UPDATE;
-	  m->person_index = i;
-      tw_event_send(e);
-    }
+	for (int i = 0; i < PEOPLE_PER_LOCATION; i++)
+	{
+		e = tw_event_new(lp->gid, tw_rand_exponential(lp->rng, 1.0), lp);
+		m = tw_event_data(e);
+		m->type = STATUS_UPDATE;
+		m->person_index = i;
+		tw_event_send(e);
+	}
 }
-
 
 void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 {
 	int person_index;
 	person_state arriving_state;
-	switch(msg->type){
-		case ARRIVAL:
+	switch (m->type)
+	{
+	case ARRIVAL:
+	{
+		arriving_state = m->arriving_state;
+		if (s->num_people == s->max_people_held)
 		{
-			arriving_state = m->arriving_state;
-			if (s->num_people == s->max_people_held)
-			{
-				s->max_people_held *= 2;
-				s->people = (tw_lpid *)realloc(s->people, sizeof(tw_lpid) * s->max_people_held);
-			}
-			s->people[s->num_people] = arriving_state;
-			person_index = s->num_people;
-			s->num_people++;
-			break;
+			s->max_people_held *= 2;
+			s->people = (person_state *)realloc(s->people, sizeof(person_state) * s->max_people_held);
 		}
-		case DEPARTURE:
-		{
-			person_index = m->person_index;
-			s->people[person_index] = s->people[s->num_people - 1];
-			s->num_people--;
-			return; //don't handle status updates for people who have left the location
-		}
-		case default:
-		{
-			person_index = m->person_index;
-			break;
-		}
+		s->people[s->num_people] = arriving_state;
+		person_index = s->num_people;
+		s->num_people++;
+		break;
+	}
+	case DEPARTURE:
+	{
+		person_index = m->person_index;
+		s->people[person_index] = s->people[s->num_people - 1];
+		s->num_people--;
+		return; // don't handle status updates for people who have left the location
+	}
+	default:
+	{
+		person_index = m->person_index;
+		break;
+	}
 	}
 
-	person_state p = s->people[person_state];
+	person_state p = s->people[person_index];
 
-	if (!p->alive)
-		continue;
+	if (!p.alive)
+		return;
 
-	if (p->infected){
+	if (p.infected)
+	{
 		if (tw_rand_unif(lp->rng) < DEATH_RATE)
 		{
-			p->alive = false;
-			printf("    person[%d] died\n", i);
+			p.alive = false;
+			printf("    person[%d] died\n", p.id);
 			return;
 		}
 	}
 
-	if (p->infected && (tw_now(lp) - p->infected_time > INFECTION_TIME))
+	if (p.infected && (tw_now(lp) - p.infected_time > INFECTION_TIME))
 	{
 		double r = tw_rand_unif(lp->rng);
-		printf("  person[%d] infected for long enough, rand: %f\n", i, r);
+		printf("  person[%d] infected for long enough, rand: %f\n", p.id, r);
 		// ADD DEATH FOR PEOPLE THAT JUST GOT SICK
 		if (r < RECOVERY_RATE)
 		{
-			p->infected = false;
-			p->immune = true;
-			p->immune_start = tw_now(lp);
-			printf("    person[%d] recovered\n", i);
+			p.infected = false;
+			p.immune = true;
+			p.immune_start = tw_now(lp);
+			printf("    person[%d] recovered\n", p.id);
 		}
 	}
-	else if (p->susceptible)
+	else if (p.susceptible)
 	{
 		for (int j = 0; j < PEOPLE_PER_LOCATION; j++)
 		{
-			if (i == j || !s->people[j].infected || !s->people[j].alive)
+			if (person_index == j || !s->people[j].infected || !s->people[j].alive)
 				continue;
 
 			if (tw_rand_unif(lp->rng) < TRANSMISSION_RATE)
 			{
-				p->susceptible = false;
-				p->infected = true;
-				p->infected_time = tw_now(lp);
-				printf("    person[%d] got infected by person[%d]\n", i, j);
+				p.susceptible = false;
+				p.infected = true;
+				p.infected_time = tw_now(lp);
+				printf("    person[%d] got infected by person[%d]\n", p.id, s->people[j].id);
 				break;
 			}
 		}
 	}
 
-	if (p->immune && (tw_now(lp) - p->immune_start > IMMUNITY_TIME))
+	if (p.immune && (tw_now(lp) - p.immune_start > IMMUNITY_TIME))
 	{
-		p->immune = false;
-		p->susceptible = true;
-		printf("    person[%d] lost immunity\n", i);
+		p.immune = false;
+		p.susceptible = true;
+		printf("    person[%d] lost immunity\n", person_index);
 	}
 
-	if(tw_rand_unif(lp->rng) < MOVE_PROBABILITY){
-		rand_result = tw_rand_integer(lp->rng, 0, 3);
-		dst_lp = 0;
-		switch(rand_result)
+	if (tw_rand_unif(lp->rng) < MOVE_PROBABILITY)
+	{
+		int rand_result = tw_rand_integer(lp->rng, 0, 3);
+		tw_lpid dst_lp = 0;
+		int width = GRID_WIDTH;
+		int one_less = GRID_WIDTH - 1;
+		switch (rand_result)
 		{
-		//LOOK INTO HOW THIS MOVEMENT WORKS - DONT FORGET IT
+		// LOOK INTO HOW THIS MOVEMENT WORKS - DONT FORGET IT
 		case 0:
+		{
 			// Fly north
-			//nlp_per_pe is 1024 in airplane version (32*32)
-			//could be keeping each section of the grid independant
-			//Should try two different things,
-			//Could have 32 = GRID_WIDTH, 31 = GRID_WIDTH -1
-			//Could have 32 = GRID_WIDTH/tw_nnodes, 31 = (GRID_WIDTH/tw_nnodes) - 1
-			//Could have another value involving grid width divided by other factor
-			//Like GRID_WIDTH and GRID_WIDTH -1 
-			int width = GRID_WIDTH;
-			int one_less = GRID_WIDTH -1;
-			if(lp->gid < width)
-			// Wrap around
-			dst_lp = lp->gid + one_less * width;
+			// nlp_per_pe is 1024 in airplane version (32*32)
+			// could be keeping each section of the grid independant
+			// Should try two different things,
+			// Could have 32 = GRID_WIDTH, 31 = GRID_WIDTH -1
+			// Could have 32 = GRID_WIDTH/tw_nnodes, 31 = (GRID_WIDTH/tw_nnodes) - 1
+			// Could have another value involving grid width divided by other factor
+			// Like GRID_WIDTH and GRID_WIDTH -1
+
+			if (lp->gid < width)
+				// Wrap around
+				dst_lp = lp->gid + one_less * width;
 			else
-			dst_lp = lp->gid - one_less;
+				dst_lp = lp->gid - one_less;
 			break;
+		}
 		case 1:
+		{
 			// Fly south
-			if(lp->gid >= one_less * width)
-			// Wrap around
-			dst_lp = lp->gid - one_less * width;
+			if (lp->gid >= one_less * width)
+				// Wrap around
+				dst_lp = lp->gid - one_less * width;
 			else
-			dst_lp = lp->gid + one_less;
+				dst_lp = lp->gid + one_less;
 			break;
+		}
 		case 2:
+		{
 			// Fly east
-			if((lp->gid % width) == one_less)
-			// Wrap around
-			dst_lp = lp->gid - one_less;
+			if ((lp->gid % width) == one_less)
+				// Wrap around
+				dst_lp = lp->gid - one_less;
 			else
-			dst_lp = lp->gid + 1;
+				dst_lp = lp->gid + 1;
 			break;
+		}
 		case 3:
+		{
 			// Fly west
-			if((lp->gid % width) == 0)
-			// Wrap around
-			dst_lp = lp->gid + one_less;
+			if ((lp->gid % width) == 0)
+				// Wrap around
+				dst_lp = lp->gid + one_less;
 			else
-			dst_lp = lp->gid - 1;
+				dst_lp = lp->gid - 1;
 			break;
+		}
 		}
 
 		tw_event *e_leave;
 		event_msg *m_leave;
 		e_leave = tw_event_new(lp->gid, tw_rand_exponential(lp->rng, 1.0), lp);
-		m_leave = tw_event_data(e);
+		m_leave = tw_event_data(e_leave);
 		m_leave->type = DEPARTURE;
 		m_leave->person_index = person_index;
 		tw_event_send(e_leave);
@@ -206,12 +221,13 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		m_arrive->type = ARRIVAL;
 		m_arrive->arriving_state = p;
 		tw_event_send(e_arrive);
-
 	}
-	else{
+	else
+	{
 		tw_event *e_stay;
 		event_msg *m_stay;
-		m_stay = tw_event_data(e_arrive);
+		e_stay = tw_event_new(lp->gid, tw_rand_exponential(lp->rng, 1.0), lp);
+		m_stay = tw_event_data(e_stay);
 		m_stay->type = STATUS_UPDATE;
 		m_stay->person_index = person_index;
 		tw_event_send(e_stay);
@@ -241,7 +257,8 @@ void location_final(location_state *s, tw_lp *lp)
 	printf("FINAL: LP %lu | Alive: %d | Dead: %d | Infected: %d\n", lp->gid, alive, dead, infected);
 }
 
-void location_commit(location_state * s, tw_bf * bf, event_msg * in_msg, tw_lp * lp){
+void location_commit(location_state *s, tw_bf *bf, event_msg *in_msg, tw_lp *lp)
+{
 	int alive = 0, dead = 0, infected = 0;
 
 	for (int i = 0; i < PEOPLE_PER_LOCATION; i++)
@@ -256,7 +273,8 @@ void location_commit(location_state * s, tw_bf * bf, event_msg * in_msg, tw_lp *
 
 	printf("LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d\n", lp->gid, s->x, s->y, alive, dead, infected);
 	printf("People IDs: ");
-	for (int i = 0; i < s->num_people; i++){
+	for (int i = 0; i < s->num_people; i++)
+	{
 		printf("%d, ", s->people[i].id);
 	}
 	printf("\n");
@@ -283,13 +301,13 @@ tw_lptype my_lps[] =
 		{0},
 };
 
-tw_pid lp_typemap(tw_pid gid){
-	return 0;
+tw_lpid lp_typemap(tw_lpid gid)
+{
+	return 0; // You only have one LP type
 }
 
 int main(int argc, char **argv, char **env)
 {
-	int i;
 	printf("main: Starting ROSS plague simulation\n");
 	g_tw_lookahead = 1.0;
 	g_tw_events_per_pe = 8192;
@@ -298,7 +316,7 @@ int main(int argc, char **argv, char **env)
 
 	int NUM_LOCATIONS = GRID_WIDTH * GRID_HEIGHT;
 	// nlp_per_pe = NUM_LOCATIONS / (tw_nnodes() * g_tw_npe);
-	//2 processes
+	// 2 processes
 	long nlp_per_pe = NUM_LOCATIONS / 2;
 
 	tw_define_lps(nlp_per_pe, sizeof(event_msg));
@@ -314,11 +332,9 @@ int main(int argc, char **argv, char **env)
 	if (tw_ismaster())
 	{
 		printf("\nAModel Statistics:\n");
-		//2 processes
-		printf("\t%-50s %11lld\n", "Number of locations",
-			   nlp_per_pe * 2 * tw_nnodes());
-		printf("\t%-50s %11lld\n", "Number of people",
-			   PEOPLE_PER_LOCATION * nlp_per_pe * 2 * tw_nnodes());
+		// 2 processes
+		printf("\t%-50s %11ld\n", "Number of locations", nlp_per_pe * 2 * tw_nnodes());
+		printf("\t%-50s %11ld\n", "Number of people", PEOPLE_PER_LOCATION * nlp_per_pe * 2 * tw_nnodes());
 	}
 
 	tw_end();
