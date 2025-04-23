@@ -12,14 +12,14 @@
 #define GRID_HEIGHT 2
 #define PEOPLE_PER_LOCATION 8
 #define MAX_PEOPLE_PER_LOCATION 25
-#define TRANSMISSION_RATE 0.2
+#define TRANSMISSION_RATE 0.1
 #define INITIAL_INFECTED_RATE 0.5
 #define RECOVERY_RATE 1.0
 #define IMMUNITY_TIME 30.0
 #define INFECTION_TIME 30.0
-#define MOVE_PROBABILITY 0.0
+#define MOVE_PROBABILITY 0.1
 #define MAX_PEOPLE 100
-#define DEATH_RATE 0.0000
+#define DEATH_RATE 0.0
 // #define lookahead 0
 // #define opt_mem 0
 

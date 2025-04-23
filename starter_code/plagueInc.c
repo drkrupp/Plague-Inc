@@ -189,16 +189,14 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		}
 	}
 
+	// update state
+	s->people[person_index].alive = p.alive;
+	s->people[person_index].infected = p.infected;
+	s->people[person_index].susceptible = p.susceptible;
+	s->people[person_index].infected_time = p.infected_time;
+	s->people[person_index].immune_start = p.immune_start;
 
-	//update state
-	s->people[person_index].alive = p->alive;
-	s->people[person_index].infected = p->infected;
-	s->people[person_index].susceptible = p->susceptible;
-	s->people[person_index].infected_time = p->infected_time;
-	s->people[person_index].immune_start = p->immune_start; 
-
-
-	//move
+	// move
 	if (tw_rand_unif(lp->rng) < MOVE_PROBABILITY)
 	{
 		int rand_result = tw_rand_integer(lp->rng, 0, 3);
