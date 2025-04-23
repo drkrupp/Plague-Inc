@@ -9,8 +9,7 @@ tw_peid mapping(tw_lpid gid)
 void location_init(location_state *s, tw_lp *lp)
 {
 
-	tw_output(lp, "location_init: LP %lu | state ptr: %p | rng: %p\n", lp->gid, s, lp->rng);
-	// printf("location_init: LP %lu | state ptr: %p | rng: %p\n", lp->gid, s, lp->rng);
+	printf("location_init: LP %lu | state ptr: %p | rng: %p\n", lp->gid, s, lp->rng);
 
 	if (!lp->rng)
 	{
@@ -24,28 +23,29 @@ void location_init(location_state *s, tw_lp *lp)
 	s->people = (person_state *)malloc(sizeof(person_state) * s->max_people_held);
 	s->num_people = PEOPLE_PER_LOCATION;
 
-	tw_output(lp, "LP %lu mapped to grid (%d, %d)\n", lp->gid, s->x, s->y);
+	printf("LP %lu mapped to grid (%d, %d)\n", lp->gid, s->x, s->y);
 
 	for (int i = 0; i < PEOPLE_PER_LOCATION; i++)
 	{
-		tw_output(lp, "  Init person[%d] for LP %lu\n", i, lp->gid);
+		printf("  Init person[%d] for LP %lu\n", i, lp->gid);
+		int id = lp->gid + i;
 		s->people[i].x = s->x;
 		s->people[i].y = s->y;
 		s->people[i].alive = true;
 		s->people[i].infected = false;
 		s->people[i].immune = false;
 		s->people[i].susceptible = true;
-		s->people[i].id = lp->gid + i;
+		s->people[i].id = id;
 
 		double r = tw_rand_unif(lp->rng);
-		tw_output(lp, "    person[%d] random init val: %f\n", i, r);
+		printf("    person[%d] random init val: %f\n", id, r);
 
 		if (r < INITIAL_INFECTED_RATE)
 		{
 			s->people[i].infected = true;
 			s->people[i].infected_time = 0.0;
 			s->people[i].susceptible = false;
-			tw_output(lp, "    person[%d] initialized as infected\n", i);
+			printf("    person[%d] initialized as infected\n", id);
 		}
 	}
 
