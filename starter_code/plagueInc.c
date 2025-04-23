@@ -22,7 +22,7 @@ void location_init(location_state *s, tw_lp *lp)
 	s->y = lp->gid / GRID_WIDTH;
 	s->max_people_held = MAX_PEOPLE_PER_LOCATION;
 	s->people = (person_state *)malloc(sizeof(person_state) * s->max_people_held);
-	s->num_people = 0;
+	s->num_people = PEOPLE_PER_LOCATION;
 
 	tw_output(lp, "LP %lu mapped to grid (%d, %d)\n", lp->gid, s->x, s->y);
 
@@ -63,10 +63,10 @@ void location_init(location_state *s, tw_lp *lp)
 
 void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 {
-	if (TIME_END < tw_now(lp))
-	{
-		return;
-	}
+	// if (TIME_END < tw_now(lp))
+	// {
+	// 	return;
+	// }
 	int person_index;
 	person_state arriving_state;
 	switch (m->type)
