@@ -143,10 +143,11 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 	{
 		if (tw_rand_unif(lp->rng) < DEATH_RATE)
 		{
-			p.alive = false;
-			p.infected = false;
-			p.susceptible = false;
+			s->people[person_index].alive = false;
+			s->people[person_index].infected = false;
+			s->people[person_index].susceptible = false;
 			tw_output(lp, "    person[%d] died\n", p.id);
+
 			return;
 		}
 	}
@@ -188,6 +189,14 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		}
 	}
 
+
+	//update state
+	s->people[person_index].alive = p->alive;
+	s->people[person_index].infected = p->infected;
+	s->people[person_index].susceptible = p->susceptible;
+
+
+	//move
 	if (tw_rand_unif(lp->rng) < MOVE_PROBABILITY)
 	{
 		int rand_result = tw_rand_integer(lp->rng, 0, 3);
