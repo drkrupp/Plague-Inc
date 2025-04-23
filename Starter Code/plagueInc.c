@@ -31,6 +31,7 @@ void location_init(location_state *s, tw_lp *lp)
 		s->people[i].infected = false;
 		s->people[i].immune = false;
 		s->people[i].susceptible = true;
+		s->people[i].id = lp->gid + i;
 
 		double r = tw_rand_unif(lp->rng);
 		printf("    person[%d] random init val: %f\n", i, r);
@@ -240,6 +241,27 @@ void location_final(location_state *s, tw_lp *lp)
 	printf("FINAL: LP %lu | Alive: %d | Dead: %d | Infected: %d\n", lp->gid, alive, dead, infected);
 }
 
+void location_commit(location_state * s, tw_bf * bf, event_msg * in_msg, tw_lp * lp){
+	int alive = 0, dead = 0, infected = 0;
+
+	for (int i = 0; i < PEOPLE_PER_LOCATION; i++)
+	{
+		if (!s->people[i].alive)
+			dead++;
+		else
+			alive++;
+		if (s->people[i].infected)
+			infected++;
+	}
+
+	printf("LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d\n", lp->gid, s->x, s->y, alive, dead, infected);
+	printf("People IDs: ");
+	for (int i = 0; i < s->num_people; i++){
+		printf("%d, ", s->people[i].id);
+	}
+	printf("\n");
+}
+
 // tw_lpid map_location(tw_lpid gid)
 // {
 // 	printf("map_location: mapping gid %lu to itself\n", gid);
@@ -253,13 +275,17 @@ tw_lptype my_lps[] =
 			(pre_run_f)NULL,
 			(event_f)location_event,
 			(revent_f)location_event_reverse,
-			(commit_f)NULL,
+			(commit_f)location_commit,
 			(final_f)location_final,
 			(map_f)mapping,
 			sizeof(location_state),
 		},
 		{0},
 };
+
+tw_pid lp_typemap(tw_pid gid){
+	return 0;
+}
 
 int main(int argc, char **argv, char **env)
 {
@@ -276,9 +302,11 @@ int main(int argc, char **argv, char **env)
 
 	tw_define_lps(nlp_per_pe, sizeof(event_msg));
 	printf("main: LP types registered\n");
-	for (i = 0; i < g_tw_nlp; i++)
-		tw_lp_settype(i, &my_lps[0]);
 
+	g_tw_lp_types = my_lps;
+	g_tw_lp_typemap = lp_typemap;
+	tw_lp_setup_types();
+	
 	printf("main: Running simulation...\n");
 	tw_run();
 
