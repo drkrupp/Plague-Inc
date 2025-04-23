@@ -8,20 +8,18 @@
 #include <stdbool.h>
 
 // Simulation parameters
-#define GRID_WIDTH 4
-#define GRID_HEIGHT 4
+#define GRID_WIDTH 2
+#define GRID_HEIGHT 2
 #define PEOPLE_PER_LOCATION 8
 #define MAX_PEOPLE_PER_LOCATION 25
-#define TRANSMISSION_RATE 0.3
-#define INITIAL_INFECTED_RATE 0.1
-#define RECOVERY_RATE 0.2
-#define MORTALITY_RATE 0.05
-#define IMMUNITY_TIME 50
-#define INFECTION_TIME 30
-#define MOVE_PROBABILITY 0.3
+#define TRANSMISSION_RATE 0.2
+#define INITIAL_INFECTED_RATE 0.5
+#define RECOVERY_RATE 1.0
+#define IMMUNITY_TIME 30.0
+#define INFECTION_TIME 30.0
+#define MOVE_PROBABILITY 0.0
 #define MAX_PEOPLE 100
-#define DEATH_RATE 0.0001
-#define TIME_END 10
+#define DEATH_RATE 0.0000
 // #define lookahead 0
 // #define opt_mem 0
 
@@ -38,7 +36,6 @@ typedef struct
 {
     bool alive;
     bool infected;
-    bool immune;
     bool susceptible;
     int x, y; // coordinates of the current location
     int id;   // unique identifier for person

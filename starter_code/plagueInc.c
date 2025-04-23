@@ -35,7 +35,6 @@ void location_init(location_state *s, tw_lp *lp)
 		s->people[i].y = s->y;
 		s->people[i].alive = true;
 		s->people[i].infected = false;
-		s->people[i].immune = false;
 		s->people[i].susceptible = true;
 		s->people[i].id = id;
 
@@ -139,32 +138,41 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 	if (!p.alive)
 		return;
 
+	// Calculating infections death
 	if (p.infected)
 	{
 		if (tw_rand_unif(lp->rng) < DEATH_RATE)
 		{
 			p.alive = false;
+			p.infected = false;
+			p.susceptible = false;
 			tw_output(lp, "    person[%d] died\n", p.id);
 			return;
 		}
 	}
+	else if (!p.susceptible && (tw_now(lp) - p.immune_start > IMMUNITY_TIME))
+	{
+		p.susceptible = true;
+		tw_output(lp, "    person[%d] lost immunity\n", person_index);
+	}
 
+	// Calculating recovery from infected
 	if (p.infected && (tw_now(lp) - p.infected_time > INFECTION_TIME))
 	{
 		double r = tw_rand_unif(lp->rng);
 		tw_output(lp, "  person[%d] infected for long enough, rand: %f\n", p.id, r);
-		// ADD DEATH FOR PEOPLE THAT JUST GOT SICK
+
 		if (r < RECOVERY_RATE)
 		{
 			p.infected = false;
-			p.immune = true;
+			p.susceptible = false;
 			p.immune_start = tw_now(lp);
 			tw_output(lp, "    person[%d] recovered\n", p.id);
 		}
 	}
 	else if (p.susceptible)
 	{
-		for (int j = 0; j < PEOPLE_PER_LOCATION; j++)
+		for (int j = 0; j < s->num_people; j++)
 		{
 			if (person_index == j || !s->people[j].infected || !s->people[j].alive)
 				continue;
@@ -178,13 +186,6 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 				break;
 			}
 		}
-	}
-
-	if (p.immune && (tw_now(lp) - p.immune_start > IMMUNITY_TIME))
-	{
-		p.immune = false;
-		p.susceptible = true;
-		tw_output(lp, "    person[%d] lost immunity\n", person_index);
 	}
 
 	if (tw_rand_unif(lp->rng) < MOVE_PROBABILITY)
@@ -283,7 +284,6 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		tw_event_send(e_stay);
 	}
 }
-
 void location_event_reverse(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 {
 	switch (m->type)
@@ -342,7 +342,7 @@ void location_commit(location_state *s, tw_bf *bf, event_msg *in_msg, tw_lp *lp)
 	int len = snprintf(buf, sizeof(buf), "INIT-LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d | Time: %f\n", lp->gid, s->x, s->y, alive, dead, infected, tw_now(lp));
 	int steps = 1001;
 	int space_needed = buf_length * steps;
-	MPI_Offset offset = (MPI_Offset)(lp->gid * space_needed + (long)(tw_now(lp) + 1)*256);
+	MPI_Offset offset = (MPI_Offset)(lp->gid * space_needed + (long)tw_now(lp) * buf_length);
 	MPI_File_write_at(mpi_file, offset, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
 }
 
