@@ -279,8 +279,8 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		m_stay = tw_event_data(e_stay);
 		m_stay->type = STATUS_UPDATE;
 		m_stay->person_index = person_index;
-		m_stay->max_people_count = initial_max_people;
-		m_stay->people = initial_people;
+		//m_stay->max_people_count = initial_max_people;
+		//m_stay->people = initial_people;
 		tw_event_send(e_stay);
 	}
 }
