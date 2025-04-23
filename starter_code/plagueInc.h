@@ -10,16 +10,16 @@
 // Simulation parameters
 #define GRID_WIDTH 2
 #define GRID_HEIGHT 2
-#define PEOPLE_PER_LOCATION 8
+#define PEOPLE_PER_LOCATION 2
 #define NUM_PROCESSES 2
-#define STEPS 1000
+#define STEPS 300
 #define MAX_PEOPLE_PER_LOCATION 25
 #define TRANSMISSION_RATE 0.1
-#define INITIAL_INFECTED_RATE 0.5
+#define INITIAL_INFECTED_RATE 0.0
 #define RECOVERY_RATE 1.0
 #define IMMUNITY_TIME 30.0
-#define INFECTION_TIME 30.0
-#define MOVE_PROBABILITY 0.0
+#define INFECTION_TIME 50.0
+#define MOVE_PROBABILITY 0.4
 #define MAX_PEOPLE 100
 #define DEATH_RATE 0.0
 // #define lookahead 0
