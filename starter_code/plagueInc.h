@@ -21,6 +21,7 @@
 #define MOVE_PROBABILITY 0.3
 #define MAX_PEOPLE 100
 #define DEATH_RATE 0.0001
+#define TIME_END 10
 // #define lookahead 0
 // #define opt_mem 0
 

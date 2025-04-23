@@ -63,6 +63,10 @@ void location_init(location_state *s, tw_lp *lp)
 
 void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 {
+	if (TIME_END < tw_now(lp))
+	{
+		return;
+	}
 	int person_index;
 	person_state arriving_state;
 	switch (m->type)
