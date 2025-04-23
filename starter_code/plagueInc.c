@@ -61,23 +61,10 @@ void location_init(location_state *s, tw_lp *lp)
 	}
 }
 
-person_state *deep_copy_person_states(const person_state *original, size_t length) {
-    if (original == NULL || length == 0) return NULL;
-
-    person_state *copy = (person_state *)malloc(length * sizeof(person_state));
-    if (copy == NULL) {
-        perror("Failed to allocate memory for array copy");
-        exit(EXIT_FAILURE);
-    }
-
-    memcpy(copy, original, length * sizeof(person_state));
-    return copy;
-}
 
 void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 {
-	person_state* initial_people = deep_copy_person_states(m->people, s->max_people_held);
-	int initial_max_people = s->max_people_held;
+
 	int person_index;
 	person_state arriving_state;
 
@@ -232,8 +219,6 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		m_leave = tw_event_data(e_leave);
 		m_leave->type = DEPARTURE;
 		m_leave->person_index = person_index;
-		m_leave->people = initial_people;
-		m_leave->max_people_count = max_people_held;
 		tw_event_send(e_leave);
 
 		tw_event *e_arrive;
@@ -242,8 +227,6 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		m_arrive = tw_event_data(e_arrive);
 		m_arrive->type = ARRIVAL;
 		m_arrive->arriving_state = p;
-		m_arrive->people = initial_people;
-		m_arrive->max_people_count = max_people_held;
 		tw_event_send(e_arrive);
 	}
 	else
@@ -254,8 +237,6 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		m_stay = tw_event_data(e_stay);
 		m_stay->type = STATUS_UPDATE;
 		m_stay->person_index = person_index;
-		m_stay->people = initial_people;
-		m_stay->max_people_count = max_people_held;
 		tw_event_send(e_stay);
 	}
 }
@@ -264,23 +245,8 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 
 void location_event_reverse(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 {
-	switch(m->type){
-		case ARRIVAL:
-		{
-			s->num_people--;
-			break;
-		}
-		case DEPARTURE:
-		{
-			s->num_people++;
-			break;
-		}
-		default:
-		{
-			break;
-		}
-	}
-	s->people = deep_copy_person_states(m->people, m->max_people_count);
+	// Not implemented
+	printf("location_event_reverse: LP %lu (unimplemented)\n", lp->gid);
 }
 
 void location_final(location_state *s, tw_lp *lp)
