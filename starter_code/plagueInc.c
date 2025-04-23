@@ -287,24 +287,25 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 void location_event_reverse(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 {
 	tw_output(lp, "BIG LOCATION REVERSE YA BOMBOCLAAT\n");
-	switch (m->type)
-	{
-	case ARRIVAL:
-	{
-		s->num_people--;
-		break;
-	}
-	case DEPARTURE:
-	{
-		s->num_people++;
-		break;
-	}
-	default:
-	{
-		break;
-	}
-	}
-	s->people = deep_copy_person_states(m->people, m->max_people_count);
+	// tw_output(lp, "BIG LOCATION REVERSE YA BOMBOCLAAT");
+	// switch (m->type)
+	//{
+	// case ARRIVAL:
+	//{
+	//	s->num_people--;
+	//	break;
+	// }
+	// case DEPARTURE:
+	//{
+	//	s->num_people++;
+	//	break;
+	// }
+	// default:
+	//{
+	//	break;
+	// }
+	// }
+	// s->people = deep_copy_person_states(m->people, m->max_people_count);
 }
 
 void location_final(location_state *s, tw_lp *lp)
