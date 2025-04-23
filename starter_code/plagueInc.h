@@ -19,7 +19,7 @@
 #define RECOVERY_RATE 1.0
 #define IMMUNITY_TIME 30.0
 #define INFECTION_TIME 30.0
-#define MOVE_PROBABILITY 0.5
+#define MOVE_PROBABILITY 0.0
 #define MAX_PEOPLE 100
 #define DEATH_RATE 0.0
 // #define lookahead 0

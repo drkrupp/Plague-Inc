@@ -82,7 +82,7 @@ void location_init(location_state *s, tw_lp *lp)
 	MPI_File_write_at(mpi_file, offset, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
 }
 
-//person_state *deep_copy_person_states(const person_state *original, size_t length)
+// person_state *deep_copy_person_states(const person_state *original, size_t length)
 //{
 //	if (original == NULL || length == 0)
 //		return NULL;
@@ -96,12 +96,12 @@ void location_init(location_state *s, tw_lp *lp)
 //
 //	memcpy(copy, original, length * sizeof(person_state));
 //	return copy;
-//}
+// }
 
 void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 {
-	//person_state *initial_people = deep_copy_person_states(m->people, s->max_people_held);
-	//int initial_max_people = s->max_people_held;
+	// person_state *initial_people = deep_copy_person_states(m->people, s->max_people_held);
+	// int initial_max_people = s->max_people_held;
 	int person_index;
 	person_state arriving_state;
 	switch (m->type)
@@ -256,8 +256,8 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		m_leave = tw_event_data(e_leave);
 		m_leave->type = DEPARTURE;
 		m_leave->person_index = person_index;
-		//m_leave->max_people_count = initial_max_people;
-		//m_leave->people = initial_people;
+		// m_leave->max_people_count = initial_max_people;
+		// m_leave->people = initial_people;
 		tw_event_send(e_leave);
 
 		tw_event *e_arrive;
@@ -266,8 +266,8 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		m_arrive = tw_event_data(e_arrive);
 		m_arrive->type = ARRIVAL;
 		m_arrive->arriving_state = p;
-		//m_arrive->max_people_count = initial_max_people;
-		//m_arrive->people = initial_people;
+		// m_arrive->max_people_count = initial_max_people;
+		// m_arrive->people = initial_people;
 		tw_event_send(e_arrive);
 	}
 	// Not moving
@@ -279,33 +279,32 @@ void location_event(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 		m_stay = tw_event_data(e_stay);
 		m_stay->type = STATUS_UPDATE;
 		m_stay->person_index = person_index;
-		//m_stay->max_people_count = initial_max_people;
-		//m_stay->people = initial_people;
+		// m_stay->max_people_count = initial_max_people;
+		// m_stay->people = initial_people;
 		tw_event_send(e_stay);
 	}
 }
 void location_event_reverse(location_state *s, tw_bf *bf, event_msg *m, tw_lp *lp)
 {
 	tw_output(lp, "BIG LOCATION REVERSE YA BOMBOCLAAT\n");
-	//tw_output(lp, "BIG LOCATION REVERSE YA BOMBOCLAAT");
-	//switch (m->type)
-	//{
-	//case ARRIVAL:
-	//{
-	//	s->num_people--;
-	//	break;
-	//}
-	//case DEPARTURE:
-	//{
-	//	s->num_people++;
-	//	break;
-	//}
-	//default:
-	//{
-	//	break;
-	//}
-	//}
-	//s->people = deep_copy_person_states(m->people, m->max_people_count);
+	switch (m->type)
+	{
+	case ARRIVAL:
+	{
+		s->num_people--;
+		break;
+	}
+	case DEPARTURE:
+	{
+		s->num_people++;
+		break;
+	}
+	default:
+	{
+		break;
+	}
+	}
+	s->people = deep_copy_person_states(m->people, m->max_people_count);
 }
 
 void location_final(location_state *s, tw_lp *lp)
