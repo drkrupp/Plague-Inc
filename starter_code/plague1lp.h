@@ -1,13 +1,15 @@
-#ifndef PLAGUE1LP_H
-#define PLAGUE1LP_H
+
+
+#ifndef INC_plagueInc_h
+#define INC_plagueInc_h
 
 #include <ross.h>
 #include <stdlib.h>
 #include <stdbool.h>
 
 // Simulation parameters
-#define GRID_WIDTH 5
-#define GRID_HEIGHT 5
+#define GRID_WIDTH 2
+#define GRID_HEIGHT 2
 #define PEOPLE_PER_LOCATION 2
 #define TRANSMISSION_RATE 0.3
 #define INITIAL_INFECTED_RATE 0.1
@@ -18,6 +20,8 @@
 #define MOVE_PROBABILITY 0.3
 #define MAX_PEOPLE 100
 #define DEATH_RATE 0.0001
+// #define lookahead 0
+// #define opt_mem 0
 
 // Event types
 typedef enum
@@ -53,4 +57,4 @@ typedef struct
     int person_index; // -1 for all people
 } event_msg;
 
-#endif // PLAGUE1LP_H
+#endif

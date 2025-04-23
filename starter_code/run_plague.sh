@@ -4,7 +4,7 @@
 #SBATCH --error=plague_%j.err
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=2
-#SBATCH --time=00:30:00
+#SBATCH --time=00:10:00
 #SBATCH --partition=el8
 #SBATCH --gres=gpu:4
 #SBATCH --exclusive 

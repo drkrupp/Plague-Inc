@@ -168,9 +168,13 @@ tw_lptype my_lps[] =
 		{0},
 };
 
+tw_lpid lp_typemap(tw_lpid gid)
+{
+	return 0; // You only have one LP type
+}
+
 int main(int argc, char **argv, char **env)
 {
-	int i;
 	printf("main: Starting ROSS plague simulation\n");
 	g_tw_lookahead = 1.0;
 	g_tw_events_per_pe = 8192;
@@ -183,9 +187,9 @@ int main(int argc, char **argv, char **env)
 
 	tw_define_lps(nlp_per_pe, sizeof(event_msg));
 	printf("main: LP types registered\n");
-	for (i = 0; i < g_tw_nlp; i++)
-		tw_lp_settype(i, &my_lps[0]);
-
+	g_tw_lp_types = my_lps;
+	g_tw_lp_typemap = lp_typemap;
+	tw_lp_setup_types();
 	printf("main: Running simulation...\n");
 	tw_run();
 
