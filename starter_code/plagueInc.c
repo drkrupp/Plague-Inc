@@ -300,15 +300,15 @@ void location_final(location_state *s, tw_lp *lp)
 	tw_output(lp, "FINAL: LP %lu | Alive: %d | Dead: %d | Infected: %d\n", lp->gid, alive, dead, infected);
 
 	ticks local_print_time = s->io_print_time;
-	ticks global_print_time = 0.0;
-	MPI_Reduce(&local_print_time, &global_print_time, 1, MPI_LONG_LONG, MPI_SUM, 0, MPI_COMM_WORLD);
+	// ticks global_print_time = 0.0;
+	// MPI_Reduce(&local_print_time, &global_print_time, 1, MPI_LONG_LONG, MPI_SUM, 0, MPI_COMM_WORLD);
 
-	if (tw_nnodes() == 1 || tw_node_id() == 0)
-	{
-		printf("Total MPI print time across all LPs and ranks: %llu seconds\n", global_print_time);
-	}
+	// if (tw_nnodes() == 1 || tw_node_id() == 0)
+	// {
+	// 	printf("Total MPI print time across all LPs and ranks: %llu seconds\n", global_print_time);
+	// }
 
-	printf("Rank %d total print time: %f\n", g_tw_mynode, local_print_time);
+	printf("LP %lu print time: %llu\n", lp->gid, local_print_time);
 
 	free(s->people);
 }
