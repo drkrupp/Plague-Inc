@@ -8,20 +8,19 @@
 #include <stdbool.h>
 
 // Simulation parameters
-#define GRID_WIDTH 4
-#define GRID_HEIGHT 4
-#define PEOPLE_PER_LOCATION 10
+#define GRID_WIDTH 16
+#define GRID_HEIGHT 16
+#define PEOPLE_PER_LOCATION 16
 #define NUM_PROCESSES 2
 #define STEPS 1000
-#define MAX_PEOPLE_PER_LOCATION 25
+#define MAX_PEOPLE_PER_LOCATION 64
 #define TRANSMISSION_RATE 0.1
-#define INITIAL_INFECTED_RATE 0.5
+#define INITIAL_INFECTED_RATE 0.2
 #define RECOVERY_RATE 1.0
 #define IMMUNITY_TIME 30.0
 #define INFECTION_TIME 50.0
-#define MOVE_PROBABILITY 0.0
-#define MAX_PEOPLE 100
-#define DEATH_RATE 0.0
+#define MOVE_PROBABILITY 0.1
+#define DEATH_RATE 0.001
 // #define lookahead 0
 // #define opt_mem 0
 
@@ -65,14 +64,5 @@ typedef struct
     int before_num_people;
     person_state before_people[MAX_PEOPLE_PER_LOCATION];
 } event_msg;
-
-// typedef struct
-// {
-//     event_t type;
-//     person_state arriving_state;
-//     int max_people_count;
-//     person_state *people;
-//     int person_index; // -1 for all people
-// } event_msg;
 
 #endif
