@@ -25,4 +25,4 @@ export OMPI_MCA_btl=^openib
 export OMPI_MCA_orte_base_help_aggregate=0  # optional: shows all MPI error messages
 
 # Run the simulation (no --mpi needed with Spectrum)
-mpirun -np 2 ./plagueInc --synch=3 --end=1000
+mpirun -np 2 ./plagueInc --synch=3 --end=128

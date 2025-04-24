@@ -12,10 +12,10 @@
 typedef unsigned long long ticks;
 
 // Simulation parameters
-#define GRID_WIDTH 16
-#define GRID_HEIGHT 16
-#define PEOPLE_PER_LOCATION 16
-#define NUM_PROCESSES 2
+#define GRID_WIDTH 1024
+#define GRID_HEIGHT 1024
+#define PEOPLE_PER_LOCATION 8
+#define NUM_PROCESSES 1
 #define STEPS 1000
 #define MAX_PEOPLE_PER_LOCATION 64
 #define TRANSMISSION_RATE 0.1
