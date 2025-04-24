@@ -6,12 +6,14 @@ MPI_File mpi_file;
 // global file pointer
 // FILE *node_out_file;
 
+ticks local_print_time_sum = 0;
+
 tw_peid
 mapping(tw_lpid gid)
 {
 	return (tw_peid)gid / g_tw_nlp;
 }
-
+ticks total_mpi_time;
 // Power9 cycle counter - clock rate is 512,000,000 cycles per second.
 static __inline__ ticks getticks(void)
 {
@@ -299,18 +301,17 @@ void location_final(location_state *s, tw_lp *lp)
 
 	tw_output(lp, "FINAL: LP %lu | Alive: %d | Dead: %d | Infected: %d\n", lp->gid, alive, dead, infected);
 
-	ticks local_print_time = s->io_print_time;
-	// ticks global_print_time = 0.0;
-	// MPI_Reduce(&local_print_time, &global_print_time, 1, MPI_LONG_LONG, MPI_SUM, 0, MPI_COMM_WORLD);
+	ticks lp_print_time = s->io_print_time;
+	printf("LP %lu print time: %llu\n", lp->gid, lp_print_time);
+	local_print_time_sum += lp_print_time;
 
-	// if (tw_nnodes() == 1 || tw_node_id() == 0)
-	// {
-	// 	printf("Total MPI print time across all LPs and ranks: %llu seconds\n", global_print_time);
-	// }
+	ticks global_print_time_sum = 0;
 
-	printf("LP %lu print time: %llu\n", lp->gid, local_print_time);
+	MPI_Reduce(&local_print_time_sum, &global_print_time_sum, 1, MPI_UNSIGNED_LONG_LONG, MPI_SUM, 0, MPI_COMM_WORLD);
 
-	free(s->people);
+	if (g_tw_mynode == 0) {
+		printf("Total print time across all LPs: %llu\n", global_print_time_sum);
+	}
 }
 
 void location_commit(location_state *s, tw_bf *bf, event_msg *in_msg, tw_lp *lp)
