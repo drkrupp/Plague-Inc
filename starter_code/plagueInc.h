@@ -51,6 +51,7 @@ typedef struct
     int num_people;
     int max_people_held;
     person_state *people;
+    ticks io_print_time;
 } location_state;
 
 // Event payload
