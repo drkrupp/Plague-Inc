@@ -6,9 +6,25 @@ MPI_File mpi_file;
 // global file pointer
 // FILE *node_out_file;
 
-tw_peid mapping(tw_lpid gid)
+tw_peid
+mapping(tw_lpid gid)
 {
 	return (tw_peid)gid / g_tw_nlp;
+}
+
+// Power9 cycle counter - clock rate is 512,000,000 cycles per second.
+static __inline__ ticks getticks(void)
+{
+	unsigned int tbl, tbu0, tbu1;
+
+	do
+	{
+		__asm__ __volatile__("mftbu %0" : "=r"(tbu0));
+		__asm__ __volatile__("mftb %0" : "=r"(tbl));
+		__asm__ __volatile__("mftbu %0" : "=r"(tbu1));
+	} while (tbu0 != tbu1);
+
+	return (((unsigned long long)tbu0) << 32) | tbl;
 }
 
 void location_init(location_state *s, tw_lp *lp)
@@ -282,6 +298,18 @@ void location_final(location_state *s, tw_lp *lp)
 	MPI_File_write_at(mpi_file, offset, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
 
 	tw_output(lp, "FINAL: LP %lu | Alive: %d | Dead: %d | Infected: %d\n", lp->gid, alive, dead, infected);
+
+	ticks local_print_time = s->io_print_time;
+	ticks global_print_time = 0.0;
+	MPI_Reduce(&local_print_time, &global_print_time, 1, MPI_LONG_LONG, MPI_SUM, 0, MPI_COMM_WORLD);
+
+	if (tw_nnodes() == 1 || tw_node_id() == 0)
+	{
+		printf("Total MPI print time across all LPs and ranks: %llu seconds\n", global_print_time);
+	}
+
+	printf("Rank %d total print time: %f\n", g_tw_mynode, local_print_time);
+
 	free(s->people);
 }
 

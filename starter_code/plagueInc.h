@@ -6,6 +6,10 @@
 #include <ross.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#include <stdio.h>
+#include <stdint.h>
+
+typedef unsigned long long ticks;
 
 // Simulation parameters
 #define GRID_WIDTH 16
