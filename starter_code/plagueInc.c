@@ -3,6 +3,22 @@
 
 MPI_File mpi_file;
 
+
+typedef unsigned long long ticks;
+ticks Total_Time;
+static __inline__ ticks getticks(void)
+{
+  unsigned int tbl, tbu0, tbu1;
+
+  do {
+    __asm__ __volatile__ ("mftbu %0" : "=r"(tbu0));
+    __asm__ __volatile__ ("mftb %0" : "=r"(tbl));
+    __asm__ __volatile__ ("mftbu %0" : "=r"(tbu1));
+  } while (tbu0 != tbu1);
+
+  return (((unsigned long long)tbu0) << 32) | tbl;
+}
+
 // global file pointer
 // FILE *node_out_file;
 
@@ -27,6 +43,7 @@ void location_init(location_state *s, tw_lp *lp)
 	s->max_people_held = MAX_PEOPLE_PER_LOCATION;
 	s->people = (person_state *)malloc(sizeof(person_state) * s->max_people_held);
 	s->num_people = PEOPLE_PER_LOCATION;
+	s->io_print_time = 0;
 	// printf("LP %lu mapped to grid (%d, %d)\n", lp->gid, s->x, s->y);
 
 	for (int i = 0; i < PEOPLE_PER_LOCATION; i++)
@@ -342,6 +359,22 @@ void location_final(location_state *s, tw_lp *lp)
 	MPI_File_write_at(mpi_file, offset, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
 
 	tw_output(lp, "FINAL: LP %lu | Alive: %d | Dead: %d | Infected: %d\n", lp->gid, alive, dead, infected);
+
+	double local_print_time = 0.0;
+    for (tw_lpid i = 0; i < g_tw_nlp; ++i) {
+        my_lp_state_type *lp_state = (my_lp_state_type *) tw_getlocal_lp(i)->state;
+        local_print_time += lp_state->io_print_time;
+    }
+
+    double global_print_time = 0.0;
+    MPI_Reduce(&local_print_time, &global_print_time, 1, MPI_DOUBLE, MPI_SUM, 0, MPI_COMM_WORLD);
+
+    if (tw_nnodes() == 1 || tw_node_id() == 0) {
+        printf("Total MPI print time across all LPs and ranks: %f seconds\n", global_print_time);
+    }
+
+	printf("Rank %d total print time: %f\n", g_tw_mynode, local_print_time);
+
 	free(s->people);
 }
 
@@ -359,6 +392,7 @@ void location_commit(location_state *s, tw_bf *bf, event_msg *in_msg, tw_lp *lp)
 			infected++;
 	}
 
+	ticks start_print = getticks();
 	int buf_length = 256;
 	char buf[256];
 	int len = snprintf(buf, sizeof(buf), "LP %lu |Coords: (%d, %d)| Alive: %d | Dead: %d | Infected: %d | Time: %f\n", lp->gid, s->x, s->y, alive, dead, infected, tw_now(lp));
@@ -366,6 +400,8 @@ void location_commit(location_state *s, tw_bf *bf, event_msg *in_msg, tw_lp *lp)
 	int space_needed = buf_length * steps;
 	MPI_Offset offset = (MPI_Offset)(lp->gid * space_needed + (long)tw_now(lp) * buf_length);
 	MPI_File_write_at(mpi_file, offset, buf, len, MPI_CHAR, MPI_STATUS_IGNORE);
+	ticks end_print = getticks();
+	s->io_print_time += (end_print - start_print);
 }
 
 tw_lptype my_lps[] =
@@ -410,6 +446,7 @@ int main(int argc, char **argv, char **env)
 	*/
 	// you should probably close the files when you are done (in main)
 
+	ticks start = getticks();
 	printf("main: Starting ROSS plague simulation\n");
 	g_tw_lookahead = 0.00000001;
 	// events per pe seems like num num people * grid width * grid height - he said to mult by 2
@@ -448,12 +485,14 @@ int main(int argc, char **argv, char **env)
 
 	tw_run();
 
+	ticks finish = getticks();
 	if (tw_ismaster())
 	{
 		printf("\nModel Statistics:\n");
 		// 2 processes
 		printf("\t%-50s %11ld\n", "Number of locations", nlp_per_pe * NUM_PROCESSES);
 		printf("\t%-50s %11ld\n", "Number of people", PEOPLE_PER_LOCATION * nlp_per_pe * NUM_PROCESSES);
+		printf("Computed in %llu ticks\n", (finish - start));
 	}
 
 	tw_end();
